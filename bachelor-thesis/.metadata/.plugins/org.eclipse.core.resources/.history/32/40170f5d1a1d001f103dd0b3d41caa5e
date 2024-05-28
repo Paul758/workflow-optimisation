@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow:Workflow
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:workflow="http://bpmnmodelling/workflow"
+    xsi:schemaLocation="http://bpmnmodelling/workflow workflow.ecore">
+  <flowObjects
+      xsi:type="workflow:Task"
+      name="1"
+      sink="//@flowObjects.1"/>
+  <flowObjects
+      xsi:type="workflow:Task"
+      name="2"
+      source="//@flowObjects.0"
+      sink="//@flowObjects.2"/>
+  <flowObjects
+      xsi:type="workflow:Task"
+      name="3"
+      source="//@flowObjects.1"
+      sink="//@flowObjects.3"/>
+  <flowObjects
+      xsi:type="workflow:Task"
+      name="4"
+      source="//@flowObjects.2"
+      sink="//@flowObjects.4"/>
+  <flowObjects
+      xsi:type="workflow:Task"
+      name="5"
+      source="//@flowObjects.3"/>
+</workflow:Workflow>
