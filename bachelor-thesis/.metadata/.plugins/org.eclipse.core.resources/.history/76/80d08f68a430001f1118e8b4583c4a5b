@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<workflow:Workflow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:workflow="http://bpmnmodelling/workflow" xsi:schemaLocation="http://bpmnmodelling/workflow workflow.ecore">
+  <flowObjects xsi:type="workflow:Task" name="1" isEncapsulatedBy="//@processes.0" sink="//@flowObjects.1"/>
+  <flowObjects xsi:type="workflow:Task" name="2" isEncapsulatedBy="//@processes.0" source="//@flowObjects.0"/>
+  <processes name="2" encapsulates="//@flowObjects.1 //@flowObjects.0"/>
+  <processes name="1"/>
+</workflow:Workflow>
