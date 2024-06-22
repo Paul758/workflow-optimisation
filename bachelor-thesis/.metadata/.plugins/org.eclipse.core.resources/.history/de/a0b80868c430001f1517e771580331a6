@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-PPxYTDCEe-MQ8cLOEyMdQ" type="Henshin" name="workflow.henshin_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="__im2sDDCEe-MQ8cLOEyMdQ" type="2001" fontName="Segoe UI" italic="true" lineColor="0">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Blq6ojDDEe-MQ8cLOEyMdQ" source="defaultAction">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Blq6ozDDEe-MQ8cLOEyMdQ" key="value" value="preserve"/>
+    </eAnnotations>
+    <children xmi:type="notation:DecorationNode" xmi:id="__im2sjDCEe-MQ8cLOEyMdQ" type="5001"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="__im2szDCEe-MQ8cLOEyMdQ" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_BlsIwDDDEe-MQ8cLOEyMdQ" type="3001" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BlsIwjDDEe-MQ8cLOEyMdQ" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_BlsIwzDDEe-MQ8cLOEyMdQ" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_BlsIxDDDEe-MQ8cLOEyMdQ" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_BlsIxTDDEe-MQ8cLOEyMdQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_BlsIxjDDEe-MQ8cLOEyMdQ"/>
+        </children>
+        <element xmi:type="henshin:Node" href="workflow.henshin#_BlpFcDDDEe-MQ8cLOEyMdQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BlsIwTDDEe-MQ8cLOEyMdQ" x="15" y="39"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_fm1oMDDDEe--A6kVjhILAg" type="3001" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_fm2PQDDDEe--A6kVjhILAg" type="5002"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_fm2PQTDDEe--A6kVjhILAg" type="5003"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_fm2PQjDDEe--A6kVjhILAg" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_fm2PQzDDEe--A6kVjhILAg"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_fm2PRDDDEe--A6kVjhILAg"/>
+        </children>
+        <element xmi:type="henshin:Node" href="workflow.henshin#_fmqpEDDDEe--A6kVjhILAg"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fm1oMTDDEe--A6kVjhILAg" x="240" y="33"/>
+      </children>
+    </children>
+    <element xmi:type="henshin:Rule" href="workflow.henshin#__ilBgDDCEe-MQ8cLOEyMdQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__im2sTDCEe-MQ8cLOEyMdQ" x="167" y="314" width="445"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_-PPxYjDCEe-MQ8cLOEyMdQ"/>
+  <element xmi:type="henshin:Module" href="workflow.henshin#_-PPxYDDCEe-MQ8cLOEyMdQ"/>
+  <edges xmi:type="notation:Connector" xmi:id="_gMAKwDDDEe--A6kVjhILAg" type="4001" source="_BlsIwDDDEe-MQ8cLOEyMdQ" target="_fm1oMDDDEe--A6kVjhILAg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_gMAKwzDDEe--A6kVjhILAg" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gMAKxDDDEe--A6kVjhILAg" x="5" y="-14"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_gMAKxTDDEe--A6kVjhILAg" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gMAKxjDDEe--A6kVjhILAg" x="-1" y="13"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_gMAKwTDDEe--A6kVjhILAg" fontName="Segoe UI"/>
+    <element xmi:type="henshin:Edge" href="workflow.henshin#_gL75UDDDEe--A6kVjhILAg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gMAKwjDDEe--A6kVjhILAg" points="[19, 10, -118, -69]$[138, 58, 1, -21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gMUT0DDDEe--A6kVjhILAg" id="(0.7654320987654321,0.35714285714285715)"/>
+  </edges>
+</notation:Diagram>

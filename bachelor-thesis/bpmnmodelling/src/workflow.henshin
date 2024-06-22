@@ -1,327 +1,397 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_gih9wB0iEe-hvJ5qR69nJw">
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_-PPxYDDCEe-MQ8cLOEyMdQ">
   <imports href="workflow.ecore#/"/>
-  <units xsi:type="henshin:Rule" xmi:id="_l6Pz4B0jEe-hvJ5qR69nJw" name="deleteEmptyProcess">
-    <lhs xmi:id="_l6SQIB0jEe-hvJ5qR69nJw" name="Lhs">
-      <nodes xmi:id="_pgdFkB0jEe-hvJ5qR69nJw" outgoing="_tsOicB0jEe-hvJ5qR69nJw">
+  <units xsi:type="henshin:Rule" xmi:id="__ilBgDDCEe-MQ8cLOEyMdQ" name="createNewActivity">
+    <lhs xmi:id="__indwDDCEe-MQ8cLOEyMdQ" name="Lhs">
+      <nodes xmi:id="_BlpFcDDDEe-MQ8cLOEyMdQ" name="flow">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_rl02oB0jEe-hvJ5qR69nJw" incoming="_tsOicB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+    </lhs>
+    <rhs xmi:id="__ioE0DDCEe-MQ8cLOEyMdQ" name="Rhs">
+      <nodes xmi:id="_Blq6oDDDEe-MQ8cLOEyMdQ" name="flow" outgoing="_gL75UDDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_stoMMB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//FlowObject"/>
+      <nodes xmi:id="_fmqpEDDDEe--A6kVjhILAg" incoming="_gL75UDDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <edges xmi:id="_tsOicB0jEe-hvJ5qR69nJw" source="_pgdFkB0jEe-hvJ5qR69nJw" target="_rl02oB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_gL75UDDDEe--A6kVjhILAg" source="_Blq6oDDDEe-MQ8cLOEyMdQ" target="_fmqpEDDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <formula xsi:type="henshin:Not" xmi:id="_x6QpIB0jEe-hvJ5qR69nJw">
-        <child xsi:type="henshin:NestedCondition" xmi:id="_x6QpIR0jEe-hvJ5qR69nJw">
-          <conclusion xmi:id="_x6QpIh0jEe-hvJ5qR69nJw">
-            <nodes xmi:id="_x6QpIx0jEe-hvJ5qR69nJw" outgoing="_wYD2kB0jEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Process"/>
+    </rhs>
+    <mappings xmi:id="_Blq6oTDDEe-MQ8cLOEyMdQ" origin="_BlpFcDDDEe-MQ8cLOEyMdQ" image="_Blq6oDDDEe-MQ8cLOEyMdQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_xuNdQDDDEe--A6kVjhILAg" name="deleteEmptyActivity">
+    <lhs xmi:id="_xuP5gDDDEe--A6kVjhILAg" name="Lhs">
+      <nodes xmi:id="_0EnT8DDDEe--A6kVjhILAg" outgoing="_4C0O4DDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow"/>
+      </nodes>
+      <nodes xmi:id="_0x_XUDDDEe--A6kVjhILAg" incoming="_4C0O4DDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_2L-pEDDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_4C0O4DDDEe--A6kVjhILAg" source="_0EnT8DDDEe--A6kVjhILAg" target="_0x_XUDDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_7WmT0DDDEe--A6kVjhILAg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_7WmT0TDDEe--A6kVjhILAg">
+          <conclusion xmi:id="_7WmT0jDDEe--A6kVjhILAg">
+            <nodes xmi:id="_7Wm64DDDEe--A6kVjhILAg" outgoing="_6wv0wDDDEe--A6kVjhILAg">
+              <type href="workflow.ecore#//Activity"/>
             </nodes>
-            <nodes xmi:id="_x6QpJR0jEe-hvJ5qR69nJw" incoming="_wYD2kB0jEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//FlowObject"/>
+            <nodes xmi:id="_7Wm64jDDEe--A6kVjhILAg" incoming="_6wv0wDDDEe--A6kVjhILAg">
+              <type href="workflow.ecore#//InformationObject"/>
             </nodes>
-            <edges xmi:id="_wYD2kB0jEe-hvJ5qR69nJw" source="_x6QpIx0jEe-hvJ5qR69nJw" target="_x6QpJR0jEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Process/encapsulates"/>
+            <edges xmi:id="_6wv0wDDDEe--A6kVjhILAg" source="_7Wm64DDDEe--A6kVjhILAg" target="_7Wm64jDDEe--A6kVjhILAg">
+              <type href="workflow.ecore#//Activity/encapsulates"/>
             </edges>
           </conclusion>
-          <mappings xmi:id="_x6QpJB0jEe-hvJ5qR69nJw" origin="_rl02oB0jEe-hvJ5qR69nJw" image="_x6QpIx0jEe-hvJ5qR69nJw"/>
-          <mappings xmi:id="_x6QpJh0jEe-hvJ5qR69nJw" origin="_stoMMB0jEe-hvJ5qR69nJw" image="_x6QpJR0jEe-hvJ5qR69nJw"/>
+          <mappings xmi:id="_7Wm64TDDEe--A6kVjhILAg" origin="_0x_XUDDDEe--A6kVjhILAg" image="_7Wm64DDDEe--A6kVjhILAg"/>
+          <mappings xmi:id="_7Wm64zDDEe--A6kVjhILAg" origin="_2L-pEDDDEe--A6kVjhILAg" image="_7Wm64jDDEe--A6kVjhILAg"/>
         </child>
       </formula>
     </lhs>
-    <rhs xmi:id="_l6SQIR0jEe-hvJ5qR69nJw" name="Rhs">
-      <nodes xmi:id="_pgdFkR0jEe-hvJ5qR69nJw">
+    <rhs xmi:id="_xuP5gTDDEe--A6kVjhILAg" name="Rhs">
+      <nodes xmi:id="_0EnT8TDDEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_stoMMR0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//FlowObject"/>
+      <nodes xmi:id="_2L-pETDDEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
     </rhs>
-    <mappings xmi:id="_pgdFkh0jEe-hvJ5qR69nJw" origin="_pgdFkB0jEe-hvJ5qR69nJw" image="_pgdFkR0jEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_stoMMh0jEe-hvJ5qR69nJw" origin="_stoMMB0jEe-hvJ5qR69nJw" image="_stoMMR0jEe-hvJ5qR69nJw"/>
+    <mappings xmi:id="_0EnT8jDDEe--A6kVjhILAg" origin="_0EnT8DDDEe--A6kVjhILAg" image="_0EnT8TDDEe--A6kVjhILAg"/>
+    <mappings xmi:id="_2L-pEjDDEe--A6kVjhILAg" origin="_2L-pEDDDEe--A6kVjhILAg" image="_2L-pETDDEe--A6kVjhILAg"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_zk8CQB0jEe-hvJ5qR69nJw" name="moveTaskForward">
-    <lhs xmi:id="_zk8pUB0jEe-hvJ5qR69nJw" name="Lhs">
-      <nodes xmi:id="_4ViqgB0jEe-hvJ5qR69nJw" name="flow" outgoing="_AEAyEB0kEe-hvJ5qR69nJw _CRL0QB0kEe-hvJ5qR69nJw _ILoZcB0kEe-hvJ5qR69nJw _L0SiMB0kEe-hvJ5qR69nJw">
+  <units xsi:type="henshin:Rule" xmi:id="_823MsDDDEe--A6kVjhILAg" name="assignInformationObject">
+    <lhs xmi:id="_825B4DDDEe--A6kVjhILAg" name="Lhs">
+      <nodes xmi:id="_A5OO4DDEEe--A6kVjhILAg" name="model" outgoing="_Jj-_kDDEEe--A6kVjhILAg _KUvuIDDEEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_7US6oB0jEe-hvJ5qR69nJw" name="p1" incoming="_AEAyEB0kEe-hvJ5qR69nJw" outgoing="_TC4P0B0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_D0qsUDDEEe--A6kVjhILAg" name="a2" incoming="_KUvuIDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_73JwEB0jEe-hvJ5qR69nJw" name="p2" incoming="_CRL0QB0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_EfKa0DDEEe--A6kVjhILAg" name="i" incoming="_Jj-_kDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <nodes xmi:id="_8xB-YB0jEe-hvJ5qR69nJw" name="t1" incoming="_ILoZcB0kEe-hvJ5qR69nJw _TC4P0B0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
+      <edges xmi:id="_Jj-_kDDEEe--A6kVjhILAg" source="_A5OO4DDEEe--A6kVjhILAg" target="_EfKa0DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
+      </edges>
+      <edges xmi:id="_KUvuIDDEEe--A6kVjhILAg" source="_A5OO4DDEEe--A6kVjhILAg" target="_D0qsUDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_TYniYDDEEe--A6kVjhILAg">
+        <left xsi:type="henshin:Not" xmi:id="_GEgA8DDEEe--A6kVjhILAg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_GEgA8TDEEe--A6kVjhILAg">
+            <conclusion xmi:id="_GEgA8jDEEe--A6kVjhILAg" name="2">
+              <nodes xmi:id="_GEgA8zDEEe--A6kVjhILAg" name="model" outgoing="_HOnqsDDEEe--A6kVjhILAg _Jj-_kjDEEe--A6kVjhILAg _KUwVMTDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Workflow"/>
+              </nodes>
+              <nodes xmi:id="_DEWCoDDEEe--A6kVjhILAg" name="a1" incoming="_HOnqsDDEEe--A6kVjhILAg" outgoing="_RGUIkDDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Activity"/>
+              </nodes>
+              <nodes xmi:id="_GEgA9zDEEe--A6kVjhILAg" name="a2" incoming="_KUwVMTDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Activity"/>
+              </nodes>
+              <nodes xmi:id="_GEgoATDEEe--A6kVjhILAg" name="i" incoming="_Jj-_kjDEEe--A6kVjhILAg _RGUIkDDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//InformationObject"/>
+              </nodes>
+              <edges xmi:id="_HOnqsDDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_DEWCoDDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Workflow/activities"/>
+              </edges>
+              <edges xmi:id="_Jj-_kjDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Workflow/informationObjects"/>
+              </edges>
+              <edges xmi:id="_KUwVMTDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgA9zDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Workflow/activities"/>
+              </edges>
+              <edges xmi:id="_RGUIkDDEEe--A6kVjhILAg" source="_DEWCoDDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Activity/encapsulates"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_GEgA9DDEEe--A6kVjhILAg" origin="_A5OO4DDEEe--A6kVjhILAg" image="_GEgA8zDEEe--A6kVjhILAg"/>
+            <mappings xmi:id="_GEgoADDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_GEgA9zDEEe--A6kVjhILAg"/>
+            <mappings xmi:id="_GEgoAjDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_GEgoATDEEe--A6kVjhILAg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_TYniYTDEEe--A6kVjhILAg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_TYniYjDEEe--A6kVjhILAg">
+            <conclusion xmi:id="_TYniYzDEEe--A6kVjhILAg" name="1">
+              <nodes xmi:id="_TYoJcDDEEe--A6kVjhILAg" name="a2" outgoing="_SsW5UDDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Activity"/>
+              </nodes>
+              <nodes xmi:id="_TYoJcjDEEe--A6kVjhILAg" name="i" incoming="_SsW5UDDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//InformationObject"/>
+              </nodes>
+              <edges xmi:id="_SsW5UDDEEe--A6kVjhILAg" source="_TYoJcDDEEe--A6kVjhILAg" target="_TYoJcjDEEe--A6kVjhILAg">
+                <type href="workflow.ecore#//Activity/encapsulates"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_TYoJcTDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_TYoJcDDEEe--A6kVjhILAg"/>
+            <mappings xmi:id="_TYoJczDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_TYoJcjDEEe--A6kVjhILAg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_825o8DDDEe--A6kVjhILAg" name="Rhs">
+      <nodes xmi:id="_A5OO4TDEEe--A6kVjhILAg" name="model" outgoing="_Jj-_kTDEEe--A6kVjhILAg _KUwVMDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_9LXJ8B0jEe-hvJ5qR69nJw" name="t2" incoming="_L0SiMB0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
+      <nodes xmi:id="_D0qsUTDEEe--A6kVjhILAg" name="a2" incoming="_KUwVMDDEEe--A6kVjhILAg _WXMzYDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <edges xmi:id="_AEAyEB0kEe-hvJ5qR69nJw" source="_4ViqgB0jEe-hvJ5qR69nJw" target="_7US6oB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <nodes xmi:id="_EfLB4DDEEe--A6kVjhILAg" name="i" incoming="_Jj-_kTDEEe--A6kVjhILAg" outgoing="_WXMzYDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_Jj-_kTDEEe--A6kVjhILAg" source="_A5OO4TDEEe--A6kVjhILAg" target="_EfLB4DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_CRL0QB0kEe-hvJ5qR69nJw" source="_4ViqgB0jEe-hvJ5qR69nJw" target="_73JwEB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_KUwVMDDEEe--A6kVjhILAg" source="_A5OO4TDEEe--A6kVjhILAg" target="_D0qsUTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_ILoZcB0kEe-hvJ5qR69nJw" source="_4ViqgB0jEe-hvJ5qR69nJw" target="_8xB-YB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_WXMzYDDEEe--A6kVjhILAg" source="_EfLB4DDEEe--A6kVjhILAg" target="_D0qsUTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject/isEncapsulatedBy"/>
       </edges>
-      <edges xmi:id="_L0SiMB0kEe-hvJ5qR69nJw" source="_4ViqgB0jEe-hvJ5qR69nJw" target="_9LXJ8B0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+    </rhs>
+    <mappings xmi:id="_A5OO4jDEEe--A6kVjhILAg" origin="_A5OO4DDEEe--A6kVjhILAg" image="_A5OO4TDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_D0qsUjDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_D0qsUTDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_EfLB4TDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_EfLB4DDEEe--A6kVjhILAg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_dw_rcDDEEe--A6kVjhILAg" name="MoveObjectToNextActivity">
+    <lhs xmi:id="_dxDV0DDEEe--A6kVjhILAg" name="Lhs">
+      <nodes xmi:id="_hrIlwDDEEe--A6kVjhILAg" name="flow" outgoing="_u2XQ8DDEEe--A6kVjhILAg _xrvioDDEEe--A6kVjhILAg _zbHOgDDEEe--A6kVjhILAg _13gYcDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow"/>
+      </nodes>
+      <nodes xmi:id="_oDnKwDDEEe--A6kVjhILAg" name="a1" incoming="_u2XQ8DDEEe--A6kVjhILAg" outgoing="_5kYS0DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_oc7CoDDEEe--A6kVjhILAg" name="a2" incoming="_zbHOgDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_p4Mt0DDEEe--A6kVjhILAg" name="i1" incoming="_xrvioDDEEe--A6kVjhILAg _5kYS0DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <nodes xmi:id="_qUOigDDEEe--A6kVjhILAg" name="i2" incoming="_13gYcDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_u2XQ8DDEEe--A6kVjhILAg" source="_hrIlwDDEEe--A6kVjhILAg" target="_oDnKwDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_TC4P0B0kEe-hvJ5qR69nJw" source="_7US6oB0jEe-hvJ5qR69nJw" target="_8xB-YB0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process/encapsulates"/>
+      <edges xmi:id="_xrvioDDEEe--A6kVjhILAg" source="_hrIlwDDEEe--A6kVjhILAg" target="_p4Mt0DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <formula xsi:type="henshin:NestedCondition" xmi:id="_bdv4cB0mEe-hvJ5qR69nJw">
-        <conclusion xmi:id="_bdv4cR0mEe-hvJ5qR69nJw">
-          <nodes xmi:id="_bdv4ch0mEe-hvJ5qR69nJw" name="t1" outgoing="_PYZ3QB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task"/>
+      <edges xmi:id="_zbHOgDDEEe--A6kVjhILAg" source="_hrIlwDDEEe--A6kVjhILAg" target="_oc7CoDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_13gYcDDEEe--A6kVjhILAg" source="_hrIlwDDEEe--A6kVjhILAg" target="_qUOigDDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
+      </edges>
+      <edges xmi:id="_5kYS0DDEEe--A6kVjhILAg" source="_oDnKwDDEEe--A6kVjhILAg" target="_p4Mt0DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
+      </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="__tKO8DDEEe--A6kVjhILAg">
+        <conclusion xmi:id="__tKO8TDEEe--A6kVjhILAg">
+          <nodes xmi:id="__tKO8jDEEe--A6kVjhILAg" name="a2" outgoing="__ASh4DDEEe--A6kVjhILAg">
+            <type href="workflow.ecore#//Activity"/>
           </nodes>
-          <nodes xmi:id="_bdv4dB0mEe-hvJ5qR69nJw" name="t2" incoming="_PYZ3QB0mEe-hvJ5qR69nJw _cc6PYB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task"/>
+          <nodes xmi:id="__tKO9DDEEe--A6kVjhILAg" name="i2" incoming="__ASh4DDEEe--A6kVjhILAg _CLmnUDDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject"/>
           </nodes>
-          <nodes xmi:id="_cc6PYh0mEe-hvJ5qR69nJw" name="p2" outgoing="_cc6PYB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Process"/>
+          <nodes xmi:id="_CLmnUjDFEe--A6kVjhILAg" name="i1" outgoing="_CLmnUDDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject"/>
           </nodes>
-          <edges xmi:id="_PYZ3QB0mEe-hvJ5qR69nJw" source="_bdv4ch0mEe-hvJ5qR69nJw" target="_bdv4dB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task/sink"/>
+          <edges xmi:id="__ASh4DDEEe--A6kVjhILAg" source="__tKO8jDEEe--A6kVjhILAg" target="__tKO9DDEEe--A6kVjhILAg">
+            <type href="workflow.ecore#//Activity/encapsulates"/>
           </edges>
-          <edges xmi:id="_cc6PYB0mEe-hvJ5qR69nJw" source="_cc6PYh0mEe-hvJ5qR69nJw" target="_bdv4dB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Process/encapsulates"/>
+          <edges xmi:id="_CLmnUDDFEe--A6kVjhILAg" source="_CLmnUjDFEe--A6kVjhILAg" target="__tKO9DDEEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject/sink"/>
           </edges>
         </conclusion>
-        <mappings xmi:id="_bdv4cx0mEe-hvJ5qR69nJw" origin="_8xB-YB0jEe-hvJ5qR69nJw" image="_bdv4ch0mEe-hvJ5qR69nJw"/>
-        <mappings xmi:id="_bdv4dR0mEe-hvJ5qR69nJw" origin="_9LXJ8B0jEe-hvJ5qR69nJw" image="_bdv4dB0mEe-hvJ5qR69nJw"/>
-        <mappings xmi:id="_cc6PYx0mEe-hvJ5qR69nJw" origin="_73JwEB0jEe-hvJ5qR69nJw" image="_cc6PYh0mEe-hvJ5qR69nJw"/>
+        <mappings xmi:id="__tKO8zDEEe--A6kVjhILAg" origin="_oc7CoDDEEe--A6kVjhILAg" image="__tKO8jDEEe--A6kVjhILAg"/>
+        <mappings xmi:id="__tKO9TDEEe--A6kVjhILAg" origin="_qUOigDDEEe--A6kVjhILAg" image="__tKO9DDEEe--A6kVjhILAg"/>
+        <mappings xmi:id="_CLmnUzDFEe--A6kVjhILAg" origin="_p4Mt0DDEEe--A6kVjhILAg" image="_CLmnUjDFEe--A6kVjhILAg"/>
       </formula>
     </lhs>
-    <rhs xmi:id="_zk8pUR0jEe-hvJ5qR69nJw" name="Rhs">
-      <nodes xmi:id="_4ViqgR0jEe-hvJ5qR69nJw" name="flow" outgoing="_AEBZIB0kEe-hvJ5qR69nJw _CRL0QR0kEe-hvJ5qR69nJw _ILoZcR0kEe-hvJ5qR69nJw _L0SiMR0kEe-hvJ5qR69nJw">
+    <rhs xmi:id="_dxDV0TDEEe--A6kVjhILAg" name="Rhs">
+      <nodes xmi:id="_hrIlwTDEEe--A6kVjhILAg" name="flow" outgoing="_u2XQ8TDEEe--A6kVjhILAg _xrvioTDEEe--A6kVjhILAg _zbHOgTDEEe--A6kVjhILAg _13gYcTDEEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_7US6oR0jEe-hvJ5qR69nJw" name="p1" incoming="_AEBZIB0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_oDnKwTDEEe--A6kVjhILAg" name="a1" incoming="_u2XQ8TDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_73JwER0jEe-hvJ5qR69nJw" name="p2" incoming="_CRL0QR0kEe-hvJ5qR69nJw" outgoing="_VqGwwB0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_oc7CoTDEEe--A6kVjhILAg" name="a2" incoming="_zbHOgTDEEe--A6kVjhILAg" outgoing="_7fq60DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_8xB-YR0jEe-hvJ5qR69nJw" name="t1" incoming="_ILoZcR0kEe-hvJ5qR69nJw _VqGwwB0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//FlowObject"/>
+      <nodes xmi:id="_p4Mt0TDEEe--A6kVjhILAg" name="i1" incoming="_xrvioTDEEe--A6kVjhILAg _7fq60DDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <nodes xmi:id="_9LXJ8R0jEe-hvJ5qR69nJw" name="t2" incoming="_L0SiMR0kEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
+      <nodes xmi:id="_qUOigTDEEe--A6kVjhILAg" name="i2" incoming="_13gYcTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <edges xmi:id="_AEBZIB0kEe-hvJ5qR69nJw" source="_4ViqgR0jEe-hvJ5qR69nJw" target="_7US6oR0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_u2XQ8TDEEe--A6kVjhILAg" source="_hrIlwTDEEe--A6kVjhILAg" target="_oDnKwTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_CRL0QR0kEe-hvJ5qR69nJw" source="_4ViqgR0jEe-hvJ5qR69nJw" target="_73JwER0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_xrvioTDEEe--A6kVjhILAg" source="_hrIlwTDEEe--A6kVjhILAg" target="_p4Mt0TDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_ILoZcR0kEe-hvJ5qR69nJw" source="_4ViqgR0jEe-hvJ5qR69nJw" target="_8xB-YR0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_zbHOgTDEEe--A6kVjhILAg" source="_hrIlwTDEEe--A6kVjhILAg" target="_oc7CoTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_L0SiMR0kEe-hvJ5qR69nJw" source="_4ViqgR0jEe-hvJ5qR69nJw" target="_9LXJ8R0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_13gYcTDEEe--A6kVjhILAg" source="_hrIlwTDEEe--A6kVjhILAg" target="_qUOigTDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_VqGwwB0kEe-hvJ5qR69nJw" source="_73JwER0jEe-hvJ5qR69nJw" target="_8xB-YR0jEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process/encapsulates"/>
+      <edges xmi:id="_7fq60DDEEe--A6kVjhILAg" source="_oc7CoTDEEe--A6kVjhILAg" target="_p4Mt0TDEEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
       </edges>
     </rhs>
-    <mappings xmi:id="_4Viqgh0jEe-hvJ5qR69nJw" origin="_4ViqgB0jEe-hvJ5qR69nJw" image="_4ViqgR0jEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_7US6oh0jEe-hvJ5qR69nJw" origin="_7US6oB0jEe-hvJ5qR69nJw" image="_7US6oR0jEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_73JwEh0jEe-hvJ5qR69nJw" origin="_73JwEB0jEe-hvJ5qR69nJw" image="_73JwER0jEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_8xB-Yh0jEe-hvJ5qR69nJw" origin="_8xB-YB0jEe-hvJ5qR69nJw" image="_8xB-YR0jEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_9LXJ8h0jEe-hvJ5qR69nJw" origin="_9LXJ8B0jEe-hvJ5qR69nJw" image="_9LXJ8R0jEe-hvJ5qR69nJw"/>
+    <mappings xmi:id="_hrIlwjDEEe--A6kVjhILAg" origin="_hrIlwDDEEe--A6kVjhILAg" image="_hrIlwTDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_oDnKwjDEEe--A6kVjhILAg" origin="_oDnKwDDEEe--A6kVjhILAg" image="_oDnKwTDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_oc7CojDEEe--A6kVjhILAg" origin="_oc7CoDDEEe--A6kVjhILAg" image="_oc7CoTDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_p4Mt0jDEEe--A6kVjhILAg" origin="_p4Mt0DDEEe--A6kVjhILAg" image="_p4Mt0TDEEe--A6kVjhILAg"/>
+    <mappings xmi:id="_qUOigjDEEe--A6kVjhILAg" origin="_qUOigDDEEe--A6kVjhILAg" image="_qUOigTDEEe--A6kVjhILAg"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_GJK9AB0lEe-hvJ5qR69nJw" name="assignFlowObject">
-    <lhs xmi:id="_GJMLIB0lEe-hvJ5qR69nJw" name="Lhs">
-      <nodes xmi:id="_IhQ1wB0lEe-hvJ5qR69nJw" outgoing="_WWuJsB0lEe-hvJ5qR69nJw _ZWg7oB0lEe-hvJ5qR69nJw">
+  <units xsi:type="henshin:Rule" xmi:id="_JyzpQDDFEe--A6kVjhILAg" name="MoveObjectToPreviouseActivity">
+    <lhs xmi:id="_JyzpQTDFEe--A6kVjhILAg" name="Lhs">
+      <nodes xmi:id="_JyzpQjDFEe--A6kVjhILAg" name="flow" outgoing="_JyzpRzDFEe--A6kVjhILAg _JyzpSDDFEe--A6kVjhILAg _JyzpSTDFEe--A6kVjhILAg _JyzpSjDFEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_LqP_8B0lEe-hvJ5qR69nJw" name="p2" incoming="_WWuJsB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_JyzpQzDFEe--A6kVjhILAg" name="a1" incoming="_JyzpRzDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_N16mQB0lEe-hvJ5qR69nJw" name="f1" incoming="_ZWg7oB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//FlowObject"/>
+      <nodes xmi:id="_JyzpRDDFEe--A6kVjhILAg" name="a2" incoming="_JyzpSTDFEe--A6kVjhILAg" outgoing="_lTq9QDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <edges xmi:id="_WWuJsB0lEe-hvJ5qR69nJw" source="_IhQ1wB0lEe-hvJ5qR69nJw" target="_LqP_8B0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
-      </edges>
-      <edges xmi:id="_ZWg7oB0lEe-hvJ5qR69nJw" source="_IhQ1wB0lEe-hvJ5qR69nJw" target="_N16mQB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
-      </edges>
-      <formula xsi:type="henshin:Not" xmi:id="_Ro6WwB0lEe-hvJ5qR69nJw">
-        <child xsi:type="henshin:NestedCondition" xmi:id="_Ro6WwR0lEe-hvJ5qR69nJw">
-          <conclusion xmi:id="_Ro6Wwh0lEe-hvJ5qR69nJw">
-            <nodes xmi:id="_Ro6Wwx0lEe-hvJ5qR69nJw" outgoing="_WWuJtB0lEe-hvJ5qR69nJw _ZWg7oh0lEe-hvJ5qR69nJw _NaMKADChEe-Rwua_egSIBg">
-              <type href="workflow.ecore#//Workflow"/>
-            </nodes>
-            <nodes xmi:id="_T3AmAh0lEe-hvJ5qR69nJw" incoming="_ZWg7oh0lEe-hvJ5qR69nJw _N3qJIDChEe-Rwua_egSIBg">
-              <type href="workflow.ecore#//FlowObject"/>
-            </nodes>
-            <nodes xmi:id="_WWuJsh0lEe-hvJ5qR69nJw" name="p2" incoming="_WWuJtB0lEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Process"/>
-            </nodes>
-            <nodes xmi:id="_LDLY4B0lEe-hvJ5qR69nJw" name="p1" incoming="_NaMKADChEe-Rwua_egSIBg" outgoing="_N3qJIDChEe-Rwua_egSIBg">
-              <type href="workflow.ecore#//Process"/>
-            </nodes>
-            <edges xmi:id="_WWuJtB0lEe-hvJ5qR69nJw" source="_Ro6Wwx0lEe-hvJ5qR69nJw" target="_WWuJsh0lEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Workflow/processes"/>
-            </edges>
-            <edges xmi:id="_ZWg7oh0lEe-hvJ5qR69nJw" source="_Ro6Wwx0lEe-hvJ5qR69nJw" target="_T3AmAh0lEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Workflow/flowObjects"/>
-            </edges>
-            <edges xmi:id="_NaMKADChEe-Rwua_egSIBg" source="_Ro6Wwx0lEe-hvJ5qR69nJw" target="_LDLY4B0lEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Workflow/processes"/>
-            </edges>
-            <edges xmi:id="_N3qJIDChEe-Rwua_egSIBg" source="_LDLY4B0lEe-hvJ5qR69nJw" target="_T3AmAh0lEe-hvJ5qR69nJw">
-              <type href="workflow.ecore#//Process/encapsulates"/>
-            </edges>
-          </conclusion>
-          <mappings xmi:id="_Ro6WxB0lEe-hvJ5qR69nJw" origin="_IhQ1wB0lEe-hvJ5qR69nJw" image="_Ro6Wwx0lEe-hvJ5qR69nJw"/>
-          <mappings xmi:id="_T3AmAx0lEe-hvJ5qR69nJw" origin="_N16mQB0lEe-hvJ5qR69nJw" image="_T3AmAh0lEe-hvJ5qR69nJw"/>
-          <mappings xmi:id="_WWuJsx0lEe-hvJ5qR69nJw" origin="_LqP_8B0lEe-hvJ5qR69nJw" image="_WWuJsh0lEe-hvJ5qR69nJw"/>
-        </child>
-      </formula>
-    </lhs>
-    <rhs xmi:id="_GJMLIR0lEe-hvJ5qR69nJw" name="Rhs">
-      <nodes xmi:id="_IhQ1wR0lEe-hvJ5qR69nJw" outgoing="_WWuJsR0lEe-hvJ5qR69nJw _ZWg7oR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow"/>
+      <nodes xmi:id="_JyzpRTDFEe--A6kVjhILAg" name="i1" incoming="_JyzpSDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <nodes xmi:id="_LqP_8R0lEe-hvJ5qR69nJw" name="p2" incoming="_WWuJsR0lEe-hvJ5qR69nJw" outgoing="_dtSHkB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_JyzpRjDFEe--A6kVjhILAg" name="i2" incoming="_JyzpSjDFEe--A6kVjhILAg _lTq9QDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <nodes xmi:id="_N16mQR0lEe-hvJ5qR69nJw" name="f1" incoming="_ZWg7oR0lEe-hvJ5qR69nJw _dtSHkB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//FlowObject"/>
-      </nodes>
-      <edges xmi:id="_WWuJsR0lEe-hvJ5qR69nJw" source="_IhQ1wR0lEe-hvJ5qR69nJw" target="_LqP_8R0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_JyzpRzDFEe--A6kVjhILAg" source="_JyzpQjDFEe--A6kVjhILAg" target="_JyzpQzDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_ZWg7oR0lEe-hvJ5qR69nJw" source="_IhQ1wR0lEe-hvJ5qR69nJw" target="_N16mQR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_JyzpSDDFEe--A6kVjhILAg" source="_JyzpQjDFEe--A6kVjhILAg" target="_JyzpRTDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_dtSHkB0lEe-hvJ5qR69nJw" source="_LqP_8R0lEe-hvJ5qR69nJw" target="_N16mQR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process/encapsulates"/>
+      <edges xmi:id="_JyzpSTDFEe--A6kVjhILAg" source="_JyzpQjDFEe--A6kVjhILAg" target="_JyzpRDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-    </rhs>
-    <mappings xmi:id="_IhQ1wh0lEe-hvJ5qR69nJw" origin="_IhQ1wB0lEe-hvJ5qR69nJw" image="_IhQ1wR0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_LqP_8h0lEe-hvJ5qR69nJw" origin="_LqP_8B0lEe-hvJ5qR69nJw" image="_LqP_8R0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_N16mQh0lEe-hvJ5qR69nJw" origin="_N16mQB0lEe-hvJ5qR69nJw" image="_N16mQR0lEe-hvJ5qR69nJw"/>
-  </units>
-  <units xsi:type="henshin:Rule" xmi:id="_l6CtoB0lEe-hvJ5qR69nJw" name="moveTaskBackward">
-    <lhs xmi:id="_l6CtoR0lEe-hvJ5qR69nJw" name="Lhs">
-      <nodes xmi:id="_l6Ctoh0lEe-hvJ5qR69nJw" name="flow" outgoing="_l6Ctpx0lEe-hvJ5qR69nJw _l6CtqB0lEe-hvJ5qR69nJw _l6CtqR0lEe-hvJ5qR69nJw _l6Ctqh0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow"/>
-      </nodes>
-      <nodes xmi:id="_l6Ctox0lEe-hvJ5qR69nJw" name="p1" incoming="_l6Ctpx0lEe-hvJ5qR69nJw" outgoing="_l6Ctqx0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
-      </nodes>
-      <nodes xmi:id="_l6CtpB0lEe-hvJ5qR69nJw" name="p2" incoming="_l6CtqB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
-      </nodes>
-      <nodes xmi:id="_l6CtpR0lEe-hvJ5qR69nJw" name="t1" incoming="_l6CtqR0lEe-hvJ5qR69nJw _l6Ctqx0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
-      </nodes>
-      <nodes xmi:id="_l6Ctph0lEe-hvJ5qR69nJw" name="t2" incoming="_l6Ctqh0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
-      </nodes>
-      <edges xmi:id="_l6Ctpx0lEe-hvJ5qR69nJw" source="_l6Ctoh0lEe-hvJ5qR69nJw" target="_l6Ctox0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_JyzpSjDFEe--A6kVjhILAg" source="_JyzpQjDFEe--A6kVjhILAg" target="_JyzpRjDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_l6CtqB0lEe-hvJ5qR69nJw" source="_l6Ctoh0lEe-hvJ5qR69nJw" target="_l6CtpB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_lTq9QDDFEe--A6kVjhILAg" source="_JyzpRDDFEe--A6kVjhILAg" target="_JyzpRjDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
       </edges>
-      <edges xmi:id="_l6CtqR0lEe-hvJ5qR69nJw" source="_l6Ctoh0lEe-hvJ5qR69nJw" target="_l6CtpR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
-      </edges>
-      <edges xmi:id="_l6Ctqh0lEe-hvJ5qR69nJw" source="_l6Ctoh0lEe-hvJ5qR69nJw" target="_l6Ctph0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
-      </edges>
-      <edges xmi:id="_l6Ctqx0lEe-hvJ5qR69nJw" source="_l6Ctox0lEe-hvJ5qR69nJw" target="_l6CtpR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process/encapsulates"/>
-      </edges>
-      <formula xsi:type="henshin:NestedCondition" xmi:id="_kz_2IB0mEe-hvJ5qR69nJw">
-        <conclusion xmi:id="_kz_2IR0mEe-hvJ5qR69nJw">
-          <nodes xmi:id="_kz_2Ih0mEe-hvJ5qR69nJw" name="p2" outgoing="_kYN5EB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Process"/>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_rDaHQDDFEe--A6kVjhILAg">
+        <conclusion xmi:id="_rDaHQTDFEe--A6kVjhILAg">
+          <nodes xmi:id="_rDaHQjDFEe--A6kVjhILAg" name="i2" incoming="_7pER8DDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject"/>
           </nodes>
-          <nodes xmi:id="_kz_2JB0mEe-hvJ5qR69nJw" name="t2" incoming="_kYN5EB0mEe-hvJ5qR69nJw" outgoing="_Ed5cEB0nEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task"/>
+          <nodes xmi:id="_rDaHRDDFEe--A6kVjhILAg" name="i1" incoming="_v1GUoDDFEe--A6kVjhILAg" outgoing="_7pER8DDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject"/>
           </nodes>
-          <nodes xmi:id="_Ed5cEh0nEe-hvJ5qR69nJw" name="t1" incoming="_Ed5cEB0nEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task"/>
+          <nodes xmi:id="_tFJ8kjDFEe--A6kVjhILAg" name="a1" outgoing="_v1GUoDDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//Activity"/>
           </nodes>
-          <edges xmi:id="_kYN5EB0mEe-hvJ5qR69nJw" source="_kz_2Ih0mEe-hvJ5qR69nJw" target="_kz_2JB0mEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Process/encapsulates"/>
+          <edges xmi:id="_v1GUoDDFEe--A6kVjhILAg" source="_tFJ8kjDFEe--A6kVjhILAg" target="_rDaHRDDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//Activity/encapsulates"/>
           </edges>
-          <edges xmi:id="_Ed5cEB0nEe-hvJ5qR69nJw" source="_kz_2JB0mEe-hvJ5qR69nJw" target="_Ed5cEh0nEe-hvJ5qR69nJw">
-            <type href="workflow.ecore#//Task/sink"/>
+          <edges xmi:id="_7pER8DDFEe--A6kVjhILAg" source="_rDaHRDDFEe--A6kVjhILAg" target="_rDaHQjDFEe--A6kVjhILAg">
+            <type href="workflow.ecore#//InformationObject/sink"/>
           </edges>
         </conclusion>
-        <mappings xmi:id="_kz_2Ix0mEe-hvJ5qR69nJw" origin="_l6CtpB0lEe-hvJ5qR69nJw" image="_kz_2Ih0mEe-hvJ5qR69nJw"/>
-        <mappings xmi:id="_kz_2JR0mEe-hvJ5qR69nJw" origin="_l6Ctph0lEe-hvJ5qR69nJw" image="_kz_2JB0mEe-hvJ5qR69nJw"/>
-        <mappings xmi:id="_Ed5cEx0nEe-hvJ5qR69nJw" origin="_l6CtpR0lEe-hvJ5qR69nJw" image="_Ed5cEh0nEe-hvJ5qR69nJw"/>
+        <mappings xmi:id="_rDaHQzDFEe--A6kVjhILAg" origin="_JyzpRjDFEe--A6kVjhILAg" image="_rDaHQjDFEe--A6kVjhILAg"/>
+        <mappings xmi:id="_rDaHRTDFEe--A6kVjhILAg" origin="_JyzpRTDFEe--A6kVjhILAg" image="_rDaHRDDFEe--A6kVjhILAg"/>
+        <mappings xmi:id="_tFJ8kzDFEe--A6kVjhILAg" origin="_JyzpQzDFEe--A6kVjhILAg" image="_tFJ8kjDFEe--A6kVjhILAg"/>
       </formula>
     </lhs>
-    <rhs xmi:id="_l6CtrB0lEe-hvJ5qR69nJw" name="Rhs">
-      <nodes xmi:id="_l6CtrR0lEe-hvJ5qR69nJw" name="flow" outgoing="_l6Ctsh0lEe-hvJ5qR69nJw _l6Ctsx0lEe-hvJ5qR69nJw _l6CttB0lEe-hvJ5qR69nJw _l6CttR0lEe-hvJ5qR69nJw">
+    <rhs xmi:id="_JyzpVjDFEe--A6kVjhILAg" name="Rhs">
+      <nodes xmi:id="_JyzpVzDFEe--A6kVjhILAg" name="flow" outgoing="_JyzpXDDFEe--A6kVjhILAg _JyzpXTDFEe--A6kVjhILAg _JyzpXjDFEe--A6kVjhILAg _JyzpXzDFEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_l6Ctrh0lEe-hvJ5qR69nJw" name="p1" incoming="_l6Ctsh0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_JyzpWDDFEe--A6kVjhILAg" name="a1" incoming="_JyzpXDDFEe--A6kVjhILAg" outgoing="_tFJ8kDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_l6Ctrx0lEe-hvJ5qR69nJw" name="p2" incoming="_l6Ctsx0lEe-hvJ5qR69nJw" outgoing="_l6Ctth0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_JyzpWTDFEe--A6kVjhILAg" name="a2" incoming="_JyzpXjDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_l6CtsB0lEe-hvJ5qR69nJw" name="t1" incoming="_l6CttB0lEe-hvJ5qR69nJw _l6Ctth0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
+      <nodes xmi:id="_JyzpWjDFEe--A6kVjhILAg" name="i1" incoming="_JyzpXTDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <nodes xmi:id="_l6CtsR0lEe-hvJ5qR69nJw" name="t2" incoming="_l6CttR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Task"/>
+      <nodes xmi:id="_JyzpWzDFEe--A6kVjhILAg" name="i2" incoming="_JyzpXzDFEe--A6kVjhILAg _tFJ8kDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
       </nodes>
-      <edges xmi:id="_l6Ctsh0lEe-hvJ5qR69nJw" source="_l6CtrR0lEe-hvJ5qR69nJw" target="_l6Ctrh0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_JyzpXDDFEe--A6kVjhILAg" source="_JyzpVzDFEe--A6kVjhILAg" target="_JyzpWDDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_l6Ctsx0lEe-hvJ5qR69nJw" source="_l6CtrR0lEe-hvJ5qR69nJw" target="_l6Ctrx0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <edges xmi:id="_JyzpXTDFEe--A6kVjhILAg" source="_JyzpVzDFEe--A6kVjhILAg" target="_JyzpWjDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_l6CttB0lEe-hvJ5qR69nJw" source="_l6CtrR0lEe-hvJ5qR69nJw" target="_l6CtsB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_JyzpXjDFEe--A6kVjhILAg" source="_JyzpVzDFEe--A6kVjhILAg" target="_JyzpWTDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
       </edges>
-      <edges xmi:id="_l6CttR0lEe-hvJ5qR69nJw" source="_l6CtrR0lEe-hvJ5qR69nJw" target="_l6CtsR0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/flowObjects"/>
+      <edges xmi:id="_JyzpXzDFEe--A6kVjhILAg" source="_JyzpVzDFEe--A6kVjhILAg" target="_JyzpWzDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
       </edges>
-      <edges xmi:id="_l6Ctth0lEe-hvJ5qR69nJw" source="_l6Ctrx0lEe-hvJ5qR69nJw" target="_l6CtsB0lEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process/encapsulates"/>
+      <edges xmi:id="_tFJ8kDDFEe--A6kVjhILAg" source="_JyzpWDDFEe--A6kVjhILAg" target="_JyzpWzDFEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
       </edges>
     </rhs>
-    <mappings xmi:id="_l6Cttx0lEe-hvJ5qR69nJw" origin="_l6Ctoh0lEe-hvJ5qR69nJw" image="_l6CtrR0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_l6CtuB0lEe-hvJ5qR69nJw" origin="_l6Ctox0lEe-hvJ5qR69nJw" image="_l6Ctrh0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_l6CtuR0lEe-hvJ5qR69nJw" origin="_l6CtpB0lEe-hvJ5qR69nJw" image="_l6Ctrx0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_l6Ctuh0lEe-hvJ5qR69nJw" origin="_l6CtpR0lEe-hvJ5qR69nJw" image="_l6CtsB0lEe-hvJ5qR69nJw"/>
-    <mappings xmi:id="_l6Ctux0lEe-hvJ5qR69nJw" origin="_l6Ctph0lEe-hvJ5qR69nJw" image="_l6CtsR0lEe-hvJ5qR69nJw"/>
+    <mappings xmi:id="_JyzpYTDFEe--A6kVjhILAg" origin="_JyzpQjDFEe--A6kVjhILAg" image="_JyzpVzDFEe--A6kVjhILAg"/>
+    <mappings xmi:id="_JyzpYjDFEe--A6kVjhILAg" origin="_JyzpQzDFEe--A6kVjhILAg" image="_JyzpWDDFEe--A6kVjhILAg"/>
+    <mappings xmi:id="_JyzpYzDFEe--A6kVjhILAg" origin="_JyzpRDDFEe--A6kVjhILAg" image="_JyzpWTDFEe--A6kVjhILAg"/>
+    <mappings xmi:id="_JyzpZDDFEe--A6kVjhILAg" origin="_JyzpRTDFEe--A6kVjhILAg" image="_JyzpWjDFEe--A6kVjhILAg"/>
+    <mappings xmi:id="_JyzpZTDFEe--A6kVjhILAg" origin="_JyzpRjDFEe--A6kVjhILAg" image="_JyzpWzDFEe--A6kVjhILAg"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_e-ov0B0nEe-hvJ5qR69nJw" name="createNewProcessModule">
-    <lhs xmi:id="_e-ov0R0nEe-hvJ5qR69nJw" name="Lhs">
-      <nodes xmi:id="_e-ov0h0nEe-hvJ5qR69nJw" name="flow">
+  <units xsi:type="henshin:Rule" xmi:id="_kMxKIDDGEe--A6kVjhILAg" name="extractObject">
+    <lhs xmi:id="_kM00gDDGEe--A6kVjhILAg" name="Lhs">
+      <nodes xmi:id="_p0IbQDDGEe--A6kVjhILAg" name="flow" outgoing="_2IPRMDDGEe--A6kVjhILAg _4qhnwDDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
+      <nodes xmi:id="_tNF7IDDGEe--A6kVjhILAg" incoming="_2IPRMDDGEe--A6kVjhILAg" outgoing="_wyQD8DDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_vATlMDDGEe--A6kVjhILAg" incoming="_wyQD8DDGEe--A6kVjhILAg _4qhnwDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_wyQD8DDGEe--A6kVjhILAg" source="_tNF7IDDGEe--A6kVjhILAg" target="_vATlMDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
+      </edges>
+      <edges xmi:id="_2IPRMDDGEe--A6kVjhILAg" source="_p0IbQDDGEe--A6kVjhILAg" target="_tNF7IDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_4qhnwDDGEe--A6kVjhILAg" source="_p0IbQDDGEe--A6kVjhILAg" target="_vATlMDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
+      </edges>
     </lhs>
-    <rhs xmi:id="_e-ov4R0nEe-hvJ5qR69nJw" name="Rhs">
-      <nodes xmi:id="_e-ov4h0nEe-hvJ5qR69nJw" name="flow" outgoing="_e-ov5h0nEe-hvJ5qR69nJw">
+    <rhs xmi:id="_kM00gTDGEe--A6kVjhILAg" name="Rhs">
+      <nodes xmi:id="_p0IbQTDGEe--A6kVjhILAg" name="flow" outgoing="_2IPRMTDGEe--A6kVjhILAg _4qhnwTDGEe--A6kVjhILAg _83G88DDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//Workflow"/>
       </nodes>
-      <nodes xmi:id="_e-ov0x0nEe-hvJ5qR69nJw" incoming="_e-ov5h0nEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Process"/>
+      <nodes xmi:id="_tNF7ITDGEe--A6kVjhILAg" incoming="_2IPRMTDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <edges xmi:id="_e-ov5h0nEe-hvJ5qR69nJw" source="_e-ov4h0nEe-hvJ5qR69nJw" target="_e-ov0x0nEe-hvJ5qR69nJw">
-        <type href="workflow.ecore#//Workflow/processes"/>
+      <nodes xmi:id="_vATlMTDGEe--A6kVjhILAg" incoming="_4qhnwTDGEe--A6kVjhILAg __2uIsDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//InformationObject"/>
+      </nodes>
+      <nodes xmi:id="_7P7jwDDGEe--A6kVjhILAg" incoming="_83G88DDGEe--A6kVjhILAg" outgoing="__2uIsDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity"/>
+      </nodes>
+      <edges xmi:id="_2IPRMTDGEe--A6kVjhILAg" source="_p0IbQTDGEe--A6kVjhILAg" target="_tNF7ITDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_4qhnwTDGEe--A6kVjhILAg" source="_p0IbQTDGEe--A6kVjhILAg" target="_vATlMTDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/informationObjects"/>
+      </edges>
+      <edges xmi:id="_83G88DDGEe--A6kVjhILAg" source="_p0IbQTDGEe--A6kVjhILAg" target="_7P7jwDDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="__2uIsDDGEe--A6kVjhILAg" source="_7P7jwDDGEe--A6kVjhILAg" target="_vATlMTDGEe--A6kVjhILAg">
+        <type href="workflow.ecore#//Activity/encapsulates"/>
       </edges>
     </rhs>
-    <mappings xmi:id="_e-ov6B0nEe-hvJ5qR69nJw" origin="_e-ov0h0nEe-hvJ5qR69nJw" image="_e-ov4h0nEe-hvJ5qR69nJw"/>
+    <mappings xmi:id="_p0IbQjDGEe--A6kVjhILAg" origin="_p0IbQDDGEe--A6kVjhILAg" image="_p0IbQTDGEe--A6kVjhILAg"/>
+    <mappings xmi:id="_tNF7IjDGEe--A6kVjhILAg" origin="_tNF7IDDGEe--A6kVjhILAg" image="_tNF7ITDGEe--A6kVjhILAg"/>
+    <mappings xmi:id="_vATlMjDGEe--A6kVjhILAg" origin="_vATlMDDGEe--A6kVjhILAg" image="_vATlMTDGEe--A6kVjhILAg"/>
   </units>
 </henshin:Module>

@@ -4,44 +4,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FlowObject" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="isEncapsulatedBy" lowerBound="1"
-        eType="#//Process" eOpposite="#//Process/encapsulates"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Workflow">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flowObjects" upperBound="-1"
-        eType="#//FlowObject" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="processes" upperBound="-1"
-        eType="#//Process" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informationObjects" upperBound="-1"
+        eType="#//InformationObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//FlowObject" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1" eType="#//FlowObject"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="encapsulates" upperBound="-1"
-        eType="#//FlowObject" eOpposite="#//FlowObject/isEncapsulatedBy"/>
+        eType="#//InformationObject" eOpposite="#//InformationObject/isEncapsulatedBy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Gateway" eSuperTypes="#//FlowObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        upperBound="-1" eType="#//FlowObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1" upperBound="-1"
-        eType="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationObject" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isEncapsulatedBy" eType="#//Activity"
+        eOpposite="#//Activity/encapsulates"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" upperBound="-1"
+        eType="#//InformationObject" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" upperBound="-1" eType="#//InformationObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Exclusive" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//FlowObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="2" upperBound="2"
-        eType="#//FlowObject"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventType" lowerBound="1"
-        eType="#//EventType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EventType">
-    <eLiterals name="Start"/>
-    <eLiterals name="End" value="1"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//InformationObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//InformationObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exclusive" eSuperTypes="#//InformationObject"/>
 </ecore:EPackage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_-PPxYDDCEe-MQ8cLOEyMdQ">
+  <imports href="workflow.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="__ilBgDDCEe-MQ8cLOEyMdQ" name="createNewActivity">
+    <lhs xmi:id="__indwDDCEe-MQ8cLOEyMdQ" name="Lhs">
+      <nodes xmi:id="_BlpFcDDDEe-MQ8cLOEyMdQ" name="flow">
+        <type href="workflow.ecore#//Workflow"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="__ioE0DDCEe-MQ8cLOEyMdQ" name="Rhs">
+      <nodes xmi:id="_Blq6oDDDEe-MQ8cLOEyMdQ" name="flow">
+        <type href="workflow.ecore#//Workflow"/>
+      </nodes>
+      <nodes xmi:id="_EAGVsDDDEe-MQ8cLOEyMdQ">
+        <type href="../bin/workflow.ecore#//Activity"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Blq6oTDDEe-MQ8cLOEyMdQ" origin="_BlpFcDDDEe-MQ8cLOEyMdQ" image="_Blq6oDDDEe-MQ8cLOEyMdQ"/>
+  </units>
+</henshin:Module>
