@@ -1,0 +1,5 @@
+package workflow.fitness;
+
+public class MaximiseTasksInActivity {
+
+}
