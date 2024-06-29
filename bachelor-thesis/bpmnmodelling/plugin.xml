@@ -10,7 +10,7 @@
       <!-- @generated workflow -->
       <package
             uri="http://bpmnmodelling/workflow"
-            class="workflow.WorkflowPackage"
+            class="model.workflow.WorkflowPackage"
             genModel="src/workflow.genmodel"/>
    </extension>
 

@@ -1,11 +1,11 @@
 problem {
 	basepath <src/>
-	metamodel <workflow.WorkflowPackage>
+	metamodel <model.workflow.WorkflowPackage>
 	model <Workflow.xmi>
 }
 goal {
-	objective Workflow maximise java { "workflow.fitness.MaximiseTasksInActivity" }
-	constraint EmptyConstraint java {"workflow.fitness.EmptyConstraint"}
+	objective Workflow maximise java { "model.workflow.fitness.MaximiseTasksInActivity" }
+	constraint EmptyConstraint java {"model.workflow.fitness.EmptyConstraint"}
 }
 search { 
 	mutate using <workflow.henshin> unit "createNewActivity"

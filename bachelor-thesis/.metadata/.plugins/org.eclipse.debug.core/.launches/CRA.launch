@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="uk.ac.kcl.ui.mdeo.launchConfiguration">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/bpmnmodelling"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
     <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="bpmnmodelling"/>
     <stringAttribute key="uk.ac.kcl.mdeoptimiser.launch.mopt_source_path" value="/bpmnmodelling/src/workflow_rules.mopt"/>
