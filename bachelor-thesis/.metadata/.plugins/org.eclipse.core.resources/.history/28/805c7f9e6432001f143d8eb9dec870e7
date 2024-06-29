@@ -351,7 +351,7 @@
       <nodes xmi:id="_tNF7IDDGEe--A6kVjhILAg" incoming="_2IPRMDDGEe--A6kVjhILAg" outgoing="_wyQD8DDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_vATlMDDGEe--A6kVjhILAg" name="i1" incoming="_wyQD8DDGEe--A6kVjhILAg _4qhnwDDGEe--A6kVjhILAg">
+      <nodes xmi:id="_vATlMDDGEe--A6kVjhILAg" incoming="_wyQD8DDGEe--A6kVjhILAg _4qhnwDDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//InformationObject"/>
       </nodes>
       <edges xmi:id="_wyQD8DDGEe--A6kVjhILAg" source="_tNF7IDDGEe--A6kVjhILAg" target="_vATlMDDGEe--A6kVjhILAg">
@@ -375,7 +375,7 @@
             <nodes xmi:id="_hA3eojJiEe-NzPCO40slWQ" name="flow" outgoing="_7-cC4DJjEe-NzPCO40slWQ _7-cC4TJjEe-NzPCO40slWQ">
               <type href="workflow.ecore#//Workflow"/>
             </nodes>
-            <nodes xmi:id="_I797MDJiEe-NzPCO40slWQ" name="i2" incoming="_8uaHQDJjEe-NzPCO40slWQ _Clf2cDJkEe-NzPCO40slWQ">
+            <nodes xmi:id="_I797MDJiEe-NzPCO40slWQ" incoming="_8uaHQDJjEe-NzPCO40slWQ _Clf2cDJkEe-NzPCO40slWQ">
               <type href="workflow.ecore#//InformationObject"/>
             </nodes>
             <edges xmi:id="_7-cC4DJjEe-NzPCO40slWQ" source="_hA3eojJiEe-NzPCO40slWQ" target="_WUnXUzJiEe-NzPCO40slWQ">
@@ -407,7 +407,7 @@
       <nodes xmi:id="_tNF7ITDGEe--A6kVjhILAg" incoming="_2IPRMTDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//Activity"/>
       </nodes>
-      <nodes xmi:id="_vATlMTDGEe--A6kVjhILAg" name="i1" incoming="_4qhnwTDGEe--A6kVjhILAg __2uIsDDGEe--A6kVjhILAg">
+      <nodes xmi:id="_vATlMTDGEe--A6kVjhILAg" incoming="_4qhnwTDGEe--A6kVjhILAg __2uIsDDGEe--A6kVjhILAg">
         <type href="workflow.ecore#//InformationObject"/>
       </nodes>
       <nodes xmi:id="_7P7jwDDGEe--A6kVjhILAg" incoming="_83G88DDGEe--A6kVjhILAg" outgoing="__2uIsDDGEe--A6kVjhILAg">
