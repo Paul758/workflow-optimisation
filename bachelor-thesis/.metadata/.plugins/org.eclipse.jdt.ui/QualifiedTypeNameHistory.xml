@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="workflow.Workflow"/>
+    <fullyQualifiedTypeName name="workflow.Activity"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="workflow.InformationObject"/>
+    <fullyQualifiedTypeName name="workflow.Task"/>
+    <fullyQualifiedTypeName name="uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction"/>
+</qualifiedTypeNameHistroy>
