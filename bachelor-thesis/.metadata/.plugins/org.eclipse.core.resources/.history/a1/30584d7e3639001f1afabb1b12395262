@@ -2,7 +2,6 @@ package model.workflow.fitness;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import model.workflow.Activity;
 import model.workflow.InformationObject;
@@ -60,47 +59,16 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 		int totalTasks = 0;
 		int totalActivities = activities.size();
 		
-		List<Double> activityRelationCohesionValues = new ArrayList<Double>();
-		
-		//Iterate over all activities in the workflow
 		for (int i = 0; i < activities.size(); i++) {
 			Activity currentActivity = activities.get(i);
 			List<Task> tasks = getTasksFromActivity(currentActivity);
 			
-			//Compare all tasks to each other
 			for (int j = 0; j < tasks.size(); i++) {
-				int relationCounter = 0;
-				Task pTask = tasks.get(j);
-				for(int k = 0; k < tasks.size(); k++) {
-					Task qTask = tasks.get(k);
-					//Skip same tasks
-					if(pTask.equals(qTask)) {
-						continue;
-					}
-					//Construct operations
-					Set<Task> pOperation = getInputTasks(pTask);
-					pOperation.add(pTask);
-					Set<Task> qOperation = getInputTasks(qTask);
-					qOperation.add(qTask);
-					
-					pOperation.retainAll(qOperation);
-					
-					if(!pOperation.isEmpty()) {
-						relationCounter++;
-					}
-				}
+				
 			}
-			
-			//Calculate activity relation cohesion value for this activity
-			
 		}
 		
 		return 0;
-	}
-
-	private Set<Task> getInputTasks(Task pTask) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	private List<Task> getTasksFromActivity(Activity currentActivity) {

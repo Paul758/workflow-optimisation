@@ -82,7 +82,6 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 					pOperation.add(pTask);
 					Set<Task> qOperation = getInputTasks(qTask);
 					qOperation.add(qTask);
-					
 					pOperation.retainAll(qOperation);
 					
 					if(!pOperation.isEmpty()) {

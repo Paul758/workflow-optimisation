@@ -77,22 +77,16 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 					if(pTask.equals(qTask)) {
 						continue;
 					}
-					//Construct operations
-					Set<Task> pOperation = getInputTasks(pTask);
-					pOperation.add(pTask);
-					Set<Task> qOperation = getInputTasks(qTask);
-					qOperation.add(qTask);
+					Set<Task> pInputTasks = getInputTasks(pTask);
+					Set<Task> qInputTasks = getInputTasks(qTask);
 					
-					pOperation.retainAll(qOperation);
+					pInputTasks.retainAll(qInputTasks);
 					
-					if(!pOperation.isEmpty()) {
+					if(!pInputTasks.isEmpty()) {
 						relationCounter++;
 					}
 				}
 			}
-			
-			//Calculate activity relation cohesion value for this activity
-			
 		}
 		
 		return 0;

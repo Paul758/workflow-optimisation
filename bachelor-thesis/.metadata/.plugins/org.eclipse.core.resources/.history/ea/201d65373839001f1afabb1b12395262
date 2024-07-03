@@ -60,8 +60,6 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 		int totalTasks = 0;
 		int totalActivities = activities.size();
 		
-		List<Double> activityRelationCohesionValues = new ArrayList<Double>();
-		
 		//Iterate over all activities in the workflow
 		for (int i = 0; i < activities.size(); i++) {
 			Activity currentActivity = activities.get(i);
@@ -69,7 +67,7 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 			
 			//Compare all tasks to each other
 			for (int j = 0; j < tasks.size(); i++) {
-				int relationCounter = 0;
+				int relationCounter;
 				Task pTask = tasks.get(j);
 				for(int k = 0; k < tasks.size(); k++) {
 					Task qTask = tasks.get(k);
@@ -77,22 +75,16 @@ public class MaximiseTasksInActivity implements IGuidanceFunction {
 					if(pTask.equals(qTask)) {
 						continue;
 					}
-					//Construct operations
-					Set<Task> pOperation = getInputTasks(pTask);
-					pOperation.add(pTask);
-					Set<Task> qOperation = getInputTasks(qTask);
-					qOperation.add(qTask);
+					Set<Task> pInputTasks = getInputTasks(pTask);
+					Set<Task> qInputTasks = getInputTasks(qTask);
 					
-					pOperation.retainAll(qOperation);
+					pInputTasks.retainAll(qInputTasks);
 					
-					if(!pOperation.isEmpty()) {
+					if(!pInputTasks.isEmpty()) {
 						relationCounter++;
 					}
 				}
 			}
-			
-			//Calculate activity relation cohesion value for this activity
-			
 		}
 		
 		return 0;
