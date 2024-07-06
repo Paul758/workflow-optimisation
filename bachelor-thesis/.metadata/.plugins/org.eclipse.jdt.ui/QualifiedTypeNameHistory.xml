@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="workflow.InformationObject"/>
     <fullyQualifiedTypeName name="workflow.Task"/>
     <fullyQualifiedTypeName name="uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>
