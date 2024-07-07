@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<workflow:Workflow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:workflow="http://bpmnmodelling/workflow" xsi:schemaLocation="http://bpmnmodelling/workflow workflow.ecore">
-  <informationObjects xsi:type="workflow:Task" name="T1" isEncapsulatedBy="//@activities.2" sink="//@informationObjects.1"/>
-  <informationObjects xsi:type="workflow:Task" name="T2" isEncapsulatedBy="//@activities.1" source="//@informationObjects.0" sink="//@informationObjects.2"/>
-  <informationObjects xsi:type="workflow:Task" name="T3" isEncapsulatedBy="//@activities.1" source="//@informationObjects.1"/>
-  <activities name="A1"/>
-  <activities name="A2" encapsulates="//@informationObjects.2 //@informationObjects.1"/>
-  <activities encapsulates="//@informationObjects.0"/>
-</workflow:Workflow>

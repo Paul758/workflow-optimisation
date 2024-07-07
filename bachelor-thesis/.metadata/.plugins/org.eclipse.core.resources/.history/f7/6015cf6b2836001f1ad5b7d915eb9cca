@@ -1,5 +1,0 @@
-package workflow.fitness;
-
-public class EmptyConstraint {
-
-}

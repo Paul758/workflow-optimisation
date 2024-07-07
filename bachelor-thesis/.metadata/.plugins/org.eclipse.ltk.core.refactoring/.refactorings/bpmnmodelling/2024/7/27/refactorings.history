@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;pInputTasks&apos; in &apos;model.workflow.fitness.MaximiseTasksInActivity.activityRelationCohesion(...)&apos; to &apos;pOperation&apos;&#x0D;&#x0A;- Original project: &apos;bpmnmodelling&apos;&#x0D;&#x0A;- Original element: &apos;model.workflow.fitness.MaximiseTasksInActivity.activityRelationCohesion(Solution).pInputTasks&apos;&#x0D;&#x0A;- Renamed element: &apos;pInputTasks&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pInputTasks&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;model.workflow.fitness{MaximiseTasksInActivity.java[MaximiseTasksInActivity~activityRelationCohesion~QSolution;@pInputTasks!2377!2421!2387!2397!QSet\&lt;QTask;&gt;;!0!false" name="pOperation" references="true" stamp="1720010688513" version="1.0"/>
-</session>

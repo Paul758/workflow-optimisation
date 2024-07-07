@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;processloan/process.ecore&apos; to &apos;BPMN.ecore&apos;" description="Rename resource &apos;process.ecore&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="process.ecore" name="BPMN.ecore" stamp="1716323114054" updateReferences="true"/>
-</session>
