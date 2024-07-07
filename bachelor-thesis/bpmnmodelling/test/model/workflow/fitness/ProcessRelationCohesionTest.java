@@ -16,11 +16,13 @@ import model.workflow.Parallel;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
+import model.workflow.fitness.relationcohesion.ActivityRelationCohesion;
+import model.workflow.fitness.relationcohesion.ProcessRelationCohesion;
 
-class ActivityRelationCohesionTest {
+class ProcessRelationCohesionTest {
 	
 	ActivityRelationCohesion activityRelationCohesion;
-	
+	ProcessRelationCohesion processRelationCohesion;
 	Workflow workflow;
 	Activity activity1;
 	Activity activity2;
@@ -42,6 +44,7 @@ class ActivityRelationCohesionTest {
 	void setUp() {
 		System.out.println("Run Before");
 		activityRelationCohesion = new ActivityRelationCohesion();
+		processRelationCohesion = new ProcessRelationCohesion();
 		
 		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		
@@ -95,25 +98,7 @@ class ActivityRelationCohesionTest {
 	}
 	
 	@Test
-	void testGetInputTasks1() throws Exception {
-		parallel1.getSource().add(task1);
-		parallel1.getSource().add(task2);
-		
-		parallel2.getSource().add(parallel1);
-		
-		task3.getSource().add(parallel2);
-		
-		Method method = ActivityRelationCohesion.class.getDeclaredMethod("getInputTasks", InformationObject.class);
-		method.setAccessible(true);
-		
-		HashSet<Task> inputTasks = (HashSet<Task>) method.invoke(activityRelationCohesion, task3);
-		
-		assertEquals(2, inputTasks.size());
-		assertTrue(inputTasks.contains(task1) && inputTasks.contains(task2));
-	}
-	
-	@Test
-	void testActivityRelationCohesion() throws Exception {
+	void processRelationCohesion() throws Exception {
 		//Setup activity 1
 		activity1.getEncapsulates().add(task1);
 		activity1.getEncapsulates().add(task2);
@@ -153,16 +138,16 @@ class ActivityRelationCohesionTest {
 		workflow.getActivities().add(activity2);
 		workflow.getActivities().add(activity3);
 		
-		double activityRelationCohesionFitness = 0;
+		double processRelationCohesionFitness = 0;
 		
-		Method method = ActivityRelationCohesion.class.getDeclaredMethod("calculateActivityRelationCohesion", Workflow.class);
+		Method method = ProcessRelationCohesion.class.getDeclaredMethod("calculateProcessRelationCohesion", Workflow.class);
 		method.setAccessible(true);
 		
-		activityRelationCohesionFitness = (double) method.invoke(activityRelationCohesion, workflow);
+		processRelationCohesionFitness = (double) method.invoke(processRelationCohesion, workflow);
 		
-		System.out.println("Activity Relation Cohesion is: " + activityRelationCohesionFitness);
+		System.out.println("Process Relation Cohesion is: " + processRelationCohesionFitness);
 		double result = 5.0d/9.0d;
-		assertEquals(result, activityRelationCohesionFitness, 0.01);
+		assertEquals(result, processRelationCohesionFitness, 0.01);
 		
 	}
 	
