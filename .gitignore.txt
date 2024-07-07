@@ -1,3 +1,7 @@
+bachelor-thesis/.metadata/*
+bachelor-thesis/.metadata/**
+.metadata/**
+.metadata/*
 .metadata/
 .metadata/
 */bachelor-thesis/.metadata
