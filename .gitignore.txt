@@ -1,3 +1,8 @@
+.metadata/
+*/bachelor-thesis/.metadata
+*/bachelor-thesis/.metadata/
+bachelor-thesis/.metadata/
+bachelor-thesis/.metadata
 # Java related
 target/**
 *.jar
