@@ -1,4 +1,4 @@
-.metadata
+bachelor-thesis/.metadata
 bin/
 tmp/
 *.tmp
