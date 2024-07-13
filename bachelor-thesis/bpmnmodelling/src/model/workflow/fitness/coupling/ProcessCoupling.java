@@ -30,7 +30,6 @@ public class ProcessCoupling implements IGuidanceFunction {
 			}
 		}
 		
-		
 		return connectedCounter / (totalActivities * (totalActivities - 1));
 	}
 

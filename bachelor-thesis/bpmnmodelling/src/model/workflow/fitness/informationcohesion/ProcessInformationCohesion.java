@@ -14,6 +14,10 @@ public class ProcessInformationCohesion implements IGuidanceFunction {
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();
+		return calculateProcessInformationCohesion(workflow);
+	}
+	
+	private double calculateProcessInformationCohesion(Workflow workflow) {
 		List<Activity> activities = workflow.getActivities();
 		double totalActivities = activities.size();
 		double totalActivityInformationCohesion = 0;
@@ -24,7 +28,7 @@ public class ProcessInformationCohesion implements IGuidanceFunction {
 		
 		return totalActivityInformationCohesion / totalActivities;
 	}
-
+	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub

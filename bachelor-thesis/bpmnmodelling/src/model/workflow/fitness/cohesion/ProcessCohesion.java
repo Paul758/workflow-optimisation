@@ -11,9 +11,17 @@ public class ProcessCohesion implements IGuidanceFunction {
 
 	ActivityCohesion activityCohesion = new ActivityCohesion();
 	
+	/**
+	 * Calculate the process cohesion by summing up the activity cohesion for each activity and then dividing it by all acitivities
+	 * resulting in the mean
+	 */
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();
+		return calculateProcessCohesion(workflow);
+	}
+	
+	private double calculateProcessCohesion(Workflow workflow) {
 		List<Activity> activities = workflow.getActivities();
 		double totalActivities = activities.size();
 		double totalCohesionValue = 0;
@@ -22,6 +30,7 @@ public class ProcessCohesion implements IGuidanceFunction {
 		}
 		
 		return totalCohesionValue / totalActivities;
+		
 	}
 
 	@Override
