@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow:Workflow
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:workflow="http://bpmnmodelling/workflow" xsi:schemaLocation="http://bpmnmodelling/workflow.ecore">
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T1"
+      isEncapsulatedBy="//@activities.0"
+      sink="//@informationObjects.9"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T2"
+      isEncapsulatedBy="//@activities.0"
+      sink="//@informationObjects.9"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T3"
+      isEncapsulatedBy="//@activities.0"
+      source="//@informationObjects.9"
+      sink="//@informationObjects.10"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T4"
+      isEncapsulatedBy="//@activities.1"
+      source="//@informationObjects.10"
+      sink="//@informationObjects.11"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T5"
+      isEncapsulatedBy="//@activities.1"
+      source="//@informationObjects.10"
+      sink="//@informationObjects.11"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T6"
+      isEncapsulatedBy="//@activities.1"
+      source="//@informationObjects.10"
+      sink="//@informationObjects.11"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T7"
+      isEncapsulatedBy="//@activities.2"
+      source="//@informationObjects.11"
+      sink="//@informationObjects.7"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T8"
+      isEncapsulatedBy="//@activities.2"
+      source="//@informationObjects.6"
+      sink="//@informationObjects.8"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T9"
+      isEncapsulatedBy="//@activities.2"
+      source="//@informationObjects.7"/>
+  <informationObjects
+      xsi:type="workflow:Parallel"
+      name="P1"
+      isEncapsulatedBy="//@activities.0"
+      source="//@informationObjects.0 //@informationObjects.1"
+      sink="//@informationObjects.2"/>
+  <informationObjects
+      xsi:type="workflow:Parallel"
+      name="P2"
+      isEncapsulatedBy="//@activities.1"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.3 //@informationObjects.4 //@informationObjects.5"/>
+  <informationObjects
+      xsi:type="workflow:Parallel"
+      name="P3"
+      isEncapsulatedBy="//@activities.1"
+      source="//@informationObjects.3 //@informationObjects.4 //@informationObjects.5"
+      sink="//@informationObjects.6"/>
+  <activities
+      name="A1"
+      encapsulates="//@informationObjects.0 //@informationObjects.1 //@informationObjects.2 //@informationObjects.9"/>
+  <activities
+      name="A2"
+      encapsulates="//@informationObjects.3 //@informationObjects.4 //@informationObjects.5 //@informationObjects.10 //@informationObjects.11"/>
+  <activities
+      name="A3"
+      encapsulates="//@informationObjects.6 //@informationObjects.7 //@informationObjects.8"/>
+</workflow:Workflow>
