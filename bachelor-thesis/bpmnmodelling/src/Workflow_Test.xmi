@@ -3,7 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:workflow="http://bpmnmodelling/workflow" xsi:schemaLocation="http://bpmnmodelling/workflow.ecore">
+    xmlns:workflow="http://bpmnmodelling/workflow"
+    xsi:schemaLocation="http://bpmnmodelling/workflow workflow.ecore">
   <informationObjects
       xsi:type="workflow:Task"
       name="T1"
@@ -13,7 +14,8 @@
       xsi:type="workflow:Task"
       name="T2"
       isEncapsulatedBy="//@activities.0"
-      sink="//@informationObjects.9"/>
+      sink="//@informationObjects.9"
+      preTasks="//@informationObjects.0"/>
   <informationObjects
       xsi:type="workflow:Task"
       name="T3"
@@ -25,7 +27,8 @@
       name="T4"
       isEncapsulatedBy="//@activities.1"
       source="//@informationObjects.10"
-      sink="//@informationObjects.11"/>
+      sink="//@informationObjects.11"
+      preTasks="//@informationObjects.2"/>
   <informationObjects
       xsi:type="workflow:Task"
       name="T5"

@@ -62,7 +62,7 @@ public interface InformationObject extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference list.
 	 * @see model.workflow.WorkflowPackage#getInformationObject_Source()
-	 * @model derived="true"
+	 * @model
 	 * @generated
 	 */
 	EList<InformationObject> getSource();
