@@ -24,6 +24,9 @@ public class ProcessCohesion implements IGuidanceFunction {
 	private double calculateProcessCohesion(Workflow workflow) {
 		List<Activity> activities = workflow.getActivities();
 		double totalActivities = activities.size();
+		if(activities.size() == 0) {
+			return 0;
+		}
 		double totalCohesionValue = 0;
 		for(Activity activity : activities) {
 			totalCohesionValue += activityCohesion.calculateActivityCohesion(activity);

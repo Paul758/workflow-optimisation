@@ -16,6 +16,12 @@ public class ActivityInformationCohesion {
 			double taskInIntersectionCounter = 0;
 			double taskAmount = tasks.size();
 			
+			//Return 0 if there is no task
+			if(taskAmount == 0) {
+				return 0;
+			}
+			
+			
 			for (int i = 0; i < tasks.size(); i++) {
 				Task pTask = tasks.get(i);
 				for (int j = 0; j < tasks.size(); j++) {
@@ -47,7 +53,6 @@ public class ActivityInformationCohesion {
 				}
 			}
 			
-		
 		double activityInformationCohesion = taskInIntersectionCounter / taskAmount;
 				
 		return activityInformationCohesion;

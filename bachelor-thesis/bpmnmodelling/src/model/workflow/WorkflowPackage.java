@@ -296,22 +296,13 @@ public interface WorkflowPackage extends EPackage {
 	int TASK__SINK = INFORMATION_OBJECT__SINK;
 
 	/**
-	 * The feature id for the '<em><b>Pre Tasks</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__PRE_TASKS = INFORMATION_OBJECT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = INFORMATION_OBJECT_FEATURE_COUNT + 1;
+	int TASK_FEATURE_COUNT = INFORMATION_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -579,17 +570,6 @@ public interface WorkflowPackage extends EPackage {
 	EClass getTask();
 
 	/**
-	 * Returns the meta object for the reference list '{@link model.workflow.Task#getPreTasks <em>Pre Tasks</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Pre Tasks</em>'.
-	 * @see model.workflow.Task#getPreTasks()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_PreTasks();
-
-	/**
 	 * Returns the meta object for class '{@link model.workflow.Parallel <em>Parallel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,14 +717,6 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TASK = eINSTANCE.getTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Pre Tasks</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__PRE_TASKS = eINSTANCE.getTask_PreTasks();
 
 		/**
 		 * The meta object literal for the '{@link model.workflow.impl.ParallelImpl <em>Parallel</em>}' class.

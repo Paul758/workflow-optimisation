@@ -15,6 +15,12 @@ public class ProcessCoupling implements IGuidanceFunction {
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();
+		return calculateProcessCoupling(workflow);
+	}
+
+	
+	private double calculateProcessCoupling(Workflow workflow) {
+		
 		List<Activity> activities = workflow.getActivities();
 		double connectedCounter = 0;
 		double totalActivities = activities.size();
@@ -30,10 +36,11 @@ public class ProcessCoupling implements IGuidanceFunction {
 			}
 		}
 		
-		return connectedCounter / (totalActivities * (totalActivities - 1));
+		double fitness = connectedCounter / (totalActivities * (totalActivities - 1));
+		return fitness;
 	}
 
-	
+
 	private boolean connected(Activity sActivity, Activity tActivity) {
 		if(sActivity.equals(tActivity)) {
 			return false;
@@ -59,7 +66,7 @@ public class ProcessCoupling implements IGuidanceFunction {
 		    	Set<Task> tOperation = FitnessUtil.getInputTasks(nextTask);
 		    	tOperation.add(nextTask);
 		    	
-		    	//Interset sets
+		    	//Intersect sets
 		    	sOperation.retainAll(tOperation);
 		    	
 		    	if(!sOperation.isEmpty()) {

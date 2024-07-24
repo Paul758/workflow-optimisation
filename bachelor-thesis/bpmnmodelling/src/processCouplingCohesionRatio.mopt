@@ -1,10 +1,10 @@
 problem {
 	basepath <src/>
 	metamodel <model.workflow.WorkflowPackage>
-	model <Workflow_Test.xmi>
+	model <Workflow_Test2.xmi>
 }
 goal {
-	objective Workflow maximise java { "model.workflow.fitness.cohesion.ProcessCohesion" }
+	objective Workflow maximise java { "model.workflow.fitness.coupling.ProcessCouplingCohesionRatio" }
 	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.MinimiseObjectsWithoutActivity"}
 	constraint MinimiseEmptyActivities java {"model.workflow.fitness.MinimiseEmptyActivities"}
 }
@@ -14,7 +14,6 @@ search {
 	mutate using <workflow.henshin> unit "assignInformationObject"
 	mutate using <workflow.henshin> unit "moveObjectToNextActivity"
 	mutate using <workflow.henshin> unit "moveObjectToPreviouseActivity"
-	mutate using <workflow.henshin> unit "extractObject"
 }
 solver {
 	optimisation provider moea algorithm NSGAII {
