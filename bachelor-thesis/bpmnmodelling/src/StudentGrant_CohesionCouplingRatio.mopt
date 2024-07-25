@@ -1,13 +1,14 @@
 problem {
 	basepath <src/>
 	metamodel <model.workflow.WorkflowPackage>
-	model <Workflow_Test_Without-Activities.xmi>
+	model <Request_Student-Grant.xmi>
 }
 goal {
 	objective Workflow maximise java { "model.workflow.fitness.coupling.ProcessCouplingCohesionRatio" }
 	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.MinimiseObjectsWithoutActivity"}
 	//constraint MinimiseEmptyActivities java {"model.workflow.fitness.MinimiseEmptyActivities"}
-	constraint MinimiseSmallActivities java {"model.workflow.fitness.MinimiseSmallActivities"}
+	//constraint MinimiseSmallActivities java {"model.workflow.fitness.MinimiseSmallActivities"}
+	constraint ValidActivityOrdering java {"model.workflow.fitness.ValidActivityOrdering"}
 }
 search { 
 	mutate using <workflow.henshin> unit "MoveObjectToNextActivity"

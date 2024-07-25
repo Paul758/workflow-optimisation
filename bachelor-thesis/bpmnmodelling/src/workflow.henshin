@@ -80,55 +80,87 @@
       <edges xmi:id="_KUvuIDDEEe--A6kVjhILAg" source="_A5OO4DDEEe--A6kVjhILAg" target="_D0qsUDDEEe--A6kVjhILAg">
         <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
       </edges>
-      <formula xsi:type="henshin:And" xmi:id="_TYniYDDEEe--A6kVjhILAg">
-        <left xsi:type="henshin:Not" xmi:id="_GEgA8DDEEe--A6kVjhILAg">
-          <child xsi:type="henshin:NestedCondition" xmi:id="_GEgA8TDEEe--A6kVjhILAg">
-            <conclusion xmi:id="_GEgA8jDEEe--A6kVjhILAg" name="2">
-              <nodes xmi:id="_GEgA8zDEEe--A6kVjhILAg" name="model" outgoing="_HOnqsDDEEe--A6kVjhILAg _Jj-_kjDEEe--A6kVjhILAg _KUwVMTDEEe--A6kVjhILAg">
+      <formula xsi:type="henshin:And" xmi:id="_otArwEqcEe-ENfJ5CASHWA">
+        <left xsi:type="henshin:And" xmi:id="_TYniYDDEEe--A6kVjhILAg">
+          <left xsi:type="henshin:Not" xmi:id="_GEgA8DDEEe--A6kVjhILAg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_GEgA8TDEEe--A6kVjhILAg">
+              <conclusion xmi:id="_GEgA8jDEEe--A6kVjhILAg" name="2">
+                <nodes xmi:id="_GEgA8zDEEe--A6kVjhILAg" name="model" outgoing="_HOnqsDDEEe--A6kVjhILAg _Jj-_kjDEEe--A6kVjhILAg _KUwVMTDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Workflow"/>
+                </nodes>
+                <nodes xmi:id="_DEWCoDDEEe--A6kVjhILAg" name="a1" incoming="_HOnqsDDEEe--A6kVjhILAg" outgoing="_RGUIkDDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Activity"/>
+                </nodes>
+                <nodes xmi:id="_GEgA9zDEEe--A6kVjhILAg" name="a2" incoming="_KUwVMTDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Activity"/>
+                </nodes>
+                <nodes xmi:id="_GEgoATDEEe--A6kVjhILAg" name="i" incoming="_Jj-_kjDEEe--A6kVjhILAg _RGUIkDDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+                </nodes>
+                <edges xmi:id="_HOnqsDDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_DEWCoDDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+                </edges>
+                <edges xmi:id="_Jj-_kjDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
+                </edges>
+                <edges xmi:id="_KUwVMTDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgA9zDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+                </edges>
+                <edges xmi:id="_RGUIkDDEEe--A6kVjhILAg" source="_DEWCoDDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_GEgA9DDEEe--A6kVjhILAg" origin="_A5OO4DDEEe--A6kVjhILAg" image="_GEgA8zDEEe--A6kVjhILAg"/>
+              <mappings xmi:id="_GEgoADDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_GEgA9zDEEe--A6kVjhILAg"/>
+              <mappings xmi:id="_GEgoAjDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_GEgoATDEEe--A6kVjhILAg"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_TYniYTDEEe--A6kVjhILAg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_TYniYjDEEe--A6kVjhILAg">
+              <conclusion xmi:id="_TYniYzDEEe--A6kVjhILAg" name="1">
+                <nodes xmi:id="_TYoJcDDEEe--A6kVjhILAg" name="a2" outgoing="_SsW5UDDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Activity"/>
+                </nodes>
+                <nodes xmi:id="_TYoJcjDEEe--A6kVjhILAg" name="i" incoming="_SsW5UDDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+                </nodes>
+                <edges xmi:id="_SsW5UDDEEe--A6kVjhILAg" source="_TYoJcDDEEe--A6kVjhILAg" target="_TYoJcjDEEe--A6kVjhILAg">
+                  <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_TYoJcTDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_TYoJcDDEEe--A6kVjhILAg"/>
+              <mappings xmi:id="_TYoJczDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_TYoJcjDEEe--A6kVjhILAg"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_otArwUqcEe-ENfJ5CASHWA">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_otArwkqcEe-ENfJ5CASHWA">
+            <conclusion xmi:id="_otArw0qcEe-ENfJ5CASHWA">
+              <nodes xmi:id="_otArxEqcEe-ENfJ5CASHWA" name="model" outgoing="_otAryEqcEe-ENfJ5CASHWA _otAry0qcEe-ENfJ5CASHWA">
                 <type href="http://bpmnmodelling/workflow#//Workflow"/>
               </nodes>
-              <nodes xmi:id="_DEWCoDDEEe--A6kVjhILAg" name="a1" incoming="_HOnqsDDEEe--A6kVjhILAg" outgoing="_RGUIkDDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//Activity"/>
-              </nodes>
-              <nodes xmi:id="_GEgA9zDEEe--A6kVjhILAg" name="a2" incoming="_KUwVMTDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//Activity"/>
-              </nodes>
-              <nodes xmi:id="_GEgoATDEEe--A6kVjhILAg" name="i" incoming="_Jj-_kjDEEe--A6kVjhILAg _RGUIkDDEEe--A6kVjhILAg">
+              <nodes xmi:id="_otArxkqcEe-ENfJ5CASHWA" name="i" incoming="_otAryEqcEe-ENfJ5CASHWA">
                 <type href="http://bpmnmodelling/workflow#//InformationObject"/>
               </nodes>
-              <edges xmi:id="_HOnqsDDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_DEWCoDDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
-              </edges>
-              <edges xmi:id="_Jj-_kjDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+              <nodes xmi:id="_otAryUqcEe-ENfJ5CASHWA" name="a2" incoming="_otAry0qcEe-ENfJ5CASHWA" outgoing="_pc5QkEqcEe-ENfJ5CASHWA">
+                <type href="http://bpmnmodelling/workflow#//Activity"/>
+              </nodes>
+              <nodes xmi:id="_nsV48EqcEe-ENfJ5CASHWA" name="i2" incoming="_pc5QkEqcEe-ENfJ5CASHWA">
+                <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+              </nodes>
+              <edges xmi:id="_otAryEqcEe-ENfJ5CASHWA" source="_otArxEqcEe-ENfJ5CASHWA" target="_otArxkqcEe-ENfJ5CASHWA">
                 <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
               </edges>
-              <edges xmi:id="_KUwVMTDEEe--A6kVjhILAg" source="_GEgA8zDEEe--A6kVjhILAg" target="_GEgA9zDEEe--A6kVjhILAg">
+              <edges xmi:id="_otAry0qcEe-ENfJ5CASHWA" source="_otArxEqcEe-ENfJ5CASHWA" target="_otAryUqcEe-ENfJ5CASHWA">
                 <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
               </edges>
-              <edges xmi:id="_RGUIkDDEEe--A6kVjhILAg" source="_DEWCoDDEEe--A6kVjhILAg" target="_GEgoATDEEe--A6kVjhILAg">
+              <edges xmi:id="_pc5QkEqcEe-ENfJ5CASHWA" source="_otAryUqcEe-ENfJ5CASHWA" target="_nsV48EqcEe-ENfJ5CASHWA">
                 <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
               </edges>
             </conclusion>
-            <mappings xmi:id="_GEgA9DDEEe--A6kVjhILAg" origin="_A5OO4DDEEe--A6kVjhILAg" image="_GEgA8zDEEe--A6kVjhILAg"/>
-            <mappings xmi:id="_GEgoADDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_GEgA9zDEEe--A6kVjhILAg"/>
-            <mappings xmi:id="_GEgoAjDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_GEgoATDEEe--A6kVjhILAg"/>
-          </child>
-        </left>
-        <right xsi:type="henshin:Not" xmi:id="_TYniYTDEEe--A6kVjhILAg">
-          <child xsi:type="henshin:NestedCondition" xmi:id="_TYniYjDEEe--A6kVjhILAg">
-            <conclusion xmi:id="_TYniYzDEEe--A6kVjhILAg" name="1">
-              <nodes xmi:id="_TYoJcDDEEe--A6kVjhILAg" name="a2" outgoing="_SsW5UDDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//Activity"/>
-              </nodes>
-              <nodes xmi:id="_TYoJcjDEEe--A6kVjhILAg" name="i" incoming="_SsW5UDDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//InformationObject"/>
-              </nodes>
-              <edges xmi:id="_SsW5UDDEEe--A6kVjhILAg" source="_TYoJcDDEEe--A6kVjhILAg" target="_TYoJcjDEEe--A6kVjhILAg">
-                <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
-              </edges>
-            </conclusion>
-            <mappings xmi:id="_TYoJcTDEEe--A6kVjhILAg" origin="_D0qsUDDEEe--A6kVjhILAg" image="_TYoJcDDEEe--A6kVjhILAg"/>
-            <mappings xmi:id="_TYoJczDEEe--A6kVjhILAg" origin="_EfKa0DDEEe--A6kVjhILAg" image="_TYoJcjDEEe--A6kVjhILAg"/>
+            <mappings xmi:id="_otArxUqcEe-ENfJ5CASHWA" origin="_A5OO4DDEEe--A6kVjhILAg" image="_otArxEqcEe-ENfJ5CASHWA"/>
+            <mappings xmi:id="_otArx0qcEe-ENfJ5CASHWA" origin="_EfKa0DDEEe--A6kVjhILAg" image="_otArxkqcEe-ENfJ5CASHWA"/>
+            <mappings xmi:id="_otArykqcEe-ENfJ5CASHWA" origin="_D0qsUDDEEe--A6kVjhILAg" image="_otAryUqcEe-ENfJ5CASHWA"/>
           </child>
         </right>
       </formula>
