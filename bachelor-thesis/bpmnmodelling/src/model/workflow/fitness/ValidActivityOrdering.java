@@ -46,6 +46,7 @@ public class ValidActivityOrdering implements IGuidanceFunction {
 					if(tasksDone.contains(dependencyTask)) {
 						continue;
 					}
+					System.out.println("Out of order activity found, the current tasks Done are: " + tasksDone.toString() + ". The task that is out of order: " + current.getName());
 					outOfOrderCounter++;
 				}
 				tasksDone.add(current);
@@ -53,7 +54,9 @@ public class ValidActivityOrdering implements IGuidanceFunction {
 			}
 			
 		}
-		
+		for(Activity activity : activities) {
+			System.out.println("The tasks in this activity are: " + activity.getEncapsulates());
+		}
 		return outOfOrderCounter;
 		
 	}
