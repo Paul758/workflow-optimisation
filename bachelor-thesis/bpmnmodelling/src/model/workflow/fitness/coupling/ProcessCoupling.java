@@ -1,5 +1,6 @@
 package model.workflow.fitness.coupling;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,6 +23,7 @@ public class ProcessCoupling implements IGuidanceFunction {
 	private double calculateProcessCoupling(Workflow workflow) {
 		
 		List<Activity> activities = workflow.getActivities();
+		System.out.println("The activities are " + activities.toString());
 		double connectedCounter = 0;
 		double totalActivities = activities.size();
 		for (int i = 0; i < activities.size(); i++) {
@@ -35,14 +37,16 @@ public class ProcessCoupling implements IGuidanceFunction {
 				}
 			}
 		}
-		
+		System.out.println("The amount of connections: " + connectedCounter);
 		double fitness = connectedCounter / (totalActivities * (totalActivities - 1));
 		return fitness;
 	}
 
 
 	private boolean connected(Activity sActivity, Activity tActivity) {
+		System.out.println("now comparing " + sActivity.toString() + " and " + tActivity.toString());
 		if(sActivity.equals(tActivity)) {
+			System.out.println("the activities are the same, so skip");
 			return false;
 		}
 		
@@ -54,7 +58,9 @@ public class ProcessCoupling implements IGuidanceFunction {
 	private boolean activitiesShareInformationObjects(Activity sActivity, Activity tActivity) {
 	    List<Task> sTasks = FitnessUtil.getTasksFromActivity(sActivity);
 	    List<Task> tTasks = FitnessUtil.getTasksFromActivity(tActivity);
-		
+		System.out.println("The tasks in " + sActivity.toString() + "are" + sTasks);
+		System.out.println("The tasks in " + tActivity.toString() + "are" + tTasks);
+	    
 	    for (int i = 0; i < sTasks.size(); i++) {
 	    	
 	    	Task currentTask = sTasks.get(i);
@@ -65,10 +71,12 @@ public class ProcessCoupling implements IGuidanceFunction {
 		    	Task nextTask = tTasks.get(j);
 		    	Set<Task> tOperation = FitnessUtil.getInputTasks(nextTask);
 		    	tOperation.add(nextTask);
-		    	
+		    	System.out.println("The sOperation is " + sOperation.toString());
+		    	System.out.println("The tOperation is " + tOperation.toString());
 		    	//Intersect sets
-		    	sOperation.retainAll(tOperation);
-		    	
+		    	Set<Task> intersectionSet = new HashSet<Task>(sOperation);
+		    	intersectionSet.retainAll(tOperation);
+		    	System.out.println("the intersection is " + sOperation.toString());
 		    	if(!sOperation.isEmpty()) {
 		    		return true;
 		    	}
