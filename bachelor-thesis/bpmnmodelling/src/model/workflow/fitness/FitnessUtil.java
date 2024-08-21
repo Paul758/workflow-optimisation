@@ -41,4 +41,19 @@ public class FitnessUtil {
 		return tasks;
 	}
 	
+	public static List<Operation> getAllOperationsFromActivity(Activity activity) {
+		List<Operation> operations = new ArrayList<Operation>();
+		List<Task> tasksInActivity = getTasksFromActivity(activity);
+		
+		for(Task task : tasksInActivity) {
+			Operation operation = new Operation(task);
+			if(operation.hasNoInput()) {
+				continue;
+			}
+			operations.add(operation);
+		}
+		
+		return operations;
+		
+	}
 }
