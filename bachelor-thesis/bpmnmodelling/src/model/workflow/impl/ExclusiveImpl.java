@@ -2,10 +2,10 @@
  */
 package model.workflow.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import model.workflow.Exclusive;
 import model.workflow.WorkflowPackage;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
