@@ -1,8 +1,10 @@
 package model.workflow.fitness;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import model.workflow.AlternativeOperation;
 import model.workflow.Task;
 
 public class Operation {
@@ -17,8 +19,20 @@ public class Operation {
 		input = new HashSet<Task>();
 		operationTaskSet = new HashSet<Task>();
 		
+		
 		initializeInput(task);
 		constructOperation(task);
+	}
+	
+	public Operation(Task task, AlternativeOperation alternativePath) {
+		output = task;
+		input = new HashSet<Task>();
+		operationTaskSet = new HashSet<Task>();
+		
+		input.addAll(alternativePath.getInputTasks());
+		
+		operationTaskSet.add(output);
+		operationTaskSet.addAll(input);
 	}
 	
 	private void initializeInput(Task task) {
@@ -29,10 +43,6 @@ public class Operation {
 		operationTaskSet.add(task);
 		operationTaskSet.addAll(input);
 	
-	}
-	
-	public Set<Task> getTaskSet() {
-		return operationTaskSet;
 	}
 	
 	public boolean hasNoInput() {
@@ -50,5 +60,9 @@ public class Operation {
 
 	public Task getOutput() {
 		return this.output;
+	}
+	
+	public Set<Task> getTaskSet() {
+		return operationTaskSet;
 	}
 }

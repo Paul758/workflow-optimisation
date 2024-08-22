@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
 import org.junit.jupiter.api.Test;
 
 import model.workflow.Activity;
+import model.workflow.AlternativeOperation;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
@@ -24,16 +25,22 @@ class ActivityRelationCohesionTest {
 	Task task1;
 	Task task2;
 	Task task3;
-	
+	Task task7;
 	Task task9;
 	Task task10;
 	Task task11;
+	Task task12;
 	Task task13;
 	Task task14;
 	Task task15;
+	Task task16;
+	Task task17;
+	Task task20;
+	Task task21;
+	Task task24;
 	
 	@Test
-	void testActivityInformationCohesion() throws Exception {
+	void testActivityRelationCohesion() throws Exception {
 		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		
 		workflow = factory.createWorkflow();
@@ -80,7 +87,7 @@ class ActivityRelationCohesionTest {
 	}
 	
 	@Test
-	void testActivityInformationCohesion2() throws Exception {
+	void testActivityRelationCohesion2() throws Exception {
 		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		
 		workflow = factory.createWorkflow();
@@ -143,13 +150,13 @@ class ActivityRelationCohesionTest {
 		arcValue = (double) method.invoke(activityRelationCohesion, activity2);
 		
 		System.out.println("ARC is: " + arcValue);
-		double result = 1.0d / 3.0d;
+		double result = 10.0d / 12.0d;
 		assertEquals(result, arcValue, 0.01d);
 		
 	}
 	
 	@Test
-	void testActivityInformationCohesionEmptyActivity() throws Exception {
+	void testActivityRelationCohesionEmptyActivity() throws Exception {
 		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		
 		workflow = factory.createWorkflow();
@@ -166,6 +173,106 @@ class ActivityRelationCohesionTest {
 		
 		System.out.println("ARC is: " + arcValue);
 		double result = 0;
+		assertEquals(result, arcValue);
+		
+	}
+	
+	@Test
+	void testActivityRelationCohesionAlternativePaths() throws Exception {
+		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
+		
+		workflow = factory.createWorkflow();
+		
+		activity1 = factory.createActivity();
+		activity1.setName("1");
+		
+		task3 = factory.createTask();
+		task3.setName("3");
+		
+		task7 = factory.createTask();
+		task7.setName("7");
+		
+		task12 = factory.createTask();
+		task12.setName("12");
+		
+		task13 = factory.createTask();
+		task13.setName("13");
+		
+		task14 = factory.createTask();
+		task14.setName("14");
+		
+		task15 = factory.createTask();
+		task15.setName("15");
+		
+		task16 = factory.createTask();
+		task16.setName("16");
+		
+		task17 = factory.createTask();
+		task17.setName("17");
+		
+		
+		task20 = factory.createTask();
+		task20.setName("20");
+		
+		task21 = factory.createTask();
+		task21.setName("21");
+		
+		task24 = factory.createTask();
+		task24.setName("24");
+		
+		activity1.getEncapsulates().add(task15);
+		activity1.getEncapsulates().add(task16);
+		activity1.getEncapsulates().add(task20);
+		activity1.getEncapsulates().add(task21);
+		activity1.getEncapsulates().add(task24);
+		
+		task15.getSource().add(task13);
+		task15.getSource().add(task14);
+		
+		task15.getSink().add(task16);
+		
+		
+		task16.getSource().add(task15);
+		task16.getSource().add(task12);
+		task16.getSource().add(task7);
+		
+		task16.getSink().add(task21);
+		task16.getSink().add(task24);
+		
+		
+		task20.getSource().add(task3);
+		task20.getSource().add(task17);
+		
+		task20.getSink().add(task24);
+		
+		
+		task21.getSource().add(task15);
+		task21.getSource().add(task16);
+		task21.getSink().add(task24);
+		
+		AlternativeOperation altOperation1 = factory.createAlternativeOperation();
+		altOperation1.getInputTasks().add(task16);
+		AlternativeOperation altOperation2 = factory.createAlternativeOperation();
+		altOperation2.getInputTasks().add(task20);
+		altOperation2.getInputTasks().add(task21);
+		
+		task24.getAlternativePaths().add(altOperation1);
+		task24.getAlternativePaths().add(altOperation2);
+		
+		task24.getSource().add(task16);
+		task24.getSource().add(task20);
+		task24.getSource().add(task21);
+		
+		workflow.getActivities().add(activity1);
+		
+		double arcValue = 0;
+		
+		Method method = ActivityRelationCohesion.class.getDeclaredMethod("calculateActivityRelationCohesion", Activity.class);
+		method.setAccessible(true);
+		arcValue = (double) method.invoke(activityRelationCohesion, activity1);
+		
+		System.out.println("ARC is: " + arcValue);
+		double result = 14.0d / 30.0d;
 		assertEquals(result, arcValue);
 		
 	}

@@ -84,7 +84,7 @@ class ProcessRelationCohesionTest {
 	
 	
 	@Test
-	void testCalculateProcessInformationCohesion() throws Exception {
+	void testCalculateProcessRelationCohesion() throws Exception {
 		//Setup activity 1
 		activity1.getEncapsulates().add(task1);
 		activity1.getEncapsulates().add(task2);
@@ -135,7 +135,7 @@ class ProcessRelationCohesionTest {
 		processRelationCohesionValue = (double) method.invoke(processRelationCohesion, workflow);
 		
 		System.out.println("Process Relation Cohesion is: " + processRelationCohesionValue);
-		double result = 1.0d / 6.0d;
+		double result = 5.0d / 12.0d;
 		assertEquals(result, processRelationCohesionValue);
 	}
 

@@ -100,19 +100,18 @@ public class WorkflowSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WorkflowPackage.PARALLEL: {
-				Parallel parallel = (Parallel)theEObject;
-				T result = caseParallel(parallel);
-				if (result == null) result = caseInformationObject(parallel);
-				if (result == null) result = caseNamedElement(parallel);
+			case WorkflowPackage.EXCLUSIVE_TASK: {
+				ExclusiveTask exclusiveTask = (ExclusiveTask)theEObject;
+				T result = caseExclusiveTask(exclusiveTask);
+				if (result == null) result = caseInformationObject(exclusiveTask);
+				if (result == null) result = caseNamedElement(exclusiveTask);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WorkflowPackage.EXCLUSIVE: {
-				Exclusive exclusive = (Exclusive)theEObject;
-				T result = caseExclusive(exclusive);
-				if (result == null) result = caseInformationObject(exclusive);
-				if (result == null) result = caseNamedElement(exclusive);
+			case WorkflowPackage.ALTERNATIVE_OPERATION: {
+				AlternativeOperation alternativeOperation = (AlternativeOperation)theEObject;
+				T result = caseAlternativeOperation(alternativeOperation);
+				if (result == null) result = caseNamedElement(alternativeOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,32 +195,32 @@ public class WorkflowSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parallel</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Exclusive Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parallel</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Exclusive Task</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParallel(Parallel object) {
+	public T caseExclusiveTask(ExclusiveTask object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Exclusive</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Alternative Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Exclusive</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Alternative Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExclusive(Exclusive object) {
+	public T caseAlternativeOperation(AlternativeOperation object) {
 		return null;
 	}
 

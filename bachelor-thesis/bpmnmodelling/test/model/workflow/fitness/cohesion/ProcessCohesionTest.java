@@ -140,7 +140,7 @@ class ProcessCohesionTest {
 				processCohesionValue = (double) method.invoke(processCohesion, workflow);
 				
 				System.out.println("Process Cohesion is: " + processCohesionValue);
-				double result = (1.0d/12.0d);
+				double result = (5.0/24.0d);
 				assertEquals(result, processCohesionValue, 0.01);
 	}
 }

@@ -28,7 +28,7 @@ public class ActivityRelationCohesion {
 		double taskAmount = tasks.size();
 		
 		//If there is one task or less return 0
-		if(taskAmount <= 1) {
+		if(operations.size() <= 1) {
 			return 0;
 		}
 		
@@ -58,8 +58,8 @@ public class ActivityRelationCohesion {
 			
 		//Calculate activity relation cohesion value for this activity
 		System.out.println("The relationCounter for " + activity.getName() + " is " + relationCounter);
-		System.out.println("The taskAmount for " + activity.getName() + " is " + taskAmount);
-		double activityRelationCohesion = relationCounter / (taskAmount * (taskAmount - 1));
+		System.out.println("The operationAmount for " + activity.getName() + " is " + operations.size());
+		double activityRelationCohesion = relationCounter / (operations.size() * (operations.size() - 1));
 		
 		System.out.println("The ARC for " + activity.getName() + " is " + activityRelationCohesion);
 		return activityRelationCohesion;

@@ -22,8 +22,14 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//InformationObject/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//InformationObject/sink"/>
     </genClasses>
-    <genClasses ecoreClass="workflow.ecore#//Task"/>
-    <genClasses ecoreClass="workflow.ecore#//Parallel"/>
-    <genClasses ecoreClass="workflow.ecore#//Exclusive"/>
+    <genClasses ecoreClass="workflow.ecore#//Task">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/alternativePaths"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ExclusiveTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//ExclusiveTask/alternativePaths"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//AlternativeOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//AlternativeOperation/inputTasks"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

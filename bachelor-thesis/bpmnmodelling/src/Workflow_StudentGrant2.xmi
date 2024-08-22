@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow:Workflow
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:workflow="http://bpmnmodelling/workflow"
+    xsi:schemaLocation="http://bpmnmodelling/workflow workflow.ecore">
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T1"
+      sink="//@informationObjects.2"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T2"
+      sink="//@informationObjects.2"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T3"
+      source="//@informationObjects.0 //@informationObjects.1"
+      sink="//@informationObjects.9 //@informationObjects.19 //@informationObjects.22 //@informationObjects.24"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T4"
+      sink="//@informationObjects.7"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T5"
+      sink="//@informationObjects.7"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T6"
+      sink="//@informationObjects.11"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T7"
+      sink="//@informationObjects.11 //@informationObjects.18 //@informationObjects.15"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T8"
+      source="//@informationObjects.3 //@informationObjects.4"
+      sink="//@informationObjects.11"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T9"
+      sink="//@informationObjects.12"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T10"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.12 //@informationObjects.13"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T11"
+      sink="//@informationObjects.13"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T12"
+      source="//@informationObjects.5 //@informationObjects.6 //@informationObjects.7"
+      sink="//@informationObjects.15 //@informationObjects.24 //@informationObjects.18"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T13"
+      source="//@informationObjects.8 //@informationObjects.9"
+      sink="//@informationObjects.14"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T14"
+      source="//@informationObjects.9 //@informationObjects.10"
+      sink="//@informationObjects.14"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T15"
+      source="//@informationObjects.12 //@informationObjects.13"
+      sink="//@informationObjects.15 //@informationObjects.20"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T16"
+      source="//@informationObjects.14 //@informationObjects.11 //@informationObjects.6"
+      sink="//@informationObjects.20 //@informationObjects.23"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T17"
+      sink="//@informationObjects.19 //@informationObjects.24"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T18"
+      sink="//@informationObjects.24"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T19"
+      source="//@informationObjects.6 //@informationObjects.11"
+      sink="//@informationObjects.25"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T20"
+      source="//@informationObjects.2 //@informationObjects.16"
+      sink="//@informationObjects.23"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T21"
+      source="//@informationObjects.14 //@informationObjects.15"
+      sink="//@informationObjects.23"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T22"
+      sink="//@informationObjects.25"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T23"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.25"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T24"
+      source="//@informationObjects.15 //@informationObjects.19 //@informationObjects.20"
+      sink="//@informationObjects.26">
+    <alternativePaths
+        name="16"
+        inputTasks="//@informationObjects.15"/>
+    <alternativePaths
+        name="20X21"
+        inputTasks="//@informationObjects.19 //@informationObjects.20"/>
+  </informationObjects>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T25"
+      source="//@informationObjects.2 //@informationObjects.11 //@informationObjects.16 //@informationObjects.17"
+      sink="//@informationObjects.26"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T26"
+      source="//@informationObjects.18 //@informationObjects.21 //@informationObjects.22"
+      sink="//@informationObjects.26">
+    <alternativePaths
+        name="19"
+        inputTasks="//@informationObjects.18"/>
+    <alternativePaths
+        name="19X22X23"
+        inputTasks="//@informationObjects.18 //@informationObjects.21 //@informationObjects.22"/>
+  </informationObjects>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="T27"
+      source="//@informationObjects.11 //@informationObjects.23 //@informationObjects.24 //@informationObjects.25">
+    <alternativePaths
+        name="12"
+        inputTasks="//@informationObjects.11"/>
+    <alternativePaths
+        name="24X25X26"
+        inputTasks="//@informationObjects.23 //@informationObjects.24 //@informationObjects.25"/>
+  </informationObjects>
+</workflow:Workflow>
