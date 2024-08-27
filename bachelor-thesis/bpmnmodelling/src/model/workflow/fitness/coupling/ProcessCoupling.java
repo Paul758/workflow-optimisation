@@ -8,6 +8,7 @@ import model.workflow.Activity;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.fitness.FitnessUtil;
+import model.workflow.fitness.Operation;
 import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction;
 import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution;
 
@@ -56,28 +57,24 @@ public class ProcessCoupling implements IGuidanceFunction {
 	}
 	
 	private boolean activitiesShareInformationObjects(Activity sActivity, Activity tActivity) {
-	    List<Task> sTasks = FitnessUtil.getTasksFromActivity(sActivity);
-	    List<Task> tTasks = FitnessUtil.getTasksFromActivity(tActivity);
-		System.out.println("The tasks in " + sActivity.toString() + "are" + sTasks);
-		System.out.println("The tasks in " + tActivity.toString() + "are" + tTasks);
+		List<Operation> sOperations = FitnessUtil.getAllOperationsFromActivity(sActivity);
+		List<Operation> tOperations = FitnessUtil.getAllOperationsFromActivity(tActivity);
+		System.out.println("The operations in " + sActivity.toString() + "are" + sOperations.toString());
+		System.out.println("The operations in " + tActivity.toString() + "are" + tOperations.toString());
 	    
-	    for (int i = 0; i < sTasks.size(); i++) {
+	    for (int i = 0; i < sOperations.size(); i++) {
 	    	
-	    	Task currentTask = sTasks.get(i);
-	    	Set<Task> sOperation = FitnessUtil.getInputTasks(currentTask);
-	    	sOperation.add(currentTask);
+	    	Operation currentOperation = sOperations.get(i);
 	    	
-		    for (int j = 0; j < tTasks.size(); j++) {
-		    	Task nextTask = tTasks.get(j);
-		    	Set<Task> tOperation = FitnessUtil.getInputTasks(nextTask);
-		    	tOperation.add(nextTask);
-		    	System.out.println("The sOperation is " + sOperation.toString());
-		    	System.out.println("The tOperation is " + tOperation.toString());
+		    for (int j = 0; j < tOperations.size(); j++) {
+		    	Operation nextOperation = tOperations.get(j);
+		    	System.out.println("The sOperation is " + sOperations.toString());
+		    	System.out.println("The tOperation is " + tOperations.toString());
 		    	//Intersect sets
-		    	Set<Task> intersectionSet = new HashSet<Task>(sOperation);
-		    	intersectionSet.retainAll(tOperation);
-		    	System.out.println("the intersection is " + sOperation.toString());
-		    	if(!sOperation.isEmpty()) {
+		    	Set<Task> intersectionSet = new HashSet<Task>(currentOperation.getTaskSet());
+		    	intersectionSet.retainAll(nextOperation.getTaskSet());
+		    	System.out.println("the intersection is " + sOperations.toString());
+		    	if(!intersectionSet.isEmpty()) {
 		    		return true;
 		    	}
 		    	

@@ -136,7 +136,7 @@ class ProcessInformationCohesionTest {
 		processInformationCohesionFitness = (double) method.invoke(processInformationCohesion, workflow);
 		
 		System.out.println("Process Information Cohesion is: " + processInformationCohesionFitness);
-		double result = 0.25d;
+		double result = 3.0d / 14.0d;
 		assertEquals(result, processInformationCohesionFitness);
 	}
 

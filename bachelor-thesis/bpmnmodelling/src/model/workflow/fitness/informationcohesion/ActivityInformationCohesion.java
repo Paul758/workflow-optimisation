@@ -1,6 +1,7 @@
 package model.workflow.fitness.informationcohesion;
 
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import model.workflow.Activity;
@@ -21,12 +22,17 @@ public class ActivityInformationCohesion {
 		
 		List<Task> tasks = FitnessUtil.getTasksFromActivity(activity);
 		List<Operation> operations = FitnessUtil.getAllOperationsFromActivity(activity);
-			
+		Set<Task> tasksUsedInAnyOperation = new HashSet<Task>(tasks);	
 		double taskInIntersectionCounter = 0;
 		double taskAmount = tasks.size();
 			
-		//Return 0 if there is no task
-		if (taskAmount == 0) {
+		//Construct set of all tasks that are used in any operation (denominator for calculation)
+		for(Operation operation : operations) {
+			tasksUsedInAnyOperation.addAll(operation.getTaskSet());
+		}
+		
+		//Return 0 if there is no operation
+		if (operations.size() == 0) {
 			return 0;
 		}
 		
@@ -42,7 +48,7 @@ public class ActivityInformationCohesion {
 		
 		System.out.println("The taskIntersection count for " + activity.getName() + " is " + taskInIntersectionCounter);	
 		System.out.println("The taskAmount for " + activity.getName() + " is " + taskAmount);	
-		double activityInformationCohesion = taskInIntersectionCounter / taskAmount;
+		double activityInformationCohesion = taskInIntersectionCounter / tasksUsedInAnyOperation.size();
 		
 		System.out.println("The activity Information Cohesion for " + activity.toString() + "is " + activityInformationCohesion);
 		return activityInformationCohesion;

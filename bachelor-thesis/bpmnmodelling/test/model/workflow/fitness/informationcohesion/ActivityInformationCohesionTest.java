@@ -148,7 +148,7 @@ class ActivityInformationCohesionTest {
 		
 		
 		System.out.println("AIC is: " + aicValue);
-		double result = 0.5;
+		double result = 3.0d / 7.0d;
 		assertEquals(result, aicValue);
 		
 	}
@@ -272,7 +272,7 @@ class ActivityInformationCohesionTest {
 		
 		
 		System.out.println("AIC is: " + aicValue);
-		double result = 4.0d / 5.0d;
+		double result = 4.0d / 11.0d;
 		assertEquals(result, aicValue);
 		
 	}

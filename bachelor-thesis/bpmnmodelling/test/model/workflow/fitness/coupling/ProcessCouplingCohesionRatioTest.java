@@ -138,7 +138,7 @@ WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		couplingValue = (double) calculateCouplingValue.invoke(processCoupling, workflow);
 				
 		System.out.println("Process CouplingCohesionRatio is: " + (couplingValue / cohesionValue));
-		double result = (1.0d / (5.0d/24.0d));
+		double result = (1.0d / (5.0d/28.0d));
 		assertEquals(result, couplingValue / cohesionValue, 0.01);
 	}
 }
