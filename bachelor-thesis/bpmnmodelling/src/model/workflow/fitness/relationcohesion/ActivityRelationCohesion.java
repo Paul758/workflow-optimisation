@@ -57,8 +57,8 @@ public class ActivityRelationCohesion {
 		}
 			
 		//Calculate activity relation cohesion value for this activity
-		System.out.println("The relationCounter for " + activity.getName() + " is " + relationCounter);
-		System.out.println("The operationAmount for " + activity.getName() + " is " + operations.size());
+		//System.out.println("The relationCounter for " + activity.getName() + " is " + relationCounter);
+		//System.out.println("The operationAmount for " + activity.getName() + " is " + operations.size());
 		double activityRelationCohesion = relationCounter / (operations.size() * (operations.size() - 1));
 		
 		System.out.println("The ARC for " + activity.getName() + " is " + activityRelationCohesion);

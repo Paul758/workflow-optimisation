@@ -24,7 +24,7 @@ public class ProcessCoupling implements IGuidanceFunction {
 	private double calculateProcessCoupling(Workflow workflow) {
 		
 		List<Activity> activities = workflow.getActivities();
-		System.out.println("The activities are " + activities.toString());
+		//System.out.println("The activities are " + activities.toString());
 		double connectedCounter = 0;
 		double totalActivities = activities.size();
 		for (int i = 0; i < activities.size(); i++) {
@@ -38,16 +38,16 @@ public class ProcessCoupling implements IGuidanceFunction {
 				}
 			}
 		}
-		System.out.println("The amount of connections: " + connectedCounter);
+		//System.out.println("The amount of connections: " + connectedCounter);
 		double fitness = connectedCounter / (totalActivities * (totalActivities - 1));
 		return fitness;
 	}
 
 
 	private boolean connected(Activity sActivity, Activity tActivity) {
-		System.out.println("now comparing " + sActivity.toString() + " and " + tActivity.toString());
+		//System.out.println("now comparing " + sActivity.toString() + " and " + tActivity.toString());
 		if(sActivity.equals(tActivity)) {
-			System.out.println("the activities are the same, so skip");
+			//System.out.println("the activities are the same, so skip");
 			return false;
 		}
 		
@@ -68,12 +68,12 @@ public class ProcessCoupling implements IGuidanceFunction {
 	    	
 		    for (int j = 0; j < tOperations.size(); j++) {
 		    	Operation nextOperation = tOperations.get(j);
-		    	System.out.println("The sOperation is " + sOperations.toString());
-		    	System.out.println("The tOperation is " + tOperations.toString());
+		    	//System.out.println("The sOperation is " + sOperations.toString());
+		    	//System.out.println("The tOperation is " + tOperations.toString());
 		    	//Intersect sets
 		    	Set<Task> intersectionSet = new HashSet<Task>(currentOperation.getTaskSet());
 		    	intersectionSet.retainAll(nextOperation.getTaskSet());
-		    	System.out.println("the intersection is " + sOperations.toString());
+		    	//System.out.println("the intersection is " + sOperations.toString());
 		    	if(!intersectionSet.isEmpty()) {
 		    		return true;
 		    	}

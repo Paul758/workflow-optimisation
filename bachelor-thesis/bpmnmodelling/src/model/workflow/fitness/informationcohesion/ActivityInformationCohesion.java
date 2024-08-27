@@ -1,6 +1,7 @@
 package model.workflow.fitness.informationcohesion;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,18 +28,23 @@ public class ActivityInformationCohesion {
 		double taskAmount = tasks.size();
 			
 		//Construct set of all tasks that are used in any operation (denominator for calculation)
-		for(Operation operation : operations) {
-			tasksUsedInAnyOperation.addAll(operation.getTaskSet());
-		}
+		System.out.println("The operations are ");
 		
+		for(Operation operation : operations) {
+			System.out.println(operation.getTaskSet().toString());
+			tasksUsedInAnyOperation.addAll(operation.getTaskSet());
+			
+		}
+		System.out.println("The tasks used in this activity are " + tasksUsedInAnyOperation.toString());
 		//Return 0 if there is no operation
 		if (operations.size() == 0) {
 			return 0;
 		}
 		
 		//Iterate over all tasks
-		for (int i = 0; i < tasks.size(); i++) {
-			Task currentTask = tasks.get(i);
+		ArrayList<Task> tasksUsedInActivity = new ArrayList<Task>(tasksUsedInAnyOperation);
+		for (int i = 0; i < tasksUsedInActivity.size(); i++) {
+			Task currentTask = tasksUsedInActivity.get(i);
 			
 			//If task is present in an operation intersection, increase counter
 			if(existsInOperationIntersection(currentTask, operations)) {
@@ -47,7 +53,7 @@ public class ActivityInformationCohesion {
 		}
 		
 		System.out.println("The taskIntersection count for " + activity.getName() + " is " + taskInIntersectionCounter);	
-		System.out.println("The taskAmount for " + activity.getName() + " is " + taskAmount);	
+		System.out.println("The taskAmount for " + activity.getName() + " is " + tasksUsedInAnyOperation);	
 		double activityInformationCohesion = taskInIntersectionCounter / tasksUsedInAnyOperation.size();
 		
 		System.out.println("The activity Information Cohesion for " + activity.toString() + "is " + activityInformationCohesion);
