@@ -1,6 +1,7 @@
 package model.workflow.fitness.util;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import model.workflow.AlternativeOperation;
@@ -69,5 +70,21 @@ public class Operation {
 	
 	public Set<Task> getTaskSet() {
 		return operationTaskSet;
+	}
+	
+	@Override
+	public boolean equals(Object other) {
+		if(!(other instanceof Operation)) {
+			return false;
+		}
+		
+		Operation otherOperation = (Operation) other;
+		return this.operationTaskSet.equals(otherOperation.getTaskSet());
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(operationTaskSet);
 	}
 }

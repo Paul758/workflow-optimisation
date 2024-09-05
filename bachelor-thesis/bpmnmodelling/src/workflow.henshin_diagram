@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-PPxYTDCEe-MQ8cLOEyMdQ" type="Henshin" name="workflow.henshin_diagram" measurementUnit="Pixel">
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_-PPxYTDCEe-MQ8cLOEyMdQ" type="Henshin" name="workflow.henshin_diagram" measurementUnit="Pixel">
   <children xmi:type="notation:Shape" xmi:id="__im2sDDCEe-MQ8cLOEyMdQ" type="2001" fontName="Segoe UI" italic="true" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Blq6ojDDEe-MQ8cLOEyMdQ" source="defaultAction">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Blq6ozDDEe-MQ8cLOEyMdQ" key="value" value="preserve"/>
@@ -188,7 +188,7 @@
       </children>
     </children>
     <element xmi:type="henshin:Rule" href="workflow.henshin#_dw_rcDDEEe--A6kVjhILAg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dxBgoTDEEe--A6kVjhILAg" x="24" y="536" width="625" height="376"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dxBgoTDEEe--A6kVjhILAg" x="12" y="718" width="625" height="376"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Jy03YDDFEe--A6kVjhILAg" type="2001" fontName="Segoe UI" italic="true" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jy03YTDFEe--A6kVjhILAg" source="defaultAction">
@@ -248,7 +248,7 @@
       </children>
     </children>
     <element xmi:type="henshin:Rule" href="workflow.henshin#_JyzpQDDFEe--A6kVjhILAg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jy03iDDFEe--A6kVjhILAg" x="685" y="536" width="625" height="376"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jy03iDDFEe--A6kVjhILAg" x="679" y="724" width="625" height="376"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_d2d80GCREe--wf5Je8sfLQ" type="2001" fontName="Segoe UI" italic="true" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fObOQGCREe--wf5Je8sfLQ" source="defaultAction">
@@ -308,7 +308,67 @@
       </children>
     </children>
     <element xmi:type="henshin:Rule" href="workflow.henshin#_d2ZEUGCREe--wf5Je8sfLQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d2d80WCREe--wf5Je8sfLQ" x="1354" y="536" width="579" height="410"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d2d80WCREe--wf5Je8sfLQ" x="1348" y="724" width="579" height="410"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_ufRB8GuQEe-cr8uuEh9Qfg" type="Note" fontName="Segoe UI" description="Create a new empty activity in the instance model." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_ufUFQGuQEe-cr8uuEh9Qfg" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_ufUsUGuQEe-cr8uuEh9Qfg" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_ufRB8WuQEe-cr8uuEh9Qfg"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_ufRB8muQEe-cr8uuEh9Qfg"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ufRB82uQEe-cr8uuEh9Qfg" x="32" y="105"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_xYM98GuQEe-cr8uuEh9Qfg" type="Note" fontName="Segoe UI" description="If an activity is empty, it can be deleted. Empty means, that the activity is not encapsulating any information object." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_xYNlAGuQEe-cr8uuEh9Qfg" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_xYNlAWuQEe-cr8uuEh9Qfg" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_xYM98WuQEe-cr8uuEh9Qfg"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_xYM98muQEe-cr8uuEh9Qfg"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xYM982uQEe-cr8uuEh9Qfg" x="406" y="105" width="391"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_9mMk0GuQEe-cr8uuEh9Qfg" type="Note" fontName="Segoe UI" description="To make the Move transformations possible, activities need to encapsulate at least one object. This transformation adds an informationObject to an empty activity." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_9mNL4GuQEe-cr8uuEh9Qfg" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_9mNL4WuQEe-cr8uuEh9Qfg" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_9mMk0WuQEe-cr8uuEh9Qfg"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_9mMk0muQEe-cr8uuEh9Qfg"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9mMk02uQEe-cr8uuEh9Qfg" x="903" y="38" width="539"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_M8JbIGuREe-cr8uuEh9Qfg" type="Note" fontName="Segoe UI" description="InformationObjects can be moved to an activity, if that activity contains an informationObject, that is the result of an operation, which contains the object that will be moved." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_M8KCMGuREe-cr8uuEh9Qfg" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_M8KCMWuREe-cr8uuEh9Qfg" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_M8JbIWuREe-cr8uuEh9Qfg"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_M8JbImuREe-cr8uuEh9Qfg"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M8JbI2uREe-cr8uuEh9Qfg" x="368" y="650" width="625"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Ym5yEGuREe-cr8uuEh9Qfg" type="Note" fontName="Segoe UI" description="A single informationObject can be extracted from the end of an activity to a new activity." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_Ym5yFGuREe-cr8uuEh9Qfg" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_Ym5yFWuREe-cr8uuEh9Qfg" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_Ym5yEWuREe-cr8uuEh9Qfg"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_Ym5yEmuREe-cr8uuEh9Qfg"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ym5yE2uREe-cr8uuEh9Qfg" x="1348" y="639" width="404"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_-PPxYjDCEe-MQ8cLOEyMdQ"/>
   <element xmi:type="henshin:Module" href="workflow.henshin#_-PPxYDDCEe-MQ8cLOEyMdQ"/>
