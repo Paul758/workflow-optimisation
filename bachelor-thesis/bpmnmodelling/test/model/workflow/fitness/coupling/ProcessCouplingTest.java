@@ -1,6 +1,6 @@
 package model.workflow.fitness.coupling;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.lang.reflect.Method;
 
@@ -8,39 +8,41 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.workflow.Activity;
-import model.workflow.Parallel;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
-import model.workflow.fitness.cohesion.ActivityCohesion;
-import model.workflow.fitness.cohesion.ProcessCohesion;
-import model.workflow.fitness.informationcohesion.ProcessInformationCohesion;
-import model.workflow.fitness.relationcohesion.ProcessRelationCohesion;
 
-public class ProcessCouplingTest {
+
+class ProcessCouplingTest {
+
+
 	ProcessCoupling processCoupling;
 	
 	Workflow workflow;
 	Activity activity1;
 	Activity activity2;
 	Activity activity3;
+	
 	Task task1;
 	Task task2;
 	Task task3;
+	
+	Task task9;
+	Task task10;
+	Task task11;
+	Task task13;
+	Task task14;
+	Task task15;
+	
 	Task task4;
 	Task task5;
-	Task task6;
-	Task task7;
 	Task task8;
-	Task task9;
-	Parallel parallel1;
-	Parallel parallel2;
-	Parallel parallel3;
+	Task task12;
 	
 	@BeforeEach
 	void setUp() {
-		System.out.println("Run Before");
 		processCoupling = new ProcessCoupling();
+		
 		
 		WorkflowFactory factory = WorkflowFactory.eINSTANCE;
 		
@@ -70,26 +72,29 @@ public class ProcessCouplingTest {
 		task5 = factory.createTask();
 		task5.setName("5");
 		
-		task6 = factory.createTask();
-		task6.setName("6");
-		
-		task7 = factory.createTask();
-		task7.setName("7");
-		
 		task8 = factory.createTask();
 		task8.setName("8");
+		
+		task12 = factory.createTask();
+		task12.setName("12");
 		
 		task9 = factory.createTask();
 		task9.setName("9");
 		
-		parallel1 = factory.createParallel();
-		parallel1.setName("Parallel 1");
+		task10 = factory.createTask();
+		task10.setName("10");
 		
-		parallel2 = factory.createParallel();
-		parallel2.setName("Parallel 2");
+		task11 = factory.createTask();
+		task11.setName("11");
 		
-		parallel3 = factory.createParallel();
-		parallel3.setName("Parallel 3");
+		task13 = factory.createTask();
+		task13.setName("13");
+		
+		task14 = factory.createTask();
+		task14.setName("14");
+		
+		task15 = factory.createTask();
+		task15.setName("15");
 		
 	}
 	
@@ -97,41 +102,119 @@ public class ProcessCouplingTest {
 	
 	
 	@Test
-	void testProcessCoupling() throws Exception {
+	void testProcessCohesion() throws Exception {
 		//Setup activity 1
 				activity1.getEncapsulates().add(task1);
 				activity1.getEncapsulates().add(task2);
 				activity1.getEncapsulates().add(task3);
-				activity1.getEncapsulates().add(parallel1);
 				
-				parallel1.getSource().add(task1);
-				parallel1.getSource().add(task2);
-				task3.getSource().add(parallel1);
+				task1.getSink().add(task3);
+				task2.getSink().add(task3);
+				
+				task3.getSource().add(task1);
+				task3.getSource().add(task2);
+				task3.getSink().add(task10);
 				
 				//Setup activity 2
-				activity2.getEncapsulates().add(task4);
-				activity2.getEncapsulates().add(task5);
-				activity2.getEncapsulates().add(task6);
-				activity2.getEncapsulates().add(parallel2);
+				activity2.getEncapsulates().add(task9);
+				activity2.getEncapsulates().add(task10);
+				activity2.getEncapsulates().add(task11);
+				activity2.getEncapsulates().add(task13);
+				activity2.getEncapsulates().add(task14);
+				activity2.getEncapsulates().add(task15);
 				
-				parallel2.getSource().add(task3);
-				task4.getSource().add(parallel2);
-				task5.getSource().add(parallel2);
-				task6.getSource().add(parallel2);
+				task10.getSource().add(task3);
+				task10.getSink().add(task13);
+				task10.getSink().add(task14);
 				
-				//Setup activity 3
-				activity3.getEncapsulates().add(task7);
+				task9.getSink().add(task13);
+				task11.getSink().add(task14);
+				
+				task13.getSource().add(task9);
+				task13.getSource().add(task10);
+				task13.getSink().add(task15);
+				
+				task14.getSource().add(task10);
+				task14.getSource().add(task11);
+				task14.getSink().add(task15);
+				
+				task15.getSource().add(task13);
+				task15.getSource().add(task14);
+				
+				
+				workflow.getActivities().add(activity1);
+				workflow.getActivities().add(activity2);
+			
+				
+				double processCouplingValue = 0;
+				
+				
+				Method method = ProcessCoupling.class.getDeclaredMethod("calculateProcessCoupling", Workflow.class);
+				method.setAccessible(true);
+				
+				processCouplingValue = (double) method.invoke(processCoupling, workflow);
+				
+				System.out.println("Process Coupling is: " + processCouplingValue);
+				double result = 1;
+				assertEquals(result, processCouplingValue, 0.01);
+	}
+
+	
+	@Test
+	void testProcessCohesion2() throws Exception {
+		//Setup activity 1
+				activity1.getEncapsulates().add(task1);
+				activity1.getEncapsulates().add(task2);
+				activity1.getEncapsulates().add(task3);
+				
+				task1.getSink().add(task3);
+				task2.getSink().add(task3);
+				
+				task3.getSource().add(task1);
+				task3.getSource().add(task2);
+				task3.getSink().add(task10);
+				
+				//Setup activity 2
+				activity2.getEncapsulates().add(task9);
+				activity2.getEncapsulates().add(task10);
+				activity2.getEncapsulates().add(task11);
+				activity2.getEncapsulates().add(task13);
+				activity2.getEncapsulates().add(task14);
+				activity2.getEncapsulates().add(task15);
+				
+				task10.getSource().add(task3);
+				task10.getSink().add(task13);
+				task10.getSink().add(task14);
+				
+				task9.getSink().add(task13);
+				task11.getSink().add(task14);
+				
+				task13.getSource().add(task9);
+				task13.getSource().add(task10);
+				task13.getSink().add(task15);
+				
+				task14.getSource().add(task10);
+				task14.getSource().add(task11);
+				task14.getSink().add(task15);
+				
+				task15.getSource().add(task13);
+				task15.getSource().add(task14);
+				
+				
+				
+				//Activity 3
+				activity3.getEncapsulates().add(task4);
+				activity3.getEncapsulates().add(task5);
 				activity3.getEncapsulates().add(task8);
-				activity3.getEncapsulates().add(task9);
-				activity3.getEncapsulates().add(parallel3);
+				activity3.getEncapsulates().add(task12);
+			
 				
-				parallel3.getSource().add(task4);
-				parallel3.getSource().add(task5);
-				parallel3.getSource().add(task6);
+				task4.getSink().add(task8);
+				task5.getSink().add(task8);
 				
-				task7.getSource().add(parallel3);
-				task8.getSource().add(task7);
-				task9.getSource().add(task8);
+				task8.getSource().add(task4);
+				task8.getSource().add(task5);
+				task8.getSink().add(task12);
 				
 				workflow.getActivities().add(activity1);
 				workflow.getActivities().add(activity2);
@@ -139,14 +222,15 @@ public class ProcessCouplingTest {
 				
 				double processCouplingValue = 0;
 				
-				Method calculateProcessCoupling = ProcessCoupling.class.getDeclaredMethod("calculateProcessCoupling", Workflow.class);
-				calculateProcessCoupling.setAccessible(true);
-			
 				
-				processCouplingValue = (double) calculateProcessCoupling.invoke(processCoupling, workflow);
+				Method method = ProcessCoupling.class.getDeclaredMethod("calculateProcessCoupling", Workflow.class);
+				method.setAccessible(true);
+				
+				processCouplingValue = (double) method.invoke(processCoupling, workflow);
 				
 				System.out.println("Process Coupling is: " + processCouplingValue);
-				double result = (4.0d/27.0d);
+				double result = 1.0d / 3.0d;
 				assertEquals(result, processCouplingValue, 0.01);
 	}
+	
 }

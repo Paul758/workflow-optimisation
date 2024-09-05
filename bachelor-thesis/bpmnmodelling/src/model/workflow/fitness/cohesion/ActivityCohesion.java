@@ -18,7 +18,8 @@ public class ActivityCohesion {
 		ActivityRelationCohesion arc = new ActivityRelationCohesion();
 		
 		double activityCohesion = aic.calculateActivityInformationCohesion(activity) * arc.calculateActivityRelationCohesion(activity);
-		
+		System.out.println("The activity cohesion for " + activity.toString() + " is " + activityCohesion);
+		System.out.println(" ");
 		return activityCohesion;
 	}
 

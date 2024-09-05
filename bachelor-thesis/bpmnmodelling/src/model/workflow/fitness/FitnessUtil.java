@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import model.workflow.Activity;
+import model.workflow.AlternativeOperation;
 import model.workflow.InformationObject;
 import model.workflow.Task;
 
@@ -41,4 +42,31 @@ public class FitnessUtil {
 		return tasks;
 	}
 	
+	public static List<Operation> getAllOperationsFromActivity(Activity activity) {
+		List<Operation> operations = new ArrayList<Operation>();
+		List<Task> tasksInActivity = getTasksFromActivity(activity);
+		
+		for(Task task : tasksInActivity) {
+			
+			if(task.getAlternativePaths().isEmpty()) {
+				Operation operation = new Operation(task);
+				
+				if(operation.hasNoInput()) {
+					continue;
+				}
+				operations.add(operation);
+			} else {
+				List<AlternativeOperation> alternativeOperations = task.getAlternativePaths();
+				for(AlternativeOperation alternativeOperation : alternativeOperations) {
+					operations.add(new Operation(task,alternativeOperation));
+				}
+			}
+			
+			
+			
+		}
+		
+		return operations;
+		
+	}
 }

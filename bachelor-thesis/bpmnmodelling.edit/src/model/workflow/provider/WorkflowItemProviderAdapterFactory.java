@@ -164,20 +164,32 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory i
 	}
 
 	/**
+<<<<<<< HEAD
 	 * This keeps track of the one adapter used for all {@link model.workflow.Parallel} instances.
+=======
+	 * This keeps track of the one adapter used for all {@link model.workflow.ExclusiveTask} instances.
+>>>>>>> refactorProcessCohesion
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+<<<<<<< HEAD
 	protected ParallelItemProvider parallelItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link model.workflow.Parallel}.
+=======
+	protected ExclusiveTaskItemProvider exclusiveTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link model.workflow.ExclusiveTask}.
+>>>>>>> refactorProcessCohesion
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
+<<<<<<< HEAD
 	public Adapter createParallelAdapter() {
 		if (parallelItemProvider == null) {
 			parallelItemProvider = new ParallelItemProvider(this);
@@ -188,25 +200,53 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory i
 
 	/**
 	 * This keeps track of the one adapter used for all {@link model.workflow.Exclusive} instances.
+=======
+	public Adapter createExclusiveTaskAdapter() {
+		if (exclusiveTaskItemProvider == null) {
+			exclusiveTaskItemProvider = new ExclusiveTaskItemProvider(this);
+		}
+
+		return exclusiveTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link model.workflow.AlternativeOperation} instances.
+>>>>>>> refactorProcessCohesion
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+<<<<<<< HEAD
 	protected ExclusiveItemProvider exclusiveItemProvider;
 
 	/**
 	 * This creates an adapter for a {@link model.workflow.Exclusive}.
+=======
+	protected AlternativeOperationItemProvider alternativeOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link model.workflow.AlternativeOperation}.
+>>>>>>> refactorProcessCohesion
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
+<<<<<<< HEAD
 	public Adapter createExclusiveAdapter() {
 		if (exclusiveItemProvider == null) {
 			exclusiveItemProvider = new ExclusiveItemProvider(this);
 		}
 
 		return exclusiveItemProvider;
+=======
+	public Adapter createAlternativeOperationAdapter() {
+		if (alternativeOperationItemProvider == null) {
+			alternativeOperationItemProvider = new AlternativeOperationItemProvider(this);
+		}
+
+		return alternativeOperationItemProvider;
+>>>>>>> refactorProcessCohesion
 	}
 
 	/**
@@ -312,8 +352,13 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory i
 		if (workflowItemProvider != null) workflowItemProvider.dispose();
 		if (activityItemProvider != null) activityItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
+<<<<<<< HEAD
 		if (parallelItemProvider != null) parallelItemProvider.dispose();
 		if (exclusiveItemProvider != null) exclusiveItemProvider.dispose();
+=======
+		if (exclusiveTaskItemProvider != null) exclusiveTaskItemProvider.dispose();
+		if (alternativeOperationItemProvider != null) alternativeOperationItemProvider.dispose();
+>>>>>>> refactorProcessCohesion
 	}
 
 }

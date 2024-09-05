@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import model.workflow.Activity;
-import model.workflow.Exclusive;
+import model.workflow.AlternativeOperation;
+import model.workflow.ExclusiveTask;
 import model.workflow.InformationObject;
 import model.workflow.NamedElement;
-import model.workflow.Parallel;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
@@ -66,14 +66,14 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parallelEClass = null;
+	private EClass exclusiveTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass exclusiveEClass = null;
+	private EClass alternativeOperationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -249,8 +249,8 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParallel() {
-		return parallelEClass;
+	public EReference getTask_AlternativePaths() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -258,8 +258,35 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExclusive() {
-		return exclusiveEClass;
+	public EClass getExclusiveTask() {
+		return exclusiveTaskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExclusiveTask_AlternativePaths() {
+		return (EReference)exclusiveTaskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAlternativeOperation() {
+		return alternativeOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAlternativeOperation_InputTasks() {
+		return (EReference)alternativeOperationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -306,10 +333,13 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEReference(informationObjectEClass, INFORMATION_OBJECT__SINK);
 
 		taskEClass = createEClass(TASK);
+		createEReference(taskEClass, TASK__ALTERNATIVE_PATHS);
 
-		parallelEClass = createEClass(PARALLEL);
+		exclusiveTaskEClass = createEClass(EXCLUSIVE_TASK);
+		createEReference(exclusiveTaskEClass, EXCLUSIVE_TASK__ALTERNATIVE_PATHS);
 
-		exclusiveEClass = createEClass(EXCLUSIVE);
+		alternativeOperationEClass = createEClass(ALTERNATIVE_OPERATION);
+		createEReference(alternativeOperationEClass, ALTERNATIVE_OPERATION__INPUT_TASKS);
 	}
 
 	/**
@@ -343,8 +373,8 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		activityEClass.getESuperTypes().add(this.getNamedElement());
 		informationObjectEClass.getESuperTypes().add(this.getNamedElement());
 		taskEClass.getESuperTypes().add(this.getInformationObject());
-		parallelEClass.getESuperTypes().add(this.getInformationObject());
-		exclusiveEClass.getESuperTypes().add(this.getInformationObject());
+		exclusiveTaskEClass.getESuperTypes().add(this.getInformationObject());
+		alternativeOperationEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -363,10 +393,13 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		initEReference(getInformationObject_Sink(), this.getInformationObject(), null, "sink", null, 0, -1, InformationObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTask_AlternativePaths(), this.getAlternativeOperation(), null, "alternativePaths", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parallelEClass, Parallel.class, "Parallel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(exclusiveTaskEClass, ExclusiveTask.class, "ExclusiveTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExclusiveTask_AlternativePaths(), this.getAlternativeOperation(), null, "alternativePaths", null, 0, -1, ExclusiveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(exclusiveEClass, Exclusive.class, "Exclusive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(alternativeOperationEClass, AlternativeOperation.class, "AlternativeOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAlternativeOperation_InputTasks(), this.getTask(), null, "inputTasks", null, 0, -1, AlternativeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

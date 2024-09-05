@@ -88,12 +88,12 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 				return createTaskAdapter();
 			}
 			@Override
-			public Adapter caseParallel(Parallel object) {
-				return createParallelAdapter();
+			public Adapter caseExclusiveTask(ExclusiveTask object) {
+				return createExclusiveTaskAdapter();
 			}
 			@Override
-			public Adapter caseExclusive(Exclusive object) {
-				return createExclusiveAdapter();
+			public Adapter caseAlternativeOperation(AlternativeOperation object) {
+				return createAlternativeOperationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -186,30 +186,30 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link model.workflow.Parallel <em>Parallel</em>}'.
+	 * Creates a new adapter for an object of class '{@link model.workflow.ExclusiveTask <em>Exclusive Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see model.workflow.Parallel
+	 * @see model.workflow.ExclusiveTask
 	 * @generated
 	 */
-	public Adapter createParallelAdapter() {
+	public Adapter createExclusiveTaskAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link model.workflow.Exclusive <em>Exclusive</em>}'.
+	 * Creates a new adapter for an object of class '{@link model.workflow.AlternativeOperation <em>Alternative Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see model.workflow.Exclusive
+	 * @see model.workflow.AlternativeOperation
 	 * @generated
 	 */
-	public Adapter createExclusiveAdapter() {
+	public Adapter createAlternativeOperationAdapter() {
 		return null;
 	}
 

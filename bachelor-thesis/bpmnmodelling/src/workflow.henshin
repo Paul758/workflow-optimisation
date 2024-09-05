@@ -462,4 +462,103 @@
     <mappings xmi:id="_tNF7IjDGEe--A6kVjhILAg" origin="_tNF7IDDGEe--A6kVjhILAg" image="_tNF7ITDGEe--A6kVjhILAg"/>
     <mappings xmi:id="_vATlMjDGEe--A6kVjhILAg" origin="_vATlMDDGEe--A6kVjhILAg" image="_vATlMTDGEe--A6kVjhILAg"/>
   </units>
+  <units xsi:type="henshin:Rule" xmi:id="_d2ZEUGCREe--wf5Je8sfLQ" name="extractInformationObject">
+    <lhs xmi:id="_d2fyAGCREe--wf5Je8sfLQ" name="Lhs">
+      <nodes xmi:id="_fOanMGCREe--wf5Je8sfLQ" name="flow" outgoing="_m_R7cGCREe--wf5Je8sfLQ _n6wsQGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow"/>
+      </nodes>
+      <nodes xmi:id="_gamGcGCREe--wf5Je8sfLQ" name="a1" incoming="_m_R7cGCREe--wf5Je8sfLQ _1bP1wGCREe--wf5Je8sfLQ" outgoing="_BEl3cGCSEe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_kD36QGCREe--wf5Je8sfLQ" name="i1" incoming="_n6wsQGCREe--wf5Je8sfLQ _BEl3cGCSEe--wf5Je8sfLQ" outgoing="_1bP1wGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_m_R7cGCREe--wf5Je8sfLQ" source="_fOanMGCREe--wf5Je8sfLQ" target="_gamGcGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_n6wsQGCREe--wf5Je8sfLQ" source="_fOanMGCREe--wf5Je8sfLQ" target="_kD36QGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
+      </edges>
+      <edges xmi:id="_1bP1wGCREe--wf5Je8sfLQ" source="_kD36QGCREe--wf5Je8sfLQ" target="_gamGcGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//InformationObject/isEncapsulatedBy"/>
+      </edges>
+      <edges xmi:id="_BEl3cGCSEe--wf5Je8sfLQ" source="_gamGcGCREe--wf5Je8sfLQ" target="_kD36QGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_lyf_QGCREe--wf5Je8sfLQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_lyf_QWCREe--wf5Je8sfLQ">
+          <conclusion xmi:id="_lyf_QmCREe--wf5Je8sfLQ">
+            <nodes xmi:id="_lygmUGCREe--wf5Je8sfLQ" name="flow" outgoing="_m_R7cmCREe--wf5Je8sfLQ _n6wsQmCREe--wf5Je8sfLQ _6Mbs0GCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Workflow"/>
+            </nodes>
+            <nodes xmi:id="_lygmUmCREe--wf5Je8sfLQ" name="a1" incoming="_m_R7cmCREe--wf5Je8sfLQ _1bP1wmCREe--wf5Je8sfLQ" outgoing="_4o75wGCREe--wf5Je8sfLQ _BEl3cmCSEe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Activity"/>
+            </nodes>
+            <nodes xmi:id="_lygmVGCREe--wf5Je8sfLQ" name="i1" incoming="_n6wsQmCREe--wf5Je8sfLQ _BEl3cmCSEe--wf5Je8sfLQ" outgoing="_1bP1wmCREe--wf5Je8sfLQ _EgVlkGCSEe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+            </nodes>
+            <nodes xmi:id="_k3vAIGCREe--wf5Je8sfLQ" name="i2" incoming="_4o75wGCREe--wf5Je8sfLQ _6Mbs0GCREe--wf5Je8sfLQ _EgVlkGCSEe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+            </nodes>
+            <edges xmi:id="_m_R7cmCREe--wf5Je8sfLQ" source="_lygmUGCREe--wf5Je8sfLQ" target="_lygmUmCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+            </edges>
+            <edges xmi:id="_n6wsQmCREe--wf5Je8sfLQ" source="_lygmUGCREe--wf5Je8sfLQ" target="_lygmVGCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
+            </edges>
+            <edges xmi:id="_1bP1wmCREe--wf5Je8sfLQ" source="_lygmVGCREe--wf5Je8sfLQ" target="_lygmUmCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//InformationObject/isEncapsulatedBy"/>
+            </edges>
+            <edges xmi:id="_4o75wGCREe--wf5Je8sfLQ" source="_lygmUmCREe--wf5Je8sfLQ" target="_k3vAIGCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+            </edges>
+            <edges xmi:id="_6Mbs0GCREe--wf5Je8sfLQ" source="_lygmUGCREe--wf5Je8sfLQ" target="_k3vAIGCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
+            </edges>
+            <edges xmi:id="_BEl3cmCSEe--wf5Je8sfLQ" source="_lygmUmCREe--wf5Je8sfLQ" target="_lygmVGCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+            </edges>
+            <edges xmi:id="_EgVlkGCSEe--wf5Je8sfLQ" source="_lygmVGCREe--wf5Je8sfLQ" target="_k3vAIGCREe--wf5Je8sfLQ">
+              <type href="http://bpmnmodelling/workflow#//InformationObject/sink"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_lygmUWCREe--wf5Je8sfLQ" origin="_fOanMGCREe--wf5Je8sfLQ" image="_lygmUGCREe--wf5Je8sfLQ"/>
+          <mappings xmi:id="_lygmU2CREe--wf5Je8sfLQ" origin="_gamGcGCREe--wf5Je8sfLQ" image="_lygmUmCREe--wf5Je8sfLQ"/>
+          <mappings xmi:id="_lygmVWCREe--wf5Je8sfLQ" origin="_kD36QGCREe--wf5Je8sfLQ" image="_lygmVGCREe--wf5Je8sfLQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_d2gZEGCREe--wf5Je8sfLQ" name="Rhs">
+      <nodes xmi:id="_fOanMWCREe--wf5Je8sfLQ" name="flow" outgoing="_m_R7cWCREe--wf5Je8sfLQ _n6wsQWCREe--wf5Je8sfLQ _t0NL4GCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow"/>
+      </nodes>
+      <nodes xmi:id="_gamGcWCREe--wf5Je8sfLQ" name="a1" incoming="_m_R7cWCREe--wf5Je8sfLQ" outgoing="_BEl3cWCSEe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_hRIF0GCREe--wf5Je8sfLQ" name="a2" incoming="_t0NL4GCREe--wf5Je8sfLQ _x7ejQGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Activity"/>
+      </nodes>
+      <nodes xmi:id="_kD36QWCREe--wf5Je8sfLQ" name="i1" incoming="_n6wsQWCREe--wf5Je8sfLQ _BEl3cWCSEe--wf5Je8sfLQ" outgoing="_x7ejQGCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//InformationObject"/>
+      </nodes>
+      <edges xmi:id="_m_R7cWCREe--wf5Je8sfLQ" source="_fOanMWCREe--wf5Je8sfLQ" target="_gamGcWCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_n6wsQWCREe--wf5Je8sfLQ" source="_fOanMWCREe--wf5Je8sfLQ" target="_kD36QWCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow/informationObjects"/>
+      </edges>
+      <edges xmi:id="_t0NL4GCREe--wf5Je8sfLQ" source="_fOanMWCREe--wf5Je8sfLQ" target="_hRIF0GCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Workflow/activities"/>
+      </edges>
+      <edges xmi:id="_x7ejQGCREe--wf5Je8sfLQ" source="_kD36QWCREe--wf5Je8sfLQ" target="_hRIF0GCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//InformationObject/isEncapsulatedBy"/>
+      </edges>
+      <edges xmi:id="_BEl3cWCSEe--wf5Je8sfLQ" source="_gamGcWCREe--wf5Je8sfLQ" target="_kD36QWCREe--wf5Je8sfLQ">
+        <type href="http://bpmnmodelling/workflow#//Activity/encapsulates"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_fOanMmCREe--wf5Je8sfLQ" origin="_fOanMGCREe--wf5Je8sfLQ" image="_fOanMWCREe--wf5Je8sfLQ"/>
+    <mappings xmi:id="_gamGcmCREe--wf5Je8sfLQ" origin="_gamGcGCREe--wf5Je8sfLQ" image="_gamGcWCREe--wf5Je8sfLQ"/>
+    <mappings xmi:id="_kD36QmCREe--wf5Je8sfLQ" origin="_kD36QGCREe--wf5Je8sfLQ" image="_kD36QWCREe--wf5Je8sfLQ"/>
+  </units>
 </henshin:Module>

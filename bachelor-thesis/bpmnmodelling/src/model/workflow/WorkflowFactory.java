@@ -58,22 +58,22 @@ public interface WorkflowFactory extends EFactory {
 	Task createTask();
 
 	/**
-	 * Returns a new object of class '<em>Parallel</em>'.
+	 * Returns a new object of class '<em>Exclusive Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parallel</em>'.
+	 * @return a new object of class '<em>Exclusive Task</em>'.
 	 * @generated
 	 */
-	Parallel createParallel();
+	ExclusiveTask createExclusiveTask();
 
 	/**
-	 * Returns a new object of class '<em>Exclusive</em>'.
+	 * Returns a new object of class '<em>Alternative Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exclusive</em>'.
+	 * @return a new object of class '<em>Alternative Operation</em>'.
 	 * @generated
 	 */
-	Exclusive createExclusive();
+	AlternativeOperation createAlternativeOperation();
 
 	/**
 	 * Returns the package supported by this factory.

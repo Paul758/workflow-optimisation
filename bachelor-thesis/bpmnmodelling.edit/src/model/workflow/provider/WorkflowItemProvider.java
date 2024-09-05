@@ -17,6 +17,10 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+<<<<<<< HEAD
+=======
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+>>>>>>> refactorProcessCohesion
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -61,11 +65,40 @@ public class WorkflowItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+<<<<<<< HEAD
+=======
+			addAlternativeOperationsPropertyDescriptor(object);
+>>>>>>> refactorProcessCohesion
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * This adds a property descriptor for the Alternative Operations feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlternativeOperationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Workflow_alternativeOperations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Workflow_alternativeOperations_feature", "_UI_Workflow_type"),
+				 WorkflowPackage.Literals.WORKFLOW__ALTERNATIVE_OPERATIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+>>>>>>> refactorProcessCohesion
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -158,12 +191,16 @@ public class WorkflowItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WorkflowPackage.Literals.WORKFLOW__INFORMATION_OBJECTS,
+<<<<<<< HEAD
 				 WorkflowFactory.eINSTANCE.createParallel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WorkflowPackage.Literals.WORKFLOW__INFORMATION_OBJECTS,
 				 WorkflowFactory.eINSTANCE.createExclusive()));
+=======
+				 WorkflowFactory.eINSTANCE.createExclusiveTask()));
+>>>>>>> refactorProcessCohesion
 
 		newChildDescriptors.add
 			(createChildParameter
