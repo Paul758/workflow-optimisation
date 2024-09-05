@@ -9,24 +9,19 @@ public class ProcessCouplingCohesionRatio implements IGuidanceFunction {
 	ProcessCoupling processCoupling = new ProcessCoupling();
 	ProcessCohesion processCohesion = new ProcessCohesion();
 	
+	/**
+	 * The Coupling / Cohesion Ratio (CCR) is defined as the ProcessCoupling / ProcessCohesion
+	 * @param Solution the instance model for which the CCR should be calculated
+	 * @return The CCR of the instance model
+	 */
 	@Override
 	public double computeFitness(Solution solution) {
-		double processCouplingValue = processCoupling.computeFitness(solution);
-		//System.out.println("The processCouplingValue in ratio class is: " + processCouplingValue);
+		double processCouplingValue = processCoupling.computeFitness(solution);	
 		double processCohesionValue = processCohesion.computeFitness(solution);
-		//System.out.println("The processCohesionValue in ratio class is: " + processCohesionValue);
-		
 		
 		if(processCohesionValue == 0) {
-			System.out.println("The processCohesionValue is 0, so for this run the processCouplingCohesionRatio is also 0");
 			return 0;
 		}
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("The processCouplingValue in ratio class is: " + processCouplingValue);
-		System.out.println("The processCohesionValue in ratio class is: " + processCohesionValue);
-		System.out.println("The processCouplingCohesionRatio for this model is " + processCouplingValue / processCohesionValue);
-		System.out.println(" ");
 		return processCouplingValue / processCohesionValue;
 	}
 

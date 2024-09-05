@@ -1,4 +1,4 @@
-package model.workflow.fitness;
+package model.workflow.fitness.util;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,6 +7,12 @@ import java.util.Set;
 import model.workflow.AlternativeOperation;
 import model.workflow.Task;
 
+/**
+ * A class to construct the operations based on the modeled task structure
+ * An operation contains exactly one Task that represents the output and 
+ * a set of tasks that represent the input.
+ * The operation taskSet is the union of the input and the output.
+ */
 public class Operation {
 	
 	private Task output;

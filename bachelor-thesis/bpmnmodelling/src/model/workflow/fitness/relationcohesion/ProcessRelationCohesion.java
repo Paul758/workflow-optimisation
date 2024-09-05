@@ -11,6 +11,12 @@ public class ProcessRelationCohesion implements IGuidanceFunction{
 
 	ActivityRelationCohesion activityRelationCohesion = new ActivityRelationCohesion();
 	
+	/**
+	 * The ProcessRelationCohesion is calculated for test purposes. It calculates the ARC for all activities
+	 * in the process and normalizes it by the amount of all activities
+	 * @Solution solution The instance model for which the ProcessInformationCohesion should be calculated
+	 * @return The ProcessInformationCohesion for the instance model.
+	 */
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();

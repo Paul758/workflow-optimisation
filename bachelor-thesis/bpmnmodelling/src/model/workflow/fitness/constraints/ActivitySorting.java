@@ -1,4 +1,4 @@
-package model.workflow.fitness;
+package model.workflow.fitness.constraints;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +14,14 @@ import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction;
 import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution;
 
 public class ActivitySorting implements IGuidanceFunction {
-
+	
+	/**
+	 * Constraint for checking if the activities of a process can be executed in a feasible order.
+	 * The activities of a feasible process model can be seen as an acyclic graph. If a topological sorting of
+	 * the activities is possible, the activities have an order, in which they can be executed.
+	 * @param Solution The instance model containing all activities
+	 * @return If a topological sorting is possible return 0, else 1. This is a binary constraint
+	 */
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();
@@ -66,7 +73,7 @@ public class ActivitySorting implements IGuidanceFunction {
 			//Cycle detected, there exists no valid ordering
 			return false;
 		}
-		System.out.println(sortedOrder.toString());
+		//System.out.println(sortedOrder.toString());
 		return true;
 		
 	}

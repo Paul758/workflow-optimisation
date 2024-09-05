@@ -7,13 +7,14 @@ import java.util.List;
 import java.util.Set;
 import model.workflow.Activity;
 import model.workflow.Task;
-import model.workflow.fitness.FitnessUtil;
-import model.workflow.fitness.Operation;
+import model.workflow.fitness.util.FitnessUtil;
+import model.workflow.fitness.util.Operation;
 
 
 public class ActivityInformationCohesion {
 	
 	/**
+	 * Calculate the AIC for a given Activity.
 	 * @param activity The activity for which the AIC should be calculated
 	 * @return Returns the AIC for the given activity. The AIC is calculated by checking for each task if there is
 	 * a pair of operations, so that the task in present in the intersection of the operation pair.
@@ -27,15 +28,13 @@ public class ActivityInformationCohesion {
 		double taskInIntersectionCounter = 0;
 		double taskAmount = tasks.size();
 			
-		//Construct set of all tasks that are used in any operation (denominator for calculation)
-		System.out.println("The operations are ");
-		
+		//Construct set of all tasks that are used in any operation (denominator for calculation)	
 		for(Operation operation : operations) {
-			System.out.println(operation.getTaskSet().toString());
+
 			tasksUsedInAnyOperation.addAll(operation.getTaskSet());
 			
 		}
-		System.out.println("The tasks used in this activity are " + tasksUsedInAnyOperation.toString());
+	
 		//Return 0 if there is no operation
 		if (operations.size() == 0) {
 			return 0;
@@ -52,11 +51,7 @@ public class ActivityInformationCohesion {
 			}	
 		}
 		
-		System.out.println("The taskIntersection count for " + activity.getName() + " is " + taskInIntersectionCounter);	
-		System.out.println("The taskAmount for " + activity.getName() + " is " + tasksUsedInAnyOperation);	
 		double activityInformationCohesion = taskInIntersectionCounter / tasksUsedInAnyOperation.size();
-		
-		System.out.println("The activity Information Cohesion for " + activity.toString() + "is " + activityInformationCohesion);
 		return activityInformationCohesion;
 	}
 

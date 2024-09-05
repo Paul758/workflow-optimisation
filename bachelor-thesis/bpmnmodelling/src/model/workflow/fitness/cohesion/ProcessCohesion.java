@@ -12,8 +12,10 @@ public class ProcessCohesion implements IGuidanceFunction {
 	ActivityCohesion activityCohesion = new ActivityCohesion();
 	
 	/**
-	 * Calculate the process cohesion by summing up the activity cohesion for each activity and then dividing it by all acitivities
+	 * Calculate the process cohesion by summing up the activity cohesion for each activity and then dividing it by all activities
 	 * resulting in the mean
+	 * @param Solution the instance model, for which the fitness is calculated.
+	 * @return the processCohesion for the instance model 
 	 */
 	@Override
 	public double computeFitness(Solution solution) {
@@ -24,11 +26,14 @@ public class ProcessCohesion implements IGuidanceFunction {
 	private double calculateProcessCohesion(Workflow workflow) {
 		List<Activity> activities = workflow.getActivities();
 		double totalActivities = activities.size();
-		if(activities.size() == 0) {
+		
+		//If no activities exists, the cohesion is 0.
+		if (activities.size() == 0) {
 			return 0;
 		}
+		
 		double totalCohesionValue = 0;
-		for(Activity activity : activities) {
+		for (Activity activity : activities) {
 			totalCohesionValue += activityCohesion.calculateActivityCohesion(activity);
 		}
 		

@@ -1,21 +1,24 @@
 problem {
 	basepath <src/>
 	metamodel <model.workflow.WorkflowPackage>
-	model <Request_Student-Grant.xmi>
+	model <Workflow_StudentGrant2.xmi>
 }
 goal {
-	objective Workflow minimise java { "model.workflow.fitness.coupling.ProcessCouplingCohesionRatio" }
+	objective Coupling minimise java { "model.workflow.fitness.coupling.ProcessCoupling" }
+	objective Cohesion maximise java { "model.workflow.fitness.cohesion.ProcessCohesion" }
 	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.MinimiseObjectsWithoutActivity"}
-	//constraint MinimiseEmptyActivities java {"model.workflow.fitness.MinimiseEmptyActivities"}
+	constraint MinimiseEmptyActivities java {"model.workflow.fitness.MinimiseEmptyActivities"}
 	constraint MinimiseSmallActivities java {"model.workflow.fitness.MinimiseSmallActivities"}
-	constraint ValidActivityOrdering java {"model.workflow.fitness.ValidActivityOrdering"}
+	constraint ValidActivityOrdering java {"model.workflow.fitness.ActivitySorting"}
+	constraint ActivityHasOperation java {"model.workflow.fitness.ActivityHasOperation"}
 }
 search { 
 	mutate using <workflow.henshin> unit "MoveObjectToNextActivity"
 	mutate using <workflow.henshin> unit "MoveObjectToPreviouseActivity"
 	mutate using <workflow.henshin> unit "createNewActivity"
 	mutate using <workflow.henshin> unit "assignInformationObject"
-	//mutate using <workflow.henshin> unit "deleteEmptyActivity"	
+	mutate using <workflow.henshin> unit "deleteEmptyActivity"
+	mutate using <workflow.henshin> unit "extractInformationObject"	
 }
 solver {
 	optimisation provider moea algorithm NSGAII {

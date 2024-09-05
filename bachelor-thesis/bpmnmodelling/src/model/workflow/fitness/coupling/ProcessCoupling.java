@@ -7,13 +7,21 @@ import java.util.Set;
 import model.workflow.Activity;
 import model.workflow.Task;
 import model.workflow.Workflow;
-import model.workflow.fitness.FitnessUtil;
-import model.workflow.fitness.Operation;
+import model.workflow.fitness.util.FitnessUtil;
+import model.workflow.fitness.util.Operation;
 import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction;
 import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution;
 
 public class ProcessCoupling implements IGuidanceFunction {
 
+	/**
+	 * Calculate the coupling of a process by finding all connections between each activity.
+	 * Two activities are connected, if the operations of each activities share at least one informationObject.
+	 * The coupling of a process is the count of all connections, divided by the
+	 * amount of activities * amount  of activities - 1 to normalize it
+	 * @param Solution the instance model containing all activities
+	 * @return The coupling of the whole process
+	 */
 	@Override
 	public double computeFitness(Solution solution) {
 		Workflow workflow = (Workflow) solution.getModel();
@@ -22,11 +30,10 @@ public class ProcessCoupling implements IGuidanceFunction {
 
 	
 	private double calculateProcessCoupling(Workflow workflow) {
-		
 		List<Activity> activities = workflow.getActivities();
-		//System.out.println("The activities are " + activities.toString());
 		double connectedCounter = 0;
 		double totalActivities = activities.size();
+		
 		for (int i = 0; i < activities.size(); i++) {
 			Activity currentActivity = activities.get(i);
 			
@@ -38,49 +45,38 @@ public class ProcessCoupling implements IGuidanceFunction {
 				}
 			}
 		}
-		//System.out.println("The amount of connections: " + connectedCounter);
 		double fitness = connectedCounter / (totalActivities * (totalActivities - 1));
 		return fitness;
 	}
 
 
 	private boolean connected(Activity sActivity, Activity tActivity) {
-		//System.out.println("now comparing " + sActivity.toString() + " and " + tActivity.toString());
-		if(sActivity.equals(tActivity)) {
-			//System.out.println("the activities are the same, so skip");
+		if (sActivity.equals(tActivity)) {
 			return false;
 		}
-		
-		return activitiesShareInformationObjects(sActivity, tActivity);
-		
-		
+		return activitiesShareInformationObjects(sActivity, tActivity);	
 	}
 	
 	private boolean activitiesShareInformationObjects(Activity sActivity, Activity tActivity) {
 		List<Operation> sOperations = FitnessUtil.getAllOperationsFromActivity(sActivity);
 		List<Operation> tOperations = FitnessUtil.getAllOperationsFromActivity(tActivity);
-		System.out.println("The operations in " + sActivity.toString() + "are" + sOperations.toString());
-		System.out.println("The operations in " + tActivity.toString() + "are" + tOperations.toString());
-	    
+    
 	    for (int i = 0; i < sOperations.size(); i++) {
 	    	
 	    	Operation currentOperation = sOperations.get(i);
 	    	
 		    for (int j = 0; j < tOperations.size(); j++) {
-		    	Operation nextOperation = tOperations.get(j);
-		    	//System.out.println("The sOperation is " + sOperations.toString());
-		    	//System.out.println("The tOperation is " + tOperations.toString());
-		    	//Intersect sets
+		    	
+		    	Operation nextOperation = tOperations.get(j);    	
 		    	Set<Task> intersectionSet = new HashSet<Task>(currentOperation.getTaskSet());
 		    	intersectionSet.retainAll(nextOperation.getTaskSet());
-		    	//System.out.println("the intersection is " + sOperations.toString());
+		    	
 		    	if(!intersectionSet.isEmpty()) {
 		    		return true;
 		    	}
 		    	
 		    }
 	    }
-		
 		return false;
 	}
 
