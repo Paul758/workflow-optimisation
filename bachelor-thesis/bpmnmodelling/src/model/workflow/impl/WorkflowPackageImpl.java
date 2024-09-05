@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import model.workflow.Activity;
 import model.workflow.AlternativeOperation;
-import model.workflow.ExclusiveTask;
 import model.workflow.InformationObject;
 import model.workflow.NamedElement;
 import model.workflow.Task;
@@ -60,13 +59,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * @generated
 	 */
 	private EClass taskEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass exclusiveTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -258,24 +250,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExclusiveTask() {
-		return exclusiveTaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExclusiveTask_AlternativePaths() {
-		return (EReference)exclusiveTaskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAlternativeOperation() {
 		return alternativeOperationEClass;
 	}
@@ -335,9 +309,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		taskEClass = createEClass(TASK);
 		createEReference(taskEClass, TASK__ALTERNATIVE_PATHS);
 
-		exclusiveTaskEClass = createEClass(EXCLUSIVE_TASK);
-		createEReference(exclusiveTaskEClass, EXCLUSIVE_TASK__ALTERNATIVE_PATHS);
-
 		alternativeOperationEClass = createEClass(ALTERNATIVE_OPERATION);
 		createEReference(alternativeOperationEClass, ALTERNATIVE_OPERATION__INPUT_TASKS);
 	}
@@ -373,7 +344,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		activityEClass.getESuperTypes().add(this.getNamedElement());
 		informationObjectEClass.getESuperTypes().add(this.getNamedElement());
 		taskEClass.getESuperTypes().add(this.getInformationObject());
-		exclusiveTaskEClass.getESuperTypes().add(this.getInformationObject());
 		alternativeOperationEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
@@ -394,9 +364,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTask_AlternativePaths(), this.getAlternativeOperation(), null, "alternativePaths", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(exclusiveTaskEClass, ExclusiveTask.class, "ExclusiveTask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExclusiveTask_AlternativePaths(), this.getAlternativeOperation(), null, "alternativePaths", null, 0, -1, ExclusiveTask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(alternativeOperationEClass, AlternativeOperation.class, "AlternativeOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAlternativeOperation_InputTasks(), this.getTask(), null, "inputTasks", null, 0, -1, AlternativeOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

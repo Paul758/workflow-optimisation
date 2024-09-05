@@ -25,10 +25,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="alternativePaths" upperBound="-1"
         eType="#//AlternativeOperation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExclusiveTask" eSuperTypes="#//InformationObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alternativePaths" upperBound="-1"
-        eType="#//AlternativeOperation" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlternativeOperation" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputTasks" upperBound="-1"
         eType="#//Task"/>

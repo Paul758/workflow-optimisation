@@ -60,7 +60,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			case WorkflowPackage.WORKFLOW: return createWorkflow();
 			case WorkflowPackage.ACTIVITY: return createActivity();
 			case WorkflowPackage.TASK: return createTask();
-			case WorkflowPackage.EXCLUSIVE_TASK: return createExclusiveTask();
 			case WorkflowPackage.ALTERNATIVE_OPERATION: return createAlternativeOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -105,16 +104,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public Task createTask() {
 		TaskImpl task = new TaskImpl();
 		return task;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExclusiveTask createExclusiveTask() {
-		ExclusiveTaskImpl exclusiveTask = new ExclusiveTaskImpl();
-		return exclusiveTask;
 	}
 
 	/**

@@ -323,79 +323,6 @@ public interface WorkflowPackage extends EPackage {
 	int TASK_OPERATION_COUNT = INFORMATION_OBJECT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link model.workflow.impl.ExclusiveTaskImpl <em>Exclusive Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see model.workflow.impl.ExclusiveTaskImpl
-	 * @see model.workflow.impl.WorkflowPackageImpl#getExclusiveTask()
-	 * @generated
-	 */
-	int EXCLUSIVE_TASK = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK__NAME = INFORMATION_OBJECT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Is Encapsulated By</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK__IS_ENCAPSULATED_BY = INFORMATION_OBJECT__IS_ENCAPSULATED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK__SOURCE = INFORMATION_OBJECT__SOURCE;
-
-	/**
-	 * The feature id for the '<em><b>Sink</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK__SINK = INFORMATION_OBJECT__SINK;
-
-	/**
-	 * The feature id for the '<em><b>Alternative Paths</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK__ALTERNATIVE_PATHS = INFORMATION_OBJECT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Exclusive Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK_FEATURE_COUNT = INFORMATION_OBJECT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Exclusive Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXCLUSIVE_TASK_OPERATION_COUNT = INFORMATION_OBJECT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link model.workflow.impl.AlternativeOperationImpl <em>Alternative Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,7 +330,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see model.workflow.impl.WorkflowPackageImpl#getAlternativeOperation()
 	 * @generated
 	 */
-	int ALTERNATIVE_OPERATION = 6;
+	int ALTERNATIVE_OPERATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -580,27 +507,6 @@ public interface WorkflowPackage extends EPackage {
 	EReference getTask_AlternativePaths();
 
 	/**
-	 * Returns the meta object for class '{@link model.workflow.ExclusiveTask <em>Exclusive Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Exclusive Task</em>'.
-	 * @see model.workflow.ExclusiveTask
-	 * @generated
-	 */
-	EClass getExclusiveTask();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link model.workflow.ExclusiveTask#getAlternativePaths <em>Alternative Paths</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Alternative Paths</em>'.
-	 * @see model.workflow.ExclusiveTask#getAlternativePaths()
-	 * @see #getExclusiveTask()
-	 * @generated
-	 */
-	EReference getExclusiveTask_AlternativePaths();
-
-	/**
 	 * Returns the meta object for class '{@link model.workflow.AlternativeOperation <em>Alternative Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,24 +663,6 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK__ALTERNATIVE_PATHS = eINSTANCE.getTask_AlternativePaths();
-
-		/**
-		 * The meta object literal for the '{@link model.workflow.impl.ExclusiveTaskImpl <em>Exclusive Task</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see model.workflow.impl.ExclusiveTaskImpl
-		 * @see model.workflow.impl.WorkflowPackageImpl#getExclusiveTask()
-		 * @generated
-		 */
-		EClass EXCLUSIVE_TASK = eINSTANCE.getExclusiveTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Alternative Paths</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXCLUSIVE_TASK__ALTERNATIVE_PATHS = eINSTANCE.getExclusiveTask_AlternativePaths();
 
 		/**
 		 * The meta object literal for the '{@link model.workflow.impl.AlternativeOperationImpl <em>Alternative Operation</em>}' class.

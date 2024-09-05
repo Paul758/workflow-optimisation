@@ -20,7 +20,6 @@ public class ActivityRelationCohesion {
 	 * The ARC is normalized between 0 and 1
 	 */
 	public double calculateActivityRelationCohesion(Activity activity) {
-		List<Task> tasks = FitnessUtil.getTasksFromActivity(activity);
 		List<Operation> operations = FitnessUtil.getAllOperationsFromActivity(activity);
 		
 		double relationCounter = 0;

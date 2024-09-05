@@ -13,8 +13,8 @@ goal {
 	constraint ActivityHasOperation java {"model.workflow.fitness.constraints.ActivityHasOperation"}
 }
 search { 
-	mutate using <workflow.henshin> unit "MoveObjectToNextActivity"
-	mutate using <workflow.henshin> unit "MoveObjectToPreviouseActivity"
+	mutate using <workflow.henshin> unit "moveObjectToNextActivity"
+	mutate using <workflow.henshin> unit "moveObjectToPreviousActivity"
 	mutate using <workflow.henshin> unit "createNewActivity"
 	mutate using <workflow.henshin> unit "assignInformationObject"
 	mutate using <workflow.henshin> unit "deleteEmptyActivity"

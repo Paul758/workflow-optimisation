@@ -58,15 +58,6 @@ public interface WorkflowFactory extends EFactory {
 	Task createTask();
 
 	/**
-	 * Returns a new object of class '<em>Exclusive Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exclusive Task</em>'.
-	 * @generated
-	 */
-	ExclusiveTask createExclusiveTask();
-
-	/**
 	 * Returns a new object of class '<em>Alternative Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
