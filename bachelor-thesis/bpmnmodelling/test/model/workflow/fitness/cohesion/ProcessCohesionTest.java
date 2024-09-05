@@ -12,8 +12,7 @@ import model.workflow.Activity;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
-import model.workflow.fitness.informationcohesion.ProcessInformationCohesion;
-import model.workflow.fitness.relationcohesion.ProcessRelationCohesion;
+
 
 class ProcessCohesionTest {
 
@@ -38,7 +37,7 @@ class ProcessCohesionTest {
 	
 	@BeforeEach
 	void setUp() {
-		System.out.println("Run Before");
+		
 		activityCohesion = new ActivityCohesion();
 		processCohesion = new ProcessCohesion();
 		
@@ -139,7 +138,7 @@ class ProcessCohesionTest {
 				
 				processCohesionValue = (double) method.invoke(processCohesion, workflow);
 				
-				System.out.println("Process Cohesion is: " + processCohesionValue);
+				
 				double result = (5.0/28.0d);
 				assertEquals(result, processCohesionValue, 0.01);
 	}

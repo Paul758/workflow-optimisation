@@ -24,7 +24,7 @@ public class ActivityRelationCohesion {
 		List<Operation> operations = FitnessUtil.getAllOperationsFromActivity(activity);
 		
 		double relationCounter = 0;
-		double taskAmount = tasks.size();
+		
 		
 		//If there is one task or less return 0
 		if(operations.size() <= 1) {

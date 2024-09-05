@@ -1,15 +1,15 @@
 problem {
 	basepath <src/>
 	metamodel <model.workflow.WorkflowPackage>
-	model <Workflow_StudentGrant2.xmi>
+	model <Workflow_StudentGrant.xmi>
 }
 goal {
 	objective CCR minimise java { "model.workflow.fitness.coupling.ProcessCouplingCohesionRatio" }
-	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.MinimiseObjectsWithoutActivity"}
-	constraint MinimiseEmptyActivities java {"model.workflow.fitness.MinimiseEmptyActivities"}
-	constraint MinimiseSmallActivities java {"model.workflow.fitness.MinimiseSmallActivities"}
-	constraint ValidActivityOrdering java {"model.workflow.fitness.ActivitySorting"}
-	constraint ActivityHasOperation java {"model.workflow.fitness.ActivityHasOperation"}
+	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.constraints.MinimiseObjectsWithoutActivity"}
+	constraint MinimiseEmptyActivities java {"model.workflow.fitness.constraints.MinimiseEmptyActivities"}
+	constraint MinimiseSmallActivities java {"model.workflow.fitness.constraints.MinimiseSmallActivities"}
+	constraint ValidActivityOrdering java {"model.workflow.fitness.constraints.ActivitySorting"}
+	constraint ActivityHasOperation java {"model.workflow.fitness.constraints.ActivityHasOperation"}
 }
 search { 
 	mutate using <workflow.henshin> unit "MoveObjectToNextActivity"

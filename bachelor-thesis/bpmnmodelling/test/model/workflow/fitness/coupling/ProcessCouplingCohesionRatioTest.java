@@ -65,7 +65,7 @@ public class ProcessCouplingCohesionRatioTest {
 	
 	@BeforeEach
 	void setUp() {
-		System.out.println("Run Before");
+		
 		processCoupling = new ProcessCoupling();
 		processCohesion = new ProcessCohesion();
 		
@@ -372,7 +372,7 @@ public class ProcessCouplingCohesionRatioTest {
 		calculateCouplingValue.setAccessible(true);	
 		couplingValue = (double) calculateCouplingValue.invoke(processCoupling, workflow);
 				
-		System.out.println("Process CouplingCohesionRatio is: " + (couplingValue / cohesionValue));
+		
 		double result = 0.7d / (7639.0d / 27300.0d);
 		assertEquals(result, couplingValue / cohesionValue, 0.01);
 	}
@@ -432,7 +432,7 @@ public class ProcessCouplingCohesionRatioTest {
 		calculateCouplingValue.setAccessible(true);	
 		couplingValue = (double) calculateCouplingValue.invoke(processCoupling, workflow);
 				
-		System.out.println("Process CouplingCohesionRatio is: " + (couplingValue / cohesionValue));
+		
 		double result = (1.0d / (5.0d/28.0d));
 		assertEquals(result, couplingValue / cohesionValue, 0.01);
 	}

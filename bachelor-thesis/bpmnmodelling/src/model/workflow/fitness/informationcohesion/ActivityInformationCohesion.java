@@ -26,7 +26,7 @@ public class ActivityInformationCohesion {
 		List<Operation> operations = FitnessUtil.getAllOperationsFromActivity(activity);
 		Set<Task> tasksUsedInAnyOperation = new HashSet<Task>(tasks);	
 		double taskInIntersectionCounter = 0;
-		double taskAmount = tasks.size();
+		
 			
 		//Construct set of all tasks that are used in any operation (denominator for calculation)	
 		for(Operation operation : operations) {
@@ -80,7 +80,7 @@ public class ActivityInformationCohesion {
 			}
 			
 		}
-		//Task doesnt exist in any intersection, return false
+		//Task doesn't exist in any intersection, return false
 		return operationPairExists;
 	}
 

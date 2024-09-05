@@ -154,7 +154,7 @@ class ProcessCouplingTest {
 				
 				processCouplingValue = (double) method.invoke(processCoupling, workflow);
 				
-				System.out.println("Process Coupling is: " + processCouplingValue);
+				
 				double result = 1;
 				assertEquals(result, processCouplingValue, 0.01);
 	}
@@ -228,7 +228,7 @@ class ProcessCouplingTest {
 				
 				processCouplingValue = (double) method.invoke(processCoupling, workflow);
 				
-				System.out.println("Process Coupling is: " + processCouplingValue);
+				
 				double result = 1.0d / 3.0d;
 				assertEquals(result, processCouplingValue, 0.01);
 	}

@@ -77,7 +77,7 @@ class ActivityInformationCohesionTest {
 		method.setAccessible(true);
 		aicValue = (double) method.invoke(activityInformationCohesion, activity1);
 		
-		System.out.println("AIC is: " + aicValue);
+		
 		double result = 0;
 		assertEquals(result, aicValue);
 		
@@ -147,7 +147,7 @@ class ActivityInformationCohesionTest {
 		aicValue = (double) method.invoke(activityInformationCohesion, activity2);
 		
 		
-		System.out.println("AIC is: " + aicValue);
+		
 		double result = 3.0d / 7.0d;
 		assertEquals(result, aicValue);
 		
@@ -170,7 +170,7 @@ class ActivityInformationCohesionTest {
 		aicValue = (double) method.invoke(activityInformationCohesion, activity3);
 		
 		
-		System.out.println("AIC is: " + aicValue);
+		
 		double result = 0;
 		assertEquals(result, aicValue);
 		
@@ -271,7 +271,7 @@ class ActivityInformationCohesionTest {
 		aicValue = (double) method.invoke(activityInformationCohesion, activity1);
 		
 		
-		System.out.println("AIC is: " + aicValue);
+		
 		double result = 4.0d / 11.0d;
 		assertEquals(result, aicValue);
 		

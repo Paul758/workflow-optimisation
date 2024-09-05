@@ -1,7 +1,6 @@
 package model.workflow.fitness.util;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import model.workflow.AlternativeOperation;

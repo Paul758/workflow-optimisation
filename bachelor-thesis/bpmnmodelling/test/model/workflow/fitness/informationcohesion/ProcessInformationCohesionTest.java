@@ -12,9 +12,7 @@ import model.workflow.Activity;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
-import model.workflow.fitness.cohesion.ActivityCohesion;
-import model.workflow.fitness.cohesion.ProcessCohesion;
-import model.workflow.fitness.relationcohesion.ProcessRelationCohesion;
+
 
 class ProcessInformationCohesionTest {
 
@@ -135,7 +133,7 @@ class ProcessInformationCohesionTest {
 		
 		processInformationCohesionFitness = (double) method.invoke(processInformationCohesion, workflow);
 		
-		System.out.println("Process Information Cohesion is: " + processInformationCohesionFitness);
+		
 		double result = 3.0d / 14.0d;
 		assertEquals(result, processInformationCohesionFitness);
 	}

@@ -11,7 +11,6 @@ import model.workflow.AlternativeOperation;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
-import model.workflow.fitness.informationcohesion.ActivityInformationCohesion;
 
 class ActivityRelationCohesionTest {
 
@@ -80,7 +79,7 @@ class ActivityRelationCohesionTest {
 		method.setAccessible(true);
 		arcValue = (double) method.invoke(activityRelationCohesion, activity1);
 		
-		System.out.println("ARC is: " + arcValue);
+		
 		double result = 0;
 		assertEquals(result, arcValue);
 		
@@ -149,7 +148,7 @@ class ActivityRelationCohesionTest {
 		method.setAccessible(true);
 		arcValue = (double) method.invoke(activityRelationCohesion, activity2);
 		
-		System.out.println("ARC is: " + arcValue);
+		
 		double result = 10.0d / 12.0d;
 		assertEquals(result, arcValue, 0.01d);
 		
@@ -171,7 +170,7 @@ class ActivityRelationCohesionTest {
 		method.setAccessible(true);
 		arcValue = (double) method.invoke(activityRelationCohesion, activity3);
 		
-		System.out.println("ARC is: " + arcValue);
+		
 		double result = 0;
 		assertEquals(result, arcValue);
 		
@@ -271,7 +270,7 @@ class ActivityRelationCohesionTest {
 		method.setAccessible(true);
 		arcValue = (double) method.invoke(activityRelationCohesion, activity1);
 		
-		System.out.println("ARC is: " + arcValue);
+		
 		double result = 14.0d / 30.0d;
 		assertEquals(result, arcValue);
 		
