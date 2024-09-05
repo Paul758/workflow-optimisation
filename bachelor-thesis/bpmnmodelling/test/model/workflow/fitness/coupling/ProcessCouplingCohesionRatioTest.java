@@ -373,7 +373,7 @@ public class ProcessCouplingCohesionRatioTest {
 		couplingValue = (double) calculateCouplingValue.invoke(processCoupling, workflow);
 				
 		System.out.println("Process CouplingCohesionRatio is: " + (couplingValue / cohesionValue));
-		double result = 0;
+		double result = 0.7d / (7639.0d / 27300.0d);
 		assertEquals(result, couplingValue / cohesionValue, 0.01);
 	}
 	
