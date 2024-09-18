@@ -8,7 +8,9 @@ Evaluation data for solution: /home/paul/repov5/bachelor-thesis/bpmnmodelling/md
 
 Objective values:
 Coupling: 0.5
-Cohesion: 0.7275
+Cohesion: 0.7275 (Cohesion = 0.2725,
+ 				  Anmerkung: die Cohesion muss umgerechnet werden zu: 1 - 0.7275 = 0.2725.
+ 				  Grund dafür ist das Vorgehen bei der Maximierung. Siehe dazu model.workflow.fitness.cohesion.ProcessCohesionMaximization.java) 
 
 Constraint values:
 MinimiseObjectsWithoutActivity: 0.0

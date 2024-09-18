@@ -5,7 +5,7 @@ problem {
 }
 goal {
 	objective Coupling minimise java { "model.workflow.fitness.coupling.ProcessCoupling" }
-	objective Cohesion maximise java { "model.workflow.fitness.cohesion.ProcessCohesion" }
+	objective Cohesion maximise java { "model.workflow.fitness.cohesion.ProcessCohesionMaximization" }
 	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.constraints.MinimiseObjectsWithoutActivity"}
 	constraint MinimiseEmptyActivities java {"model.workflow.fitness.constraints.MinimiseEmptyActivities"}
 	constraint MinimiseSmallActivities java {"model.workflow.fitness.constraints.MinimiseSmallActivities"}
