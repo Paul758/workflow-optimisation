@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow:Workflow
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:workflow="http://bpmnmodelling/workflow">
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="1"
+      sink="//@informationObjects.1"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="2"
+      source="//@informationObjects.0"
+      sink="//@informationObjects.2"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="3"
+      source="//@informationObjects.1"
+      sink="//@informationObjects.3 //@informationObjects.4 //@informationObjects.5"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="4"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.6 //@informationObjects.7"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="5"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.7 //@informationObjects.8"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="6"
+      source="//@informationObjects.2"
+      sink="//@informationObjects.8"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="7"
+      source="//@informationObjects.3"
+      sink="//@informationObjects.9"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="8"
+      source="//@informationObjects.3 //@informationObjects.4"
+      sink="//@informationObjects.9"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="9"
+      source="//@informationObjects.4 //@informationObjects.5"
+      sink="//@informationObjects.9"/>
+  <informationObjects
+      xsi:type="workflow:Task"
+      name="10"
+      source="//@informationObjects.6 //@informationObjects.7 //@informationObjects.8"/>
+</workflow:Workflow>

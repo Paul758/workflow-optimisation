@@ -1,0 +1,33 @@
+problem {
+	basepath <src/>
+	metamodel <model.workflow.WorkflowPackage>
+	model <example_A.xmi>
+}
+goal {
+	objective CCR minimise java { "model.workflow.fitness.coupling.ProcessCouplingCohesionRatio" }
+	constraint MinimiseObjectsWithoutActivity java {"model.workflow.fitness.constraints.MinimiseObjectsWithoutActivity"}
+	constraint MinimiseEmptyActivities java {"model.workflow.fitness.constraints.MinimiseEmptyActivities"}
+	constraint MinimiseSmallActivities java {"model.workflow.fitness.constraints.MinimiseSmallActivities"}
+	constraint ValidActivityOrdering java {"model.workflow.fitness.constraints.ActivitySorting"}
+	constraint ActivityHasOperation java {"model.workflow.fitness.constraints.ActivityHasOperation"}
+}
+search { 
+	mutate using <workflow.henshin> unit "moveObjectToNextActivity"
+	mutate using <workflow.henshin> unit "moveObjectToPreviousActivity"
+	mutate using <workflow.henshin> unit "createNewActivity"
+	mutate using <workflow.henshin> unit "assignInformationObject"
+	mutate using <workflow.henshin> unit "deleteEmptyActivity"
+	mutate using <workflow.henshin> unit "extractInformationObject"	
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 3
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}
