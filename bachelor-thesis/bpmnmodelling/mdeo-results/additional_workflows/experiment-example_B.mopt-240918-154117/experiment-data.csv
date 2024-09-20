@@ -1,0 +1,2 @@
+batch-id,duration,o-CCR,c-MinimiseObjectsWithoutActivity,c-MinimiseEmptyActivities,c-MinimiseSmallActivities,c-ValidActivityOrdering,c-ActivityHasOperation,solutions-found,solution-model
+0,00:00:20.308,1.6216216216216215,1,/home/paul/repoV3-0/bachelor-thesis/bpmnmodelling/mdeo-results/experiment-example_B.mopt-240918-154117/batch-0238D33A2.xmi

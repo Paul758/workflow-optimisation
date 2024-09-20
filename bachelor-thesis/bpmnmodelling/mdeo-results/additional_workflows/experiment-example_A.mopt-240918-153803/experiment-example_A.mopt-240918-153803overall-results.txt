@@ -1,0 +1,33 @@
+Average experiment time: 00:00:24.098
+
+============================================
+
+============================================
+
+Batch 0 duration: 00:00:24.098
+
+--------------------------------------------
+Evaluation data for solution: /home/paul/repoV3-0/bachelor-thesis/bpmnmodelling/mdeo-results/experiment-example_A.mopt-240918-153803/batch-06DD603C8.xmi
+
+Objective values:
+CCR: 1.391304347826087
+
+Constraint values:
+MinimiseObjectsWithoutActivity: 0.0
+MinimiseEmptyActivities: 0.0
+MinimiseSmallActivities: 0.0
+ValidActivityOrdering: 0.0
+ActivityHasOperation: 0.0
+
+Parent mutation steps:
+Steps: [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0]
+
+Transformations chain:
+Length: 51
+Sequence: [createNewActivity, deleteEmptyActivity, createNewActivity] -> [assignInformationObject, extractInformationObject, assignInformationObject] -> [moveObjectToPreviousActivity, deleteEmptyActivity, extractInformationObject] -> [moveObjectToPreviousActivity, deleteEmptyActivity, createNewActivity] -> [assignInformationObject, createNewActivity, deleteEmptyActivity] -> [createNewActivity, assignInformationObject, moveObjectToPreviousActivity] -> [moveObjectToPreviousActivity, extractInformationObject, assignInformationObject] -> [moveObjectToPreviousActivity, assignInformationObject, moveObjectToNextActivity] -> [assignInformationObject, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [deleteEmptyActivity, moveObjectToNextActivity, extractInformationObject] -> [assignInformationObject, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToPreviousActivity, assignInformationObject, moveObjectToPreviousActivity] -> [assignInformationObject, moveObjectToNextActivity, moveObjectToNextActivity] -> [moveObjectToPreviousActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, moveObjectToPreviousActivity, deleteEmptyActivity] -> [extractInformationObject, deleteEmptyActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [assignInformationObject, createNewActivity, assignInformationObject] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [deleteEmptyActivity, moveObjectToPreviousActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, moveObjectToPreviousActivity] -> [extractInformationObject, moveObjectToPreviousActivity, assignInformationObject] -> [moveObjectToPreviousActivity, moveObjectToPreviousActivity, assignInformationObject] -> [createNewActivity, assignInformationObject, moveObjectToNextActivity] -> [moveObjectToPreviousActivity, deleteEmptyActivity, assignInformationObject] -> [extractInformationObject, extractInformationObject, assignInformationObject] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, deleteEmptyActivity, moveObjectToPreviousActivity] -> [extractInformationObject, moveObjectToNextActivity, deleteEmptyActivity] -> [createNewActivity, assignInformationObject, assignInformationObject] -> [moveObjectToNextActivity, deleteEmptyActivity, moveObjectToNextActivity] -> [moveObjectToPreviousActivity, deleteEmptyActivity, moveObjectToNextActivity] -> [extractInformationObject, moveObjectToPreviousActivity, assignInformationObject] -> [moveObjectToPreviousActivity, extractInformationObject, moveObjectToNextActivity] -> [moveObjectToPreviousActivity, deleteEmptyActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, extractInformationObject] -> [moveObjectToNextActivity, moveObjectToNextActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToPreviousActivity, moveObjectToPreviousActivity, extractInformationObject] -> [createNewActivity, deleteEmptyActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, createNewActivity, deleteEmptyActivity] -> [extractInformationObject, moveObjectToNextActivity, deleteEmptyActivity] -> [createNewActivity, deleteEmptyActivity, moveObjectToPreviousActivity] -> [extractInformationObject, moveObjectToPreviousActivity, moveObjectToNextActivity]
+
+============================================
+
+Serialized objectives saved to: /home/paul/repoV3-0/bachelor-thesis/bpmnmodelling/mdeo-results/experiment-example_A.mopt-240918-153803/batch-0/batch-0-serialized-objectives.pf
+============================================
+

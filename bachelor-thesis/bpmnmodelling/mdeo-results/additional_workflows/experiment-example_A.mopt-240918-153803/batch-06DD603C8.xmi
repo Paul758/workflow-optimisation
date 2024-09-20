@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<workflow:Workflow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:workflow="http://bpmnmodelling/workflow">
+  <informationObjects xsi:type="workflow:Task" name="1" isEncapsulatedBy="//@activities.1" sink="//@informationObjects.1 //@informationObjects.2"/>
+  <informationObjects xsi:type="workflow:Task" name="2" isEncapsulatedBy="//@activities.1" source="//@informationObjects.0" sink="//@informationObjects.4 //@informationObjects.5"/>
+  <informationObjects xsi:type="workflow:Task" name="3" isEncapsulatedBy="//@activities.1" source="//@informationObjects.0" sink="//@informationObjects.4"/>
+  <informationObjects xsi:type="workflow:Task" name="4" isEncapsulatedBy="//@activities.0" sink="//@informationObjects.5"/>
+  <informationObjects xsi:type="workflow:Task" name="5" isEncapsulatedBy="//@activities.1" source="//@informationObjects.1 //@informationObjects.2" sink="//@informationObjects.6"/>
+  <informationObjects xsi:type="workflow:Task" name="6" isEncapsulatedBy="//@activities.0" source="//@informationObjects.1 //@informationObjects.3" sink="//@informationObjects.7"/>
+  <informationObjects xsi:type="workflow:Task" name="7" isEncapsulatedBy="//@activities.0" source="//@informationObjects.4" sink="//@informationObjects.13"/>
+  <informationObjects xsi:type="workflow:Task" name="8" isEncapsulatedBy="//@activities.0" source="//@informationObjects.5" sink="//@informationObjects.9 //@informationObjects.14"/>
+  <informationObjects xsi:type="workflow:Task" name="9" isEncapsulatedBy="//@activities.0" sink="//@informationObjects.9"/>
+  <informationObjects xsi:type="workflow:Task" name="10" isEncapsulatedBy="//@activities.0" source="//@informationObjects.7 //@informationObjects.8" sink="//@informationObjects.15"/>
+  <informationObjects xsi:type="workflow:Task" name="11" isEncapsulatedBy="//@activities.2" sink="//@informationObjects.12"/>
+  <informationObjects xsi:type="workflow:Task" name="12" isEncapsulatedBy="//@activities.2" sink="//@informationObjects.12"/>
+  <informationObjects xsi:type="workflow:Task" name="13" isEncapsulatedBy="//@activities.2" source="//@informationObjects.10 //@informationObjects.11" sink="//@informationObjects.18"/>
+  <informationObjects xsi:type="workflow:Task" name="14" isEncapsulatedBy="//@activities.0" source="//@informationObjects.6" sink="//@informationObjects.16"/>
+  <informationObjects xsi:type="workflow:Task" name="15" isEncapsulatedBy="//@activities.0" source="//@informationObjects.7" sink="//@informationObjects.16"/>
+  <informationObjects xsi:type="workflow:Task" name="16" isEncapsulatedBy="//@activities.0" source="//@informationObjects.9" sink="//@informationObjects.16 //@informationObjects.17 //@informationObjects.18"/>
+  <informationObjects xsi:type="workflow:Task" name="17" isEncapsulatedBy="//@activities.0" source="//@informationObjects.13 //@informationObjects.14 //@informationObjects.15" sink="//@informationObjects.17"/>
+  <informationObjects xsi:type="workflow:Task" name="18" isEncapsulatedBy="//@activities.3" source="//@informationObjects.15 //@informationObjects.16" sink="//@informationObjects.19"/>
+  <informationObjects xsi:type="workflow:Task" name="19" isEncapsulatedBy="//@activities.3" source="//@informationObjects.12 //@informationObjects.15" sink="//@informationObjects.19"/>
+  <informationObjects xsi:type="workflow:Task" name="20" isEncapsulatedBy="//@activities.3" source="//@informationObjects.17 //@informationObjects.18"/>
+  <activities encapsulates="//@informationObjects.15 //@informationObjects.14 //@informationObjects.9 //@informationObjects.8 //@informationObjects.13 //@informationObjects.7 //@informationObjects.6 //@informationObjects.5 //@informationObjects.16 //@informationObjects.3"/>
+  <activities encapsulates="//@informationObjects.4 //@informationObjects.1 //@informationObjects.0 //@informationObjects.2"/>
+  <activities encapsulates="//@informationObjects.10 //@informationObjects.11 //@informationObjects.12"/>
+  <activities encapsulates="//@informationObjects.17 //@informationObjects.19 //@informationObjects.18"/>
+</workflow:Workflow>

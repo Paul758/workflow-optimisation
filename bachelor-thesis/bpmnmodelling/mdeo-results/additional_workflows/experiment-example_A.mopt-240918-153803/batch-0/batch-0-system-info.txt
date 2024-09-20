@@ -1,0 +1,5 @@
+Operating system: Ubuntu 22.04.3 LTS (Jammy Jellyfish) build 5.15.153.1-microsoft-standard-WSL2
+Java Runtime: OpenJDK Runtime Environment Version: 11.0.24+8-post-Ubuntu-1ubuntu322.04
+Processor: Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz
+Processor Cores: 4 physical 4 logical
+Memory: 7.7352294921875 GB

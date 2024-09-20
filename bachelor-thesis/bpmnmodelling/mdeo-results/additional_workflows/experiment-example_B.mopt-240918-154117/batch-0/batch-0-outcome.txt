@@ -1,0 +1,27 @@
+
+============================================
+
+Batch 0 duration: 00:00:20.308
+
+--------------------------------------------
+Evaluation data for solution: /home/paul/repoV3-0/bachelor-thesis/bpmnmodelling/mdeo-results/experiment-example_B.mopt-240918-154117/batch-0238D33A2.xmi
+
+Objective values:
+CCR: 1.6216216216216215
+
+Constraint values:
+MinimiseObjectsWithoutActivity: 0.0
+MinimiseEmptyActivities: 0.0
+MinimiseSmallActivities: 0.0
+ValidActivityOrdering: 0.0
+ActivityHasOperation: 0.0
+
+Parent mutation steps:
+Steps: [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0] -> [x=3.0, sigma=0.0]
+
+Transformations chain:
+Length: 38
+Sequence: [createNewActivity, createNewActivity, assignInformationObject] -> [extractInformationObject, extractInformationObject, deleteEmptyActivity] -> [assignInformationObject, moveObjectToPreviousActivity, deleteEmptyActivity] -> [deleteEmptyActivity, createNewActivity, assignInformationObject] -> [extractInformationObject, moveObjectToNextActivity, deleteEmptyActivity] -> [extractInformationObject, assignInformationObject, moveObjectToNextActivity] -> [deleteEmptyActivity, createNewActivity, deleteEmptyActivity] -> [createNewActivity, deleteEmptyActivity, createNewActivity] -> [createNewActivity, deleteEmptyActivity, deleteEmptyActivity] -> [createNewActivity, assignInformationObject, moveObjectToNextActivity] -> [createNewActivity, moveObjectToNextActivity, assignInformationObject] -> [assignInformationObject, moveObjectToNextActivity, assignInformationObject] -> [moveObjectToNextActivity, assignInformationObject, moveObjectToNextActivity] -> [deleteEmptyActivity, createNewActivity, assignInformationObject] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, deleteEmptyActivity] -> [createNewActivity, deleteEmptyActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, assignInformationObject, moveObjectToPreviousActivity] -> [createNewActivity, moveObjectToNextActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, assignInformationObject, extractInformationObject] -> [createNewActivity, deleteEmptyActivity, assignInformationObject] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, deleteEmptyActivity] -> [moveObjectToPreviousActivity, moveObjectToNextActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, createNewActivity, assignInformationObject] -> [moveObjectToNextActivity, assignInformationObject, moveObjectToPreviousActivity] -> [createNewActivity, deleteEmptyActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToPreviousActivity, moveObjectToNextActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, createNewActivity, deleteEmptyActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToPreviousActivity, moveObjectToPreviousActivity, moveObjectToNextActivity] -> [extractInformationObject, moveObjectToNextActivity, moveObjectToPreviousActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, moveObjectToNextActivity] -> [moveObjectToNextActivity, moveObjectToPreviousActivity, moveObjectToNextActivity] -> [createNewActivity, deleteEmptyActivity, moveObjectToNextActivity] -> [moveObjectToPreviousActivity, createNewActivity, deleteEmptyActivity]
+
+============================================
+
