@@ -73,7 +73,7 @@ public class FitnessUtil {
 			} else {
 				List<AlternativeOperation> alternativeOperations = task.getAlternativePaths();
 				for (AlternativeOperation alternativeOperation : alternativeOperations) {
-					operations.add(new Operation(task,alternativeOperation));
+					operations.add(new Operation(task, alternativeOperation));
 				}
 			}
 		}

@@ -12,7 +12,6 @@ import model.workflow.AlternativeOperation;
 import model.workflow.Task;
 import model.workflow.Workflow;
 import model.workflow.WorkflowFactory;
-import model.workflow.fitness.relationcohesion.ActivityRelationCohesion;
 
 
 class ProcessCouplingTest {
